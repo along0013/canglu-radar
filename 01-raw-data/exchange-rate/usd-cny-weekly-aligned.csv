@@ -1,0 +1,4 @@
+﻿natural_week_start,natural_week_end,representative_date,currency_pair,representative_rate,selection_rule,source_type,source_url,source_note,data_quality_level,record_status,is_estimated,missing_reason
+2026-05-18,2026-05-24,2026-05-22,USD/CNY,6.8373,自然周最后一个已核验交易日；本周周五可用,official_SAFE,国家外汇管理局公开汇率中间价：100美元=683.73元人民币,官方公开中间价；仅单日记录，尚未形成26周序列,A,weekly_representative_verified,False,
+2026-05-11,2026-05-17,2026-05-15,USD/CNY,,优先取自然周最后一个交易日；缺失时待补SAFE/ChinaMoney/银行公开表,,,尚未找到本周可复核汇率代表值,PENDING,pending_collection,False,缺少可复核官方/公开汇率来源
+2026-05-04,2026-05-10,2026-05-08,USD/CNY,,优先取自然周最后一个交易日；缺失时待补SAFE/ChinaMoney/银行公开表,,,尚未找到本周可复核汇率代表值,PENDING,pending_collection,False,缺少可复核官方/公开汇率来源

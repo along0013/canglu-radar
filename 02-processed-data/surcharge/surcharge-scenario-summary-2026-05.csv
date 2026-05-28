@@ -1,0 +1,6 @@
+﻿scenario_code,scenario_name_cn,route_group,surcharge_usd_per_feu,applied_fee_count
+BASE_USEC,美东基础场景,USEC,836.5,6
+BASE_USWC,美西基础场景,USWC,836.5,6
+STRESS_USEC,美东压力场景,USEC,2111.5,11
+STRESS_USWC,美西压力场景,USWC,2111.5,11
+USEC_PANAMA_STRESS,美东巴拿马压力场景,USEC,2386.5,12
