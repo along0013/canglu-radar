@@ -1,0 +1,68 @@
+﻿source,included,arcname,note
+03-analysis\CR-04A_指标计算结果.xlsx,True,03-analysis\CR-04A_指标计算结果.xlsx,file
+03-analysis\rerun-simulations\week2-prime\CR-04A_指标计算结果_week2-prime.xlsx,True,03-analysis\rerun-simulations\week2-prime\CR-04A_指标计算结果_week2-prime.xlsx,dir member
+03-analysis\rerun-simulations\week2-prime\latest-summary-week2-prime.csv,True,03-analysis\rerun-simulations\week2-prime\latest-summary-week2-prime.csv,dir member
+03-analysis\rerun-simulations\week3-prime\CR-04A_指标计算结果_week3-prime.xlsx,True,03-analysis\rerun-simulations\week3-prime\CR-04A_指标计算结果_week3-prime.xlsx,dir member
+03-analysis\rerun-simulations\week3-prime\latest-summary-week3-prime.csv,True,03-analysis\rerun-simulations\week3-prime\latest-summary-week3-prime.csv,dir member
+04-decision-report\CR-04B_业务决策建议.docx,True,04-decision-report\CR-04B_业务决策建议.docx,file
+04-decision-report\CR-05_分析报告.docx,True,04-decision-report\CR-05_分析报告.docx,file
+04-decision-report\rerun-simulations\week2-prime\CR-04B_业务决策建议_week2-prime.csv,True,04-decision-report\rerun-simulations\week2-prime\CR-04B_业务决策建议_week2-prime.csv,dir member
+04-decision-report\rerun-simulations\week2-prime\CR-04B_业务决策建议_week2-prime.docx,True,04-decision-report\rerun-simulations\week2-prime\CR-04B_业务决策建议_week2-prime.docx,dir member
+04-decision-report\rerun-simulations\week3-prime\CR-04B_业务决策建议_week3-prime.csv,True,04-decision-report\rerun-simulations\week3-prime\CR-04B_业务决策建议_week3-prime.csv,dir member
+04-decision-report\rerun-simulations\week3-prime\CR-04B_业务决策建议_week3-prime.docx,True,04-decision-report\rerun-simulations\week3-prime\CR-04B_业务决策建议_week3-prime.docx,dir member
+05-presentation\CR-06_参赛展示PPT_storyboard.md,True,05-presentation\CR-06_参赛展示PPT_storyboard.md,file
+05-presentation\cr-06-submission-deck.html,True,05-presentation\cr-06-submission-deck.html,file
+05-presentation\CR-06_可打印PPT稿.md,True,05-presentation\CR-06_可打印PPT稿.md,file
+05-presentation\PPT_EXPORT_NOTE.md,True,05-presentation\PPT_EXPORT_NOTE.md,file
+05-presentation\screenshots\demo-screenshot-P01.png,True,05-presentation\screenshots\demo-screenshot-P01.png,dir member
+05-presentation\screenshots\demo-screenshot-P02.png,True,05-presentation\screenshots\demo-screenshot-P02.png,dir member
+05-presentation\screenshots\demo-screenshot-P03.png,True,05-presentation\screenshots\demo-screenshot-P03.png,dir member
+05-presentation\screenshots\demo-screenshot-P04.png,True,05-presentation\screenshots\demo-screenshot-P04.png,dir member
+05-presentation\screenshots\demo-screenshot-P05.png,True,05-presentation\screenshots\demo-screenshot-P05.png,dir member
+05-presentation\screenshots\demo-screenshot-P06.png,True,05-presentation\screenshots\demo-screenshot-P06.png,dir member
+05-presentation\screenshots\demo-screenshot-P07.png,True,05-presentation\screenshots\demo-screenshot-P07.png,dir member
+05-presentation\screenshots\demo-screenshot-P08.png,True,05-presentation\screenshots\demo-screenshot-P08.png,dir member
+05-presentation\screenshots\demo-screenshot-P09.png,True,05-presentation\screenshots\demo-screenshot-P09.png,dir member
+05-presentation\screenshots\demo-screenshot-P10.png,True,05-presentation\screenshots\demo-screenshot-P10.png,dir member
+05-presentation\printable-pages\P01.md,True,05-presentation\printable-pages\P01.md,dir member
+05-presentation\printable-pages\P02.md,True,05-presentation\printable-pages\P02.md,dir member
+05-presentation\printable-pages\P03.md,True,05-presentation\printable-pages\P03.md,dir member
+05-presentation\printable-pages\P04.md,True,05-presentation\printable-pages\P04.md,dir member
+05-presentation\printable-pages\P05.md,True,05-presentation\printable-pages\P05.md,dir member
+05-presentation\printable-pages\P06.md,True,05-presentation\printable-pages\P06.md,dir member
+05-presentation\printable-pages\P07.md,True,05-presentation\printable-pages\P07.md,dir member
+05-presentation\printable-pages\P08.md,True,05-presentation\printable-pages\P08.md,dir member
+05-presentation\printable-pages\P09.md,True,05-presentation\printable-pages\P09.md,dir member
+05-presentation\printable-pages\P10.md,True,05-presentation\printable-pages\P10.md,dir member
+06-visual-demo\CR-07_闭环长图.png,True,06-visual-demo\CR-07_闭环长图.png,file
+06-visual-demo\CR-08_Demo演示脚本.docx,True,06-visual-demo\CR-08_Demo演示脚本.docx,file
+06-visual-demo\demo-assets\demo-narration-subtitles.md,True,06-visual-demo\demo-assets\demo-narration-subtitles.md,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P01.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P01.png,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P02.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P02.png,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P03.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P03.png,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P04.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P04.png,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P05.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P05.png,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P06.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P06.png,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P07.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P07.png,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P08.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P08.png,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P09.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P09.png,dir member
+06-visual-demo\demo-screenshots\demo-screenshot-P10.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P10.png,dir member
+06-visual-demo\demo-screenshots\README.md,True,06-visual-demo\demo-screenshots\README.md,dir member
+07-validation\CR-09_量化验证表.xlsx,True,07-validation\CR-09_量化验证表.xlsx,file
+09-logs\rerun-records-week1.md,True,09-logs\rerun-records-week1.md,file
+09-logs\rerun-records-week2.md,True,09-logs\rerun-records-week2.md,file
+09-logs\rerun-records-week3.md,True,09-logs\rerun-records-week3.md,file
+09-logs\rerun-records-week2-prime.md,True,09-logs\rerun-records-week2-prime.md,file
+09-logs\rerun-records-week3-prime.md,True,09-logs\rerun-records-week3-prime.md,file
+00-control\qa-checklist.md,True,00-control\qa-checklist.md,file
+01-raw-data\collection-drafts\manual-weekly\screenshot-ocr-collection-plan.md,True,01-raw-data\collection-drafts\manual-weekly\screenshot-ocr-collection-plan.md,file
+01-raw-data\freight-index\week2-input\scfi-week2-simulated-input.csv,True,01-raw-data\freight-index\week2-input\scfi-week2-simulated-input.csv,dir member
+01-raw-data\freight-index\week3-input\scfi-week3-simulated-input.csv,True,01-raw-data\freight-index\week3-input\scfi-week3-simulated-input.csv,dir member
+01-raw-data\exchange-rate\week2-input\usd-cny-week2-simulated-input.csv,True,01-raw-data\exchange-rate\week2-input\usd-cny-week2-simulated-input.csv,dir member
+01-raw-data\exchange-rate\week3-input\usd-cny-week3-simulated-input.csv,True,01-raw-data\exchange-rate\week3-input\usd-cny-week3-simulated-input.csv,dir member
+01-raw-data\carrier-announcements\week2-input\carrier-announcement-week2-simulated.csv,True,01-raw-data\carrier-announcements\week2-input\carrier-announcement-week2-simulated.csv,dir member
+01-raw-data\carrier-announcements\week3-input\carrier-announcement-week3-simulated.csv,True,01-raw-data\carrier-announcements\week3-input\carrier-announcement-week3-simulated.csv,dir member
+02-governance\surcharge-scenario-cost-model.md,True,02-governance\surcharge-scenario-cost-model.md,file
+02-processed-data\canglu-demo-cost-model-scenario-based.xlsx,True,02-processed-data\canglu-demo-cost-model-scenario-based.xlsx,file
+02-processed-data\surcharge-scenario-summary-2026-05.csv,True,02-processed-data\surcharge-scenario-summary-2026-05.csv,file
+02-processed-data\surcharge-scenario-rules-2026-05.csv,True,02-processed-data\surcharge-scenario-rules-2026-05.csv,file
