@@ -1,6 +1,0 @@
-﻿scenario_code,scenario_name_cn,route_group,base_freight_column,container_count,shipment_count,peak_season_flag,port_congestion_flag,emergency_bunker_flag,equipment_imbalance_flag,war_risk_region_flag,panama_path_flag,description
-BASE_USWC,美西基础场景,USWC,美西航线,1,1,False,False,False,False,False,False,普通美西报价演示：基础常见费用，不启用条件性风险项
-BASE_USEC,美东基础场景,USEC,美东航线,1,1,False,False,False,False,False,False,普通美东报价演示：基础常见费用，不启用条件性风险项
-STRESS_USWC,美西压力场景,USWC,美西航线,1,1,True,True,True,True,True,False,美西压力测试：基础费用+旺季/拥堵/紧急燃油/缺箱/战争风险，不含巴拿马
-STRESS_USEC,美东压力场景,USEC,美东航线,1,1,True,True,True,True,True,False,美东压力测试：基础费用+旺季/拥堵/紧急燃油/缺箱/战争风险，不含巴拿马
-USEC_PANAMA_STRESS,美东巴拿马压力场景,USEC,美东航线,1,1,True,True,True,True,True,True,美东经巴拿马压力测试：压力场景+巴拿马运河附加费
