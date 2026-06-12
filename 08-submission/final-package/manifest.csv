@@ -1,68 +1,189 @@
-﻿source,included,arcname,note
-03-analysis\CR-04A_指标计算结果.xlsx,True,03-analysis\CR-04A_指标计算结果.xlsx,file
-03-analysis\rerun-simulations\week2-prime\CR-04A_指标计算结果_week2-prime.xlsx,True,03-analysis\rerun-simulations\week2-prime\CR-04A_指标计算结果_week2-prime.xlsx,dir member
-03-analysis\rerun-simulations\week2-prime\latest-summary-week2-prime.csv,True,03-analysis\rerun-simulations\week2-prime\latest-summary-week2-prime.csv,dir member
-03-analysis\rerun-simulations\week3-prime\CR-04A_指标计算结果_week3-prime.xlsx,True,03-analysis\rerun-simulations\week3-prime\CR-04A_指标计算结果_week3-prime.xlsx,dir member
-03-analysis\rerun-simulations\week3-prime\latest-summary-week3-prime.csv,True,03-analysis\rerun-simulations\week3-prime\latest-summary-week3-prime.csv,dir member
-04-decision-report\CR-04B_业务决策建议.docx,True,04-decision-report\CR-04B_业务决策建议.docx,file
-04-decision-report\CR-05_分析报告.docx,True,04-decision-report\CR-05_分析报告.docx,file
-04-decision-report\rerun-simulations\week2-prime\CR-04B_业务决策建议_week2-prime.csv,True,04-decision-report\rerun-simulations\week2-prime\CR-04B_业务决策建议_week2-prime.csv,dir member
-04-decision-report\rerun-simulations\week2-prime\CR-04B_业务决策建议_week2-prime.docx,True,04-decision-report\rerun-simulations\week2-prime\CR-04B_业务决策建议_week2-prime.docx,dir member
-04-decision-report\rerun-simulations\week3-prime\CR-04B_业务决策建议_week3-prime.csv,True,04-decision-report\rerun-simulations\week3-prime\CR-04B_业务决策建议_week3-prime.csv,dir member
-04-decision-report\rerun-simulations\week3-prime\CR-04B_业务决策建议_week3-prime.docx,True,04-decision-report\rerun-simulations\week3-prime\CR-04B_业务决策建议_week3-prime.docx,dir member
-05-presentation\CR-06_参赛展示PPT_storyboard.md,True,05-presentation\CR-06_参赛展示PPT_storyboard.md,file
-05-presentation\cr-06-submission-deck.html,True,05-presentation\cr-06-submission-deck.html,file
-05-presentation\CR-06_可打印PPT稿.md,True,05-presentation\CR-06_可打印PPT稿.md,file
-05-presentation\PPT_EXPORT_NOTE.md,True,05-presentation\PPT_EXPORT_NOTE.md,file
-05-presentation\screenshots\demo-screenshot-P01.png,True,05-presentation\screenshots\demo-screenshot-P01.png,dir member
-05-presentation\screenshots\demo-screenshot-P02.png,True,05-presentation\screenshots\demo-screenshot-P02.png,dir member
-05-presentation\screenshots\demo-screenshot-P03.png,True,05-presentation\screenshots\demo-screenshot-P03.png,dir member
-05-presentation\screenshots\demo-screenshot-P04.png,True,05-presentation\screenshots\demo-screenshot-P04.png,dir member
-05-presentation\screenshots\demo-screenshot-P05.png,True,05-presentation\screenshots\demo-screenshot-P05.png,dir member
-05-presentation\screenshots\demo-screenshot-P06.png,True,05-presentation\screenshots\demo-screenshot-P06.png,dir member
-05-presentation\screenshots\demo-screenshot-P07.png,True,05-presentation\screenshots\demo-screenshot-P07.png,dir member
-05-presentation\screenshots\demo-screenshot-P08.png,True,05-presentation\screenshots\demo-screenshot-P08.png,dir member
-05-presentation\screenshots\demo-screenshot-P09.png,True,05-presentation\screenshots\demo-screenshot-P09.png,dir member
-05-presentation\screenshots\demo-screenshot-P10.png,True,05-presentation\screenshots\demo-screenshot-P10.png,dir member
-05-presentation\printable-pages\P01.md,True,05-presentation\printable-pages\P01.md,dir member
-05-presentation\printable-pages\P02.md,True,05-presentation\printable-pages\P02.md,dir member
-05-presentation\printable-pages\P03.md,True,05-presentation\printable-pages\P03.md,dir member
-05-presentation\printable-pages\P04.md,True,05-presentation\printable-pages\P04.md,dir member
-05-presentation\printable-pages\P05.md,True,05-presentation\printable-pages\P05.md,dir member
-05-presentation\printable-pages\P06.md,True,05-presentation\printable-pages\P06.md,dir member
-05-presentation\printable-pages\P07.md,True,05-presentation\printable-pages\P07.md,dir member
-05-presentation\printable-pages\P08.md,True,05-presentation\printable-pages\P08.md,dir member
-05-presentation\printable-pages\P09.md,True,05-presentation\printable-pages\P09.md,dir member
-05-presentation\printable-pages\P10.md,True,05-presentation\printable-pages\P10.md,dir member
-06-visual-demo\CR-07_闭环长图.png,True,06-visual-demo\CR-07_闭环长图.png,file
-06-visual-demo\CR-08_Demo演示脚本.docx,True,06-visual-demo\CR-08_Demo演示脚本.docx,file
-06-visual-demo\demo-assets\demo-narration-subtitles.md,True,06-visual-demo\demo-assets\demo-narration-subtitles.md,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P01.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P01.png,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P02.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P02.png,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P03.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P03.png,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P04.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P04.png,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P05.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P05.png,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P06.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P06.png,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P07.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P07.png,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P08.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P08.png,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P09.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P09.png,dir member
-06-visual-demo\demo-screenshots\demo-screenshot-P10.png,True,06-visual-demo\demo-screenshots\demo-screenshot-P10.png,dir member
-06-visual-demo\demo-screenshots\README.md,True,06-visual-demo\demo-screenshots\README.md,dir member
-07-validation\CR-09_量化验证表.xlsx,True,07-validation\CR-09_量化验证表.xlsx,file
-09-logs\rerun-records-week1.md,True,09-logs\rerun-records-week1.md,file
-09-logs\rerun-records-week2.md,True,09-logs\rerun-records-week2.md,file
-09-logs\rerun-records-week3.md,True,09-logs\rerun-records-week3.md,file
-09-logs\rerun-records-week2-prime.md,True,09-logs\rerun-records-week2-prime.md,file
-09-logs\rerun-records-week3-prime.md,True,09-logs\rerun-records-week3-prime.md,file
-00-control\qa-checklist.md,True,00-control\qa-checklist.md,file
-01-raw-data\collection-drafts\manual-weekly\screenshot-ocr-collection-plan.md,True,01-raw-data\collection-drafts\manual-weekly\screenshot-ocr-collection-plan.md,file
-01-raw-data\freight-index\week2-input\scfi-week2-simulated-input.csv,True,01-raw-data\freight-index\week2-input\scfi-week2-simulated-input.csv,dir member
-01-raw-data\freight-index\week3-input\scfi-week3-simulated-input.csv,True,01-raw-data\freight-index\week3-input\scfi-week3-simulated-input.csv,dir member
-01-raw-data\exchange-rate\week2-input\usd-cny-week2-simulated-input.csv,True,01-raw-data\exchange-rate\week2-input\usd-cny-week2-simulated-input.csv,dir member
-01-raw-data\exchange-rate\week3-input\usd-cny-week3-simulated-input.csv,True,01-raw-data\exchange-rate\week3-input\usd-cny-week3-simulated-input.csv,dir member
-01-raw-data\carrier-announcements\week2-input\carrier-announcement-week2-simulated.csv,True,01-raw-data\carrier-announcements\week2-input\carrier-announcement-week2-simulated.csv,dir member
-01-raw-data\carrier-announcements\week3-input\carrier-announcement-week3-simulated.csv,True,01-raw-data\carrier-announcements\week3-input\carrier-announcement-week3-simulated.csv,dir member
-02-governance\surcharge-scenario-cost-model.md,True,02-governance\surcharge-scenario-cost-model.md,file
-02-processed-data\canglu-demo-cost-model-scenario-based.xlsx,True,02-processed-data\canglu-demo-cost-model-scenario-based.xlsx,file
-02-processed-data\surcharge-scenario-summary-2026-05.csv,True,02-processed-data\surcharge-scenario-summary-2026-05.csv,file
-02-processed-data\surcharge-scenario-rules-2026-05.csv,True,02-processed-data\surcharge-scenario-rules-2026-05.csv,file
+﻿source,included,arcname,module,quality_level,note
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_BAF_ONE.pdf""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_BAF_ONE.pdf""",其他,N/A,项目材料。
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_BAF_\350\241\214\344\270\232\350\275\254\350\275\275.txt""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_BAF_\350\241\214\344\270\232\350\275\254\350\275\275.txt""",其他,N/A,项目材料。
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_GRI_\351\251\254\345\243\253\345\237\272.pdf""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_GRI_\351\251\254\345\243\253\345\237\272.pdf""",其他,N/A,项目材料。
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_GRI_\351\251\254\345\243\253\345\237\272\345\200\231\351\200\211.txt""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_GRI_\351\251\254\345\243\253\345\237\272\345\200\231\351\200\211.txt""",其他,N/A,项目材料。
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_PSS_\344\270\255\350\277\234.pdf""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_PSS_\344\270\255\350\277\234.pdf""",其他,N/A,项目材料。
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_PSS_\351\251\254\345\243\253\345\237\272.txt""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_PSS_\351\251\254\345\243\253\345\237\272.txt""",其他,N/A,项目材料。
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_\345\201\234\350\210\252_MSC.pdf""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_\345\201\234\350\210\252_MSC.pdf""",其他,N/A,项目材料。
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_\345\201\234\350\210\252_\347\273\274\345\220\210\350\275\254\350\275\275.txt""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_\345\201\234\350\210\252_\347\273\274\345\220\210\350\275\254\350\275\275.txt""",其他,N/A,项目材料。
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_\347\273\223\346\236\204\345\214\226\346\240\267\346\234\254.csv""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_\347\273\223\346\236\204\345\214\226\346\240\267\346\234\254.csv""",其他,N/A,项目材料。
+"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_\350\267\263\346\270\257\346\270\257\345\217\243\346\213\245\345\240\265_MSC\350\275\254\350\275\275.txt""",yes,"""01-raw-data/carrier-announcements/\345\216\237\345\247\213_\350\210\271\345\205\254\345\217\270\345\205\254\345\221\212_\350\267\263\346\270\257\346\270\257\345\217\243\346\213\245\345\240\265_MSC\350\275\254\350\275\275.txt""",其他,N/A,项目材料。
+"""01-raw-data/collection-reports/\345\205\254\345\274\200\346\225\260\346\215\256\350\241\245\351\207\207\347\273\255\346\211\247\350\241\214\346\212\245\345\221\212.md""",yes,"""01-raw-data/collection-reports/\345\205\254\345\274\200\346\225\260\346\215\256\350\241\245\351\207\207\347\273\255\346\211\247\350\241\214\346\212\245\345\221\212.md""",其他,N/A,项目材料。
+"""01-raw-data/collection-reports/current/README_\345\275\223\345\211\215\344\270\273\347\272\277\346\226\207\344\273\266\350\257\264\346\230\216.md""",yes,"""01-raw-data/collection-reports/current/README_\345\275\223\345\211\215\344\270\273\347\272\277\346\226\207\344\273\266\350\257\264\346\230\216.md""",其他,N/A,项目材料。
+"""01-raw-data/collection-reports/current/\345\205\254\345\274\200\346\225\260\346\215\256\350\241\245\351\207\207\347\273\255\346\211\247\350\241\214\346\212\245\345\221\212.md""",yes,"""01-raw-data/collection-reports/current/\345\205\254\345\274\200\346\225\260\346\215\256\350\241\245\351\207\207\347\273\255\346\211\247\350\241\214\346\212\245\345\221\212.md""",其他,N/A,项目材料。
+"""01-raw-data/collection-reports/current/\350\257\212\346\226\255\351\224\231\351\242\230\351\233\206.csv""",yes,"""01-raw-data/collection-reports/current/\350\257\212\346\226\255\351\224\231\351\242\230\351\233\206.csv""",其他,N/A,项目材料。
+"""01-raw-data/collection-reports/current/\350\257\212\346\226\255\351\224\231\351\242\230\351\233\206\344\270\216\345\233\236\345\275\222\346\265\213\350\257\225\346\234\272\345\210\266.md""",yes,"""01-raw-data/collection-reports/current/\350\257\212\346\226\255\351\224\231\351\242\230\351\233\206\344\270\216\345\233\236\345\275\222\346\265\213\350\257\225\346\234\272\345\210\266.md""",其他,N/A,项目材料。
+"""01-raw-data/collection-reports/current/\350\277\22126\345\221\250\350\210\252\350\277\220\346\214\207\346\225\260\345\275\225\345\205\245\344\270\216\345\215\240\344\275\215\350\257\264\346\230\216.md""",yes,"""01-raw-data/collection-reports/current/\350\277\22126\345\221\250\350\210\252\350\277\220\346\214\207\346\225\260\345\275\225\345\205\245\344\270\216\345\215\240\344\275\215\350\257\264\346\230\216.md""",其他,N/A,项目材料。
+"""01-raw-data/exchange-rate/README_\345\275\223\345\211\215\346\261\207\347\216\207\346\226\207\344\273\266\350\257\264\346\230\216.md""",yes,"""01-raw-data/exchange-rate/README_\345\275\223\345\211\215\346\261\207\347\216\207\346\226\207\344\273\266\350\257\264\346\230\216.md""",其他,N/A,项目材料。
+"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207.csv""",yes,"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207.csv""",其他,N/A,项目材料。
+"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207_\345\205\254\345\274\200\346\240\270\351\252\214\350\241\245\345\205\205.csv""",yes,"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207_\345\205\254\345\274\200\346\240\270\351\252\214\350\241\245\345\205\205.csv""",其他,N/A,项目材料。
+"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207_\345\221\250\345\272\246.csv""",yes,"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207_\345\221\250\345\272\246.csv""",其他,N/A,项目材料。
+"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207_\345\221\250\345\272\246_\346\274\224\347\244\272\350\241\245\345\205\250\347\211\210.csv""",yes,"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207_\345\221\250\345\272\246_\346\274\224\347\244\272\350\241\245\345\205\250\347\211\210.csv""",其他,N/A,项目材料。
+"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207_template.csv""",yes,"""01-raw-data/exchange-rate/\345\216\237\345\247\213_\346\261\207\347\216\207_template.csv""",其他,N/A,项目材料。
+"""01-raw-data/freight-index/\345\216\237\345\247\213_CCFI\350\277\220\344\273\267\346\214\207\346\225\260.csv""",yes,"""01-raw-data/freight-index/\345\216\237\345\247\213_CCFI\350\277\220\344\273\267\346\214\207\346\225\260.csv""",其他,N/A,项目材料。
+"""01-raw-data/freight-index/\345\216\237\345\247\213_CCFI\350\277\220\344\273\267\346\214\207\346\225\260_\346\274\224\347\244\272\350\241\245\345\205\250\347\211\210.csv""",yes,"""01-raw-data/freight-index/\345\216\237\345\247\213_CCFI\350\277\220\344\273\267\346\214\207\346\225\260_\346\274\224\347\244\272\350\241\245\345\205\250\347\211\210.csv""",其他,N/A,项目材料。
+"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFIS\347\273\223\347\256\227\346\214\207\346\225\260.csv""",yes,"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFIS\347\273\223\347\256\227\346\214\207\346\225\260.csv""",其他,N/A,项目材料。
+"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFIS\347\273\223\347\256\227\346\214\207\346\225\260_\346\274\224\347\244\272\350\241\245\345\205\250\347\211\210.csv""",yes,"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFIS\347\273\223\347\256\227\346\214\207\346\225\260_\346\274\224\347\244\272\350\241\245\345\205\250\347\211\210.csv""",其他,N/A,项目材料。
+"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFI\345\215\225\346\234\237\347\273\274\345\220\210\346\214\207\346\225\260.csv""",yes,"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFI\345\215\225\346\234\237\347\273\274\345\220\210\346\214\207\346\225\260.csv""",其他,N/A,项目材料。
+"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFI\350\277\220\344\273\267\346\214\207\346\225\260.csv""",yes,"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFI\350\277\220\344\273\267\346\214\207\346\225\260.csv""",其他,N/A,项目材料。
+"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFI\350\277\220\344\273\267\346\214\207\346\225\260_\346\274\224\347\244\272\350\241\245\345\205\250\347\211\210.csv""",yes,"""01-raw-data/freight-index/\345\216\237\345\247\213_SCFI\350\277\220\344\273\267\346\214\207\346\225\260_\346\274\224\347\244\272\350\241\245\345\205\250\347\211\210.csv""",其他,N/A,项目材料。
+"""01-raw-data/freight-index/\345\216\237\345\247\213_\350\210\252\350\277\220\346\214\207\346\225\260_26\345\221\250\345\256\214\346\225\264\345\215\240\344\275\215\351\225\277\350\241\250.csv""",yes,"""01-raw-data/freight-index/\345\216\237\345\247\213_\350\210\252\350\277\220\346\214\207\346\225\260_26\345\221\250\345\256\214\346\225\264\345\215\240\344\275\215\351\225\277\350\241\250.csv""",其他,N/A,项目材料。
+"""01-raw-data/freight-index/\345\216\237\345\247\213_\350\277\220\344\273\267\346\214\207\346\225\260_template.csv""",yes,"""01-raw-data/freight-index/\345\216\237\345\247\213_\350\277\220\344\273\267\346\214\207\346\225\260_template.csv""",其他,N/A,项目材料。
+"""01-raw-data/internal-simulated/\345\216\237\345\247\213_\351\231\204\345\212\240\350\264\271\350\247\204\345\210\231.xlsx""",yes,"""01-raw-data/internal-simulated/\345\216\237\345\247\213_\351\231\204\345\212\240\350\264\271\350\247\204\345\210\231.xlsx""",其他,N/A,项目材料。
+"""01-raw-data/oil-price/\345\216\237\345\247\213_\345\270\203\344\274\246\347\211\271\345\216\237\346\262\271.csv""",yes,"""01-raw-data/oil-price/\345\216\237\345\247\213_\345\270\203\344\274\246\347\211\271\345\216\237\346\262\271.csv""",其他,N/A,项目材料。
+"""01-raw-data/route-dictionary/\345\216\237\345\247\213_\350\210\252\347\272\277\345\255\227\345\205\270.xlsx""",yes,"""01-raw-data/route-dictionary/\345\216\237\345\247\213_\350\210\252\347\272\277\345\255\227\345\205\270.xlsx""",其他,N/A,项目材料。
+"""01-raw-data/route-dictionary/\345\216\237\345\247\213_\350\210\252\347\272\277\345\255\227\345\205\270_template.csv""",yes,"""01-raw-data/route-dictionary/\345\216\237\345\247\213_\350\210\252\347\272\277\345\255\227\345\205\270_template.csv""",其他,N/A,项目材料。
+"""01-raw-data/surcharge-rules/\345\216\237\345\247\213_\351\231\204\345\212\240\350\264\271\350\247\204\345\210\231.xlsx""",yes,"""01-raw-data/surcharge-rules/\345\216\237\345\247\213_\351\231\204\345\212\240\350\264\271\350\247\204\345\210\231.xlsx""",其他,N/A,项目材料。
+"""01-raw-data/surcharge-rules/\345\216\237\345\247\213_\351\231\204\345\212\240\350\264\271\350\247\204\345\210\231_template.xlsx""",yes,"""01-raw-data/surcharge-rules/\345\216\237\345\247\213_\351\231\204\345\212\240\350\264\271\350\247\204\345\210\231_template.xlsx""",其他,N/A,项目材料。
+"""02-governance/CR-02A_\345\255\227\346\256\265\345\255\227\345\205\270.xlsx""",yes,"""02-governance/CR-02A_\345\255\227\346\256\265\345\255\227\345\205\270.xlsx""",其他,N/A,项目材料。
+"""02-governance/CR-02A_\345\255\227\346\256\265\345\255\227\345\205\270_template.xlsx""",yes,"""02-governance/CR-02A_\345\255\227\346\256\265\345\255\227\345\205\270_template.xlsx""",其他,N/A,项目材料。
+"""02-governance/CR-02B_\346\270\205\346\264\227\345\220\216\344\270\273\346\225\260\346\215\256.xlsx""",yes,"""02-governance/CR-02B_\346\270\205\346\264\227\345\220\216\344\270\273\346\225\260\346\215\256.xlsx""",其他,N/A,项目材料。
+"""02-governance/CR-02B_\346\270\205\346\264\227\345\220\216\344\270\273\346\225\260\346\215\256_template.xlsx""",yes,"""02-governance/CR-02B_\346\270\205\346\264\227\345\220\216\344\270\273\346\225\260\346\215\256_template.xlsx""",其他,N/A,项目材料。
+"""02-governance/CR-02C_\346\225\260\346\215\256\350\204\261\346\225\217\344\270\216\346\235\245\346\272\220\350\257\264\346\230\216.docx""",yes,"""02-governance/CR-02C_\346\225\260\346\215\256\350\204\261\346\225\217\344\270\216\346\235\245\346\272\220\350\257\264\346\230\216.docx""",其他,N/A,项目材料。
+"""02-processed-data/CR-MVP_\346\225\260\346\215\256\350\264\250\351\207\217\346\243\200\346\237\245.csv""",yes,"""02-processed-data/CR-MVP_\346\225\260\346\215\256\350\264\250\351\207\217\346\243\200\346\237\245.csv""",其他,N/A,项目材料。
+"""02-processed-data/CR-MVP_\346\270\205\346\264\227\345\220\216\344\270\273\346\225\260\346\215\256.xlsx""",yes,"""02-processed-data/CR-MVP_\346\270\205\346\264\227\345\220\216\344\270\273\346\225\260\346\215\256.xlsx""",其他,N/A,项目材料。
+"""03-analysis/CR-04A_\346\214\207\346\240\207\350\256\241\347\256\227\347\273\223\346\236\234.xlsx""",yes,"""03-analysis/CR-04A_\346\214\207\346\240\207\350\256\241\347\256\227\347\273\223\346\236\234.xlsx""",其他,N/A,指标计算结果，作为项目唯一数值源。
+"""03-analysis/CR-04A_\346\214\207\346\240\207\350\256\241\347\256\227\347\273\223\346\236\234_template.xlsx""",yes,"""03-analysis/CR-04A_\346\214\207\346\240\207\350\256\241\347\256\227\347\273\223\346\236\234_template.xlsx""",其他,N/A,指标计算结果，作为项目唯一数值源。
+"""03-analysis/rerun-simulations/week2-prime/CR-04A_\346\214\207\346\240\207\350\256\241\347\256\227\347\273\223\346\236\234_week2-prime.xlsx""",yes,"""03-analysis/rerun-simulations/week2-prime/CR-04A_\346\214\207\346\240\207\350\256\241\347\256\227\347\273\223\346\236\234_week2-prime.xlsx""",其他,N/A,指标计算结果，作为项目唯一数值源。
+"""03-analysis/rerun-simulations/week3-prime/CR-04A_\346\214\207\346\240\207\350\256\241\347\256\227\347\273\223\346\236\234_week3-prime.xlsx""",yes,"""03-analysis/rerun-simulations/week3-prime/CR-04A_\346\214\207\346\240\207\350\256\241\347\256\227\347\273\223\346\236\234_week3-prime.xlsx""",其他,N/A,指标计算结果，作为项目唯一数值源。
+"""04-decision-report/CR-01_\344\270\232\345\212\241\347\227\233\347\202\271\344\270\216\344\273\267\345\200\274\344\270\273\345\274\240.docx""",yes,"""04-decision-report/CR-01_\344\270\232\345\212\241\347\227\233\347\202\271\344\270\216\344\273\267\345\200\274\344\270\273\345\274\240.docx""",其他,N/A,项目材料。
+"""04-decision-report/CR-01_\344\270\232\345\212\241\347\227\233\347\202\271\344\270\216\344\273\267\345\200\274\344\270\273\345\274\240_outline.md""",yes,"""04-decision-report/CR-01_\344\270\232\345\212\241\347\227\233\347\202\271\344\270\216\344\273\267\345\200\274\344\270\273\345\274\240_outline.md""",其他,N/A,项目材料。
+"""04-decision-report/CR-03_\345\267\245\344\275\234\346\265\201\350\256\276\350\256\241\350\257\264\346\230\216\344\271\246.docx""",yes,"""04-decision-report/CR-03_\345\267\245\344\275\234\346\265\201\350\256\276\350\256\241\350\257\264\346\230\216\344\271\246.docx""",其他,N/A,项目材料。
+"""04-decision-report/CR-03_\345\267\245\344\275\234\346\265\201\350\256\276\350\256\241\350\257\264\346\230\216\344\271\246_outline.md""",yes,"""04-decision-report/CR-03_\345\267\245\344\275\234\346\265\201\350\256\276\350\256\241\350\257\264\346\230\216\344\271\246_outline.md""",其他,N/A,项目材料。
+"""04-decision-report/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256.csv""",yes,"""04-decision-report/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256.csv""",其他,N/A,项目材料。
+"""04-decision-report/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256.docx""",yes,"""04-decision-report/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256.docx""",其他,N/A,项目材料。
+"""04-decision-report/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256.md""",yes,"""04-decision-report/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256.md""",其他,N/A,项目材料。
+"""04-decision-report/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_outline.md""",yes,"""04-decision-report/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_outline.md""",其他,N/A,项目材料。
+"""04-decision-report/CR-05_\345\210\206\346\236\220\346\212\245\345\221\212.docx""",yes,"""04-decision-report/CR-05_\345\210\206\346\236\220\346\212\245\345\221\212.docx""",其他,N/A,项目材料。
+"""04-decision-report/CR-05_\345\210\206\346\236\220\346\212\245\345\221\212.md""",yes,"""04-decision-report/CR-05_\345\210\206\346\236\220\346\212\245\345\221\212.md""",其他,N/A,项目材料。
+"""04-decision-report/CR-05_\345\210\206\346\236\220\346\212\245\345\221\212_outline.md""",yes,"""04-decision-report/CR-05_\345\210\206\346\236\220\346\212\245\345\221\212_outline.md""",其他,N/A,项目材料。
+"""04-decision-report/rerun-simulations/week2-prime/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_week2-prime.csv""",yes,"""04-decision-report/rerun-simulations/week2-prime/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_week2-prime.csv""",其他,N/A,模拟复跑Week2’材料，验证输入变化导致输出变化。
+"""04-decision-report/rerun-simulations/week2-prime/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_week2-prime.docx""",yes,"""04-decision-report/rerun-simulations/week2-prime/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_week2-prime.docx""",其他,N/A,模拟复跑Week2’材料，验证输入变化导致输出变化。
+"""04-decision-report/rerun-simulations/week3-prime/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_week3-prime.csv""",yes,"""04-decision-report/rerun-simulations/week3-prime/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_week3-prime.csv""",其他,N/A,模拟复跑Week3’材料，验证输入变化导致输出变化。
+"""04-decision-report/rerun-simulations/week3-prime/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_week3-prime.docx""",yes,"""04-decision-report/rerun-simulations/week3-prime/CR-04B_\344\270\232\345\212\241\345\206\263\347\255\226\345\273\272\350\256\256_week3-prime.docx""",其他,N/A,模拟复跑Week3’材料，验证输入变化导致输出变化。
+"""05-presentation/CR-06_\345\217\202\350\265\233\345\261\225\347\244\272PPT_storyboard.md""",yes,"""05-presentation/CR-06_\345\217\202\350\265\233\345\261\225\347\244\272PPT_storyboard.md""",其他,N/A,项目材料。
+"""05-presentation/CR-06_\345\217\257\346\211\223\345\215\260PPT\347\250\277.md""",yes,"""05-presentation/CR-06_\345\217\257\346\211\223\345\215\260PPT\347\250\277.md""",其他,N/A,项目材料。
+"""06-visual-demo/CR-07_\351\227\255\347\216\257\351\225\277\345\233\276.png""",yes,"""06-visual-demo/CR-07_\351\227\255\347\216\257\351\225\277\345\233\276.png""",其他,N/A,项目材料。
+"""06-visual-demo/CR-07_\351\227\255\347\216\257\351\225\277\345\233\276_wireframe.md""",yes,"""06-visual-demo/CR-07_\351\227\255\347\216\257\351\225\277\345\233\276_wireframe.md""",其他,N/A,项目材料。
+"""06-visual-demo/CR-08_Demo\346\274\224\347\244\272\350\204\232\346\234\254.docx""",yes,"""06-visual-demo/CR-08_Demo\346\274\224\347\244\272\350\204\232\346\234\254.docx""",其他,N/A,项目材料。
+"""06-visual-demo/CR-08_Demo\346\274\224\347\244\272\350\204\232\346\234\254_outline.md""",yes,"""06-visual-demo/CR-08_Demo\346\274\224\347\244\272\350\204\232\346\234\254_outline.md""",其他,N/A,项目材料。
+"""07-validation/CR-09_\351\207\217\345\214\226\351\252\214\350\257\201\350\241\250.xlsx""",yes,"""07-validation/CR-09_\351\207\217\345\214\226\351\252\214\350\257\201\350\241\250.xlsx""",其他,N/A,量化验证表，记录效率提升与验证口径。
+"""07-validation/CR-09_\351\207\217\345\214\226\351\252\214\350\257\201\350\241\250_template.xlsx""",yes,"""07-validation/CR-09_\351\207\217\345\214\226\351\252\214\350\257\201\350\241\250_template.xlsx""",其他,N/A,量化验证表，记录效率提升与验证口径。
+"""08-submission/01_\344\275\234\345\223\201\350\257\264\346\230\216\346\226\207\346\241\243_outline.docx""",yes,"""08-submission/01_\344\275\234\345\223\201\350\257\264\346\230\216\346\226\207\346\241\243_outline.docx""",其他,N/A,项目材料。
+"""08-submission/CR-10A_\350\257\204\345\247\224\351\230\205\350\257\273\346\214\207\345\215\227.docx""",yes,"""08-submission/CR-10A_\350\257\204\345\247\224\351\230\205\350\257\273\346\214\207\345\215\227.docx""",其他,N/A,项目材料。
+"""08-submission/CR-10A_\350\257\204\345\247\224\351\230\205\350\257\273\346\214\207\345\215\227_outline.md""",yes,"""08-submission/CR-10A_\350\257\204\345\247\224\351\230\205\350\257\273\346\214\207\345\215\227_outline.md""",其他,N/A,项目材料。
+"""08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216.docx""",yes,"""08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216.docx""",其他,N/A,项目材料。
+"""08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216_outline.md""",yes,"""08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216_outline.md""",其他,N/A,项目材料。
+"""08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225.docx""",yes,"""08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225.docx""",其他,N/A,项目材料。
+"""08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225_outline.md""",yes,"""08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225_outline.md""",其他,N/A,项目材料。
+"""08-submission/CR-11_\344\275\234\345\223\201\350\257\264\346\230\216\346\226\207\346\241\243.md""",yes,"""08-submission/CR-11_\344\275\234\345\223\201\350\257\264\346\230\216\346\226\207\346\241\243.md""",其他,N/A,项目材料。
+.gitignore,yes,.gitignore,仓库配置,N/A,排除草稿、日志、缓存、压缩包等非评审材料。
+00-control/batch-map.md,yes,00-control/batch-map.md,控制层,N/A,Markdown说明、报告或QA材料。
+00-control/data-dependency-stoplist.md,yes,00-control/data-dependency-stoplist.md,控制层,N/A,Markdown说明、报告或QA材料。
+00-control/data-governance/README.md,yes,00-control/data-governance/README.md,控制层,N/A,Markdown说明、报告或QA材料。
+00-control/data-governance/carrier-announcement-natural-week-rules.txt,yes,00-control/data-governance/carrier-announcement-natural-week-rules.txt,控制层,N/A,项目材料。
+00-control/data-governance/chart-derived-index-c-rules.md,yes,00-control/data-governance/chart-derived-index-c-rules.md,控制层,N/A,Markdown说明、报告或QA材料。
+00-control/data-governance/natural-week-multisource-data-governance.txt,yes,00-control/data-governance/natural-week-multisource-data-governance.txt,控制层,N/A,项目材料。
+00-control/data-governance/usd-cny-natural-week-alignment-rules.txt,yes,00-control/data-governance/usd-cny-natural-week-alignment-rules.txt,控制层,N/A,项目材料。
+00-control/naming-rules.md,yes,00-control/naming-rules.md,控制层,N/A,Markdown说明、报告或QA材料。
+00-control/placeholder-file-index.md,yes,00-control/placeholder-file-index.md,控制层,N/A,Markdown说明、报告或QA材料。
+00-control/qa-checklist.md,yes,00-control/qa-checklist.md,控制层,N/A,Markdown说明、报告或QA材料。
+01-raw-data/carrier-announcements/carrier-announcements-evidence-backlog.csv,yes,01-raw-data/carrier-announcements/carrier-announcements-evidence-backlog.csv,数据层,B_public_excerpt / PENDING_REVIEW,结构化数据或清单文件。
+01-raw-data/carrier-announcements/carrier-announcements-natural-week-events-demo-completed.csv,yes,01-raw-data/carrier-announcements/carrier-announcements-natural-week-events-demo-completed.csv,数据层,B_public_excerpt / PENDING_REVIEW,结构化数据或清单文件。
+01-raw-data/carrier-announcements/carrier-announcements-natural-week-events.csv,yes,01-raw-data/carrier-announcements/carrier-announcements-natural-week-events.csv,数据层,B_public_excerpt / PENDING_REVIEW,结构化数据或清单文件。
+01-raw-data/carrier-announcements/week2-input/carrier-announcement-week2-simulated.csv,yes,01-raw-data/carrier-announcements/week2-input/carrier-announcement-week2-simulated.csv,数据层,B_public_excerpt / PENDING_REVIEW,结构化数据或清单文件。
+01-raw-data/carrier-announcements/week3-input/carrier-announcement-week3-simulated.csv,yes,01-raw-data/carrier-announcements/week3-input/carrier-announcement-week3-simulated.csv,数据层,B_public_excerpt / PENDING_REVIEW,结构化数据或清单文件。
+01-raw-data/collection-reports/current/26-week-placeholder-completeness-summary.csv,yes,01-raw-data/collection-reports/current/26-week-placeholder-completeness-summary.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/26-week-placeholder-file-check.csv,yes,01-raw-data/collection-reports/current/26-week-placeholder-file-check.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/archive-move-index.csv,yes,01-raw-data/collection-reports/current/archive-move-index.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/coverage-after-chart-10-rounds.csv,yes,01-raw-data/collection-reports/current/coverage-after-chart-10-rounds.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/coverage-after-chart-10-rounds.md,yes,01-raw-data/collection-reports/current/coverage-after-chart-10-rounds.md,数据层,B_public_excerpt / C_demo_simulated,Markdown说明、报告或QA材料。
+01-raw-data/collection-reports/current/coverage-difficulties-below-90-after-chart-10-rounds.csv,yes,01-raw-data/collection-reports/current/coverage-difficulties-below-90-after-chart-10-rounds.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/coverage-report-current.csv,yes,01-raw-data/collection-reports/current/coverage-report-current.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/data-source-website-list.csv,yes,01-raw-data/collection-reports/current/data-source-website-list.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/data-source-website-list.md,yes,01-raw-data/collection-reports/current/data-source-website-list.md,数据层,B_public_excerpt / C_demo_simulated,Markdown说明、报告或QA材料。
+01-raw-data/collection-reports/current/document-library-cleanup-recommendations.csv,yes,01-raw-data/collection-reports/current/document-library-cleanup-recommendations.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/document-library-inventory.csv,yes,01-raw-data/collection-reports/current/document-library-inventory.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/document-library-summary.csv,yes,01-raw-data/collection-reports/current/document-library-summary.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/final-coverage-after-10-rounds.csv,yes,01-raw-data/collection-reports/current/final-coverage-after-10-rounds.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/final-coverage-after-10-rounds.md,yes,01-raw-data/collection-reports/current/final-coverage-after-10-rounds.md,数据层,B_public_excerpt / C_demo_simulated,Markdown说明、报告或QA材料。
+01-raw-data/collection-reports/current/post-cleanup-verification.csv,yes,01-raw-data/collection-reports/current/post-cleanup-verification.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/current/public-data-write-summary.csv,yes,01-raw-data/collection-reports/current/public-data-write-summary.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/data-source-website-list.csv,yes,01-raw-data/collection-reports/data-source-website-list.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/data-source-website-list.md,yes,01-raw-data/collection-reports/data-source-website-list.md,数据层,B_public_excerpt / C_demo_simulated,Markdown说明、报告或QA材料。
+01-raw-data/collection-reports/document-library-cleanup-recommendations.csv,yes,01-raw-data/collection-reports/document-library-cleanup-recommendations.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/document-library-inventory.csv,yes,01-raw-data/collection-reports/document-library-inventory.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/document-library-summary.csv,yes,01-raw-data/collection-reports/document-library-summary.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/collection-reports/public-data-write-summary.csv,yes,01-raw-data/collection-reports/public-data-write-summary.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/data-ingestion-checklist.md,yes,01-raw-data/data-ingestion-checklist.md,数据层,B_public_excerpt / C_demo_simulated,Markdown说明、报告或QA材料。
+01-raw-data/exchange-rate/usd-cny-screenshot-ocr-daily.csv,yes,01-raw-data/exchange-rate/usd-cny-screenshot-ocr-daily.csv,数据层,B_screenshot_ocr / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/exchange-rate/usd-cny-weekly-aligned.csv,yes,01-raw-data/exchange-rate/usd-cny-weekly-aligned.csv,数据层,B_screenshot_ocr / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/exchange-rate/usd-cny-weekly-collection-plan.csv,yes,01-raw-data/exchange-rate/usd-cny-weekly-collection-plan.csv,数据层,B_screenshot_ocr / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/exchange-rate/usd-cny-weekly-from-screenshot.csv,yes,01-raw-data/exchange-rate/usd-cny-weekly-from-screenshot.csv,数据层,B_screenshot_ocr / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/exchange-rate/week2-input/usd-cny-week2-simulated-input.csv,yes,01-raw-data/exchange-rate/week2-input/usd-cny-week2-simulated-input.csv,数据层,B_screenshot_ocr / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/exchange-rate/week3-input/usd-cny-week3-simulated-input.csv,yes,01-raw-data/exchange-rate/week3-input/usd-cny-week3-simulated-input.csv,数据层,B_screenshot_ocr / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/freight-index/ccfi-weekly-aligned.csv,yes,01-raw-data/freight-index/ccfi-weekly-aligned.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/freight-index/week2-input/scfi-week2-simulated-input.csv,yes,01-raw-data/freight-index/week2-input/scfi-week2-simulated-input.csv,数据层,A_official / B_public_excerpt,结构化数据或清单文件。
+01-raw-data/freight-index/week3-input/scfi-week3-simulated-input.csv,yes,01-raw-data/freight-index/week3-input/scfi-week3-simulated-input.csv,数据层,A_official / B_public_excerpt,结构化数据或清单文件。
+01-raw-data/mvp-raw-files-status.md,yes,01-raw-data/mvp-raw-files-status.md,数据层,B_public_excerpt / C_demo_simulated,Markdown说明、报告或QA材料。
+01-raw-data/surcharge-rules/README_surcharge_reference_2026_05.md,yes,01-raw-data/surcharge-rules/README_surcharge_reference_2026_05.md,数据层,B_public_excerpt / C_demo_simulated,Markdown说明、报告或QA材料。
+01-raw-data/surcharge-rules/surcharge-cost-model-reference-input-2026-05.csv,yes,01-raw-data/surcharge-rules/surcharge-cost-model-reference-input-2026-05.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+01-raw-data/surcharge-rules/surcharge-market-reference-2026-05.csv,yes,01-raw-data/surcharge-rules/surcharge-market-reference-2026-05.csv,数据层,B_public_excerpt / C_demo_simulated,结构化数据或清单文件。
+02-governance/surcharge-scenario-cost-model.md,yes,02-governance/surcharge-scenario-cost-model.md,治理层,A/B/C/PENDING 分层治理,Markdown说明、报告或QA材料。
+02-processed-data/canglu-demo-cost-model-scenario-based.csv,yes,02-processed-data/canglu-demo-cost-model-scenario-based.csv,处理层,A/B/C/PENDING 分层治理,结构化数据或清单文件。
+02-processed-data/canglu-demo-cost-model-scenario-based.xlsx,yes,02-processed-data/canglu-demo-cost-model-scenario-based.xlsx,处理层,A/B/C/PENDING 分层治理,Excel分析、指标或验证文件。
+02-processed-data/canglu-radar-scenario-cost-model.xlsx,yes,02-processed-data/canglu-radar-scenario-cost-model.xlsx,处理层,A/B/C/PENDING 分层治理,Excel分析、指标或验证文件。
+02-processed-data/surcharge-scenario-calculation-detail-2026-05.csv,yes,02-processed-data/surcharge-scenario-calculation-detail-2026-05.csv,处理层,A/B/C/PENDING 分层治理,结构化数据或清单文件。
+02-processed-data/surcharge-scenario-definitions-2026-05.csv,yes,02-processed-data/surcharge-scenario-definitions-2026-05.csv,处理层,A/B/C/PENDING 分层治理,结构化数据或清单文件。
+02-processed-data/surcharge-scenario-rules-2026-05.csv,yes,02-processed-data/surcharge-scenario-rules-2026-05.csv,处理层,A/B/C/PENDING 分层治理,结构化数据或清单文件。
+02-processed-data/surcharge-scenario-summary-2026-05.csv,yes,02-processed-data/surcharge-scenario-summary-2026-05.csv,处理层,A/B/C/PENDING 分层治理,结构化数据或清单文件。
+03-analysis/rerun-simulations/week2-prime/latest-summary-week2-prime.csv,yes,03-analysis/rerun-simulations/week2-prime/latest-summary-week2-prime.csv,分析层,由CR-04A数值源计算生成；含A/C/PENDING标注,模拟复跑Week2’材料，验证输入变化导致输出变化。
+03-analysis/rerun-simulations/week3-prime/latest-summary-week3-prime.csv,yes,03-analysis/rerun-simulations/week3-prime/latest-summary-week3-prime.csv,分析层,由CR-04A数值源计算生成；含A/C/PENDING标注,模拟复跑Week3’材料，验证输入变化导致输出变化。
+05-presentation/PPT_EXPORT_NOTE.md,yes,05-presentation/PPT_EXPORT_NOTE.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/assets/generated/manifest.json,yes,05-presentation/assets/generated/manifest.json,展示层,展示材料；不新增数据口径,项目材料。
+05-presentation/cr-06-submission-deck.html,yes,05-presentation/cr-06-submission-deck.html,展示层,展示材料；不新增数据口径,HTML展示或占位材料。
+05-presentation/printable-markdown/README.md,yes,05-presentation/printable-markdown/README.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-markdown/p1-printable.md,yes,05-presentation/printable-markdown/p1-printable.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-markdown/p2-printable.md,yes,05-presentation/printable-markdown/p2-printable.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-markdown/p3-printable.md,yes,05-presentation/printable-markdown/p3-printable.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-markdown/p4-printable.md,yes,05-presentation/printable-markdown/p4-printable.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-markdown/p5-printable.md,yes,05-presentation/printable-markdown/p5-printable.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-markdown/p6-printable.md,yes,05-presentation/printable-markdown/p6-printable.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-markdown/p7-printable.md,yes,05-presentation/printable-markdown/p7-printable.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-markdown/p8-printable.md,yes,05-presentation/printable-markdown/p8-printable.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P01.md,yes,05-presentation/printable-pages/P01.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P02.md,yes,05-presentation/printable-pages/P02.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P03.md,yes,05-presentation/printable-pages/P03.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P04.md,yes,05-presentation/printable-pages/P04.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P05.md,yes,05-presentation/printable-pages/P05.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P06.md,yes,05-presentation/printable-pages/P06.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P07.md,yes,05-presentation/printable-pages/P07.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P08.md,yes,05-presentation/printable-pages/P08.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P09.md,yes,05-presentation/printable-pages/P09.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/printable-pages/P10.md,yes,05-presentation/printable-pages/P10.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+05-presentation/screenshots/demo-screenshot-P01.png,yes,05-presentation/screenshots/demo-screenshot-P01.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+05-presentation/screenshots/demo-screenshot-P02.png,yes,05-presentation/screenshots/demo-screenshot-P02.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+05-presentation/screenshots/demo-screenshot-P03.png,yes,05-presentation/screenshots/demo-screenshot-P03.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+05-presentation/screenshots/demo-screenshot-P04.png,yes,05-presentation/screenshots/demo-screenshot-P04.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+05-presentation/screenshots/demo-screenshot-P05.png,yes,05-presentation/screenshots/demo-screenshot-P05.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+05-presentation/screenshots/demo-screenshot-P06.png,yes,05-presentation/screenshots/demo-screenshot-P06.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+05-presentation/screenshots/demo-screenshot-P07.png,yes,05-presentation/screenshots/demo-screenshot-P07.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+05-presentation/screenshots/demo-screenshot-P08.png,yes,05-presentation/screenshots/demo-screenshot-P08.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+05-presentation/screenshots/demo-screenshot-P09.png,yes,05-presentation/screenshots/demo-screenshot-P09.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+05-presentation/screenshots/demo-screenshot-P10.png,yes,05-presentation/screenshots/demo-screenshot-P10.png,展示层,展示材料；不新增数据口径,图片或截图材料。
+06-visual-demo/demo-assets/demo-narration-subtitles.md,yes,06-visual-demo/demo-assets/demo-narration-subtitles.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。
+06-visual-demo/demo-screenshots/README.md,yes,06-visual-demo/demo-screenshots/README.md,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P01.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P01.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P02.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P02.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P03.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P03.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P04.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P04.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P05.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P05.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P06.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P06.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P07.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P07.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P08.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P08.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P09.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P09.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+06-visual-demo/demo-screenshots/demo-screenshot-P10.png,yes,06-visual-demo/demo-screenshots/demo-screenshot-P10.png,展示层,展示材料；不新增数据口径,Demo截图素材，用于快速浏览演示流程。
+08-submission/CR-10C_材料目录.md,yes,08-submission/CR-10C_材料目录.md,提交层,提交/评审导航材料,最终版材料目录，列出当前仓库跟踪文件。
+08-submission/final-package/manifest.csv,yes,08-submission/final-package/manifest.csv,提交层,提交/评审导航材料,提交包清单，列明文件用途和质量口径。
+README.md,yes,README.md,仓库入口,N/A,仓库首页与评审阅读导航。
