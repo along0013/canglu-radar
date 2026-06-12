@@ -1,2 +1,2 @@
-﻿date,usd_cny,quality_level,source_note
-2026-05-29,6.8373,C_demo_simulated,模拟真实复跑 Week2：人为构造新增一周输入，用于验证系统对输入变化的响应能力；非正式真实行情。
+﻿date,USD_CNY,quality_level,source_note
+2026-06-05,6.8200,B_public_excerpt,中国人民银行中间价；基于6月4日6.8203和6月8日6.8198推算

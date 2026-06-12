@@ -12,7 +12,9 @@ desktop.ini
 *.log
 logs/
 log/
-09-logs/
+09-logs/*
+!09-logs/rerun-records-week2-prime.md
+!09-logs/rerun-records-week3-prime.md
 
 # Cache / temporary files
 __pycache__/

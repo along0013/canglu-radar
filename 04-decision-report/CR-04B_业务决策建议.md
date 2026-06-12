@@ -1,9 +1,11 @@
 ---
 口径：所有指标数字来自 CR-04A_指标计算结果.xlsx
-最新周：2026-05-22
+历史基准周：2026-05-22；当前复跑周：2026-06-12
 ---
 
 # 一、最新周预警摘要
+
+本表基于2026-05-22（历史高位周）数据。系统已验证可复跑至2026-06-12，详见 `09-logs/rerun-records-week2-prime.md` 和 `09-logs/rerun-records-week3-prime.md`。
 
 | route_name | value | unit | wow_pct | z_score | warning_level | warning_tags | quality_level |
 |---|---|---|---|---|---|---|---|
@@ -12,6 +14,18 @@
 | 美西航线 | 3154.0 | USD/FEU | 1.15 | 2.27 | 红色预警 | P95高位;Z≥2异常;连续上涨≥3周 | A_official |
 | 美东航线 | 4313.0 | USD/FEU | 2.11 | 2.36 | 红色预警 | P95高位;Z≥2异常;连续上涨≥3周 | A_official |
 | SCFI综合指数 | 2218.15 | points | 3.62 | 2.23 | 红色预警 | P95高位;Z≥2异常;连续上涨≥3周 | A_official |
+
+# 一补、当前周（2026-06-12）复跑指标摘要
+
+本表基于2026-06-12复跑输入生成：SCFI综合指数为上海航交所官网真实发布数据，分航线基于2026-06-05真实分航线数据按综合指数涨幅比例推算。
+
+|route_name|value|unit|wow_pct|z_score|warning_level|warning_tags|quality_level|
+|---|---|---|---|---|---|---|---|
+|欧洲航线|2852.0|USD/TEU|9.48|5.38|红色预警|P95高位;Z≥2异常;连续上涨≥3周|B_public_excerpt|
+|地中海航线|4196.0|USD/TEU|9.5|4.19|红色预警|P95高位;Z≥2异常;连续上涨≥3周|B_public_excerpt|
+|美西航线|4984.0|USD/FEU|9.49|4.47|红色预警|P95高位;Z≥2异常;连续上涨≥3周|B_public_excerpt|
+|美东航线|6286.0|USD/FEU|9.49|4.34|红色预警|P95高位;Z≥2异常;连续上涨≥3周|B_public_excerpt|
+|SCFI综合指数|2985.22|points|9.49|3.98|红色预警|P95高位;Z≥2异常;连续上涨≥3周|B_public_excerpt|
 
 # 二、差异化业务建议
 
