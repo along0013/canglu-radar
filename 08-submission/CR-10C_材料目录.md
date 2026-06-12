@@ -1,13 +1,17 @@
 # CR-10C 材料目录（最终版）
-本目录基于当前 Git 正式跟踪/候选提交文件生成，共 192 个文件。已排除草稿、缓存、批量日志和临时探针；仅保留两份真实数据复跑记录。
+本目录基于当前 Git 正式跟踪/候选提交文件生成，共 194 个文件。已排除草稿、缓存、批量日志和临时探针；仅保留两份真实数据复跑记录。
 ## 推荐评审阅读顺序
 1. `README.md`
 2. `08-submission/CR-11_作品说明文档.md`
-3. `03-analysis/CR-04A_指标计算结果.xlsx`
-4. `04-decision-report/CR-04B_业务决策建议.md`
-5. `04-decision-report/CR-05_分析报告.md`
-6. `03-analysis/CR-04C_敏感性分析表.md`
-7. `09-logs/rerun-records-week2-prime.md` 与 `09-logs/rerun-records-week3-prime.md`
+3. `05-presentation/舱路雷达_参赛展示PPT.pdf`
+4. `03-analysis/CR-04A_指标计算结果.xlsx`
+5. `04-decision-report/CR-04B_业务决策建议.md`
+6. `04-decision-report/CR-05_分析报告.md`
+7. `03-analysis/CR-04C_敏感性分析表.md`
+8. `09-logs/rerun-records-week2-prime.md` 与 `09-logs/rerun-records-week3-prime.md`
+## 参赛展示文件
+- `05-presentation/舱路雷达_参赛展示PPT.pdf`：10页可上传展示PDF，由P01-P10截图顺序合并。
+- `05-presentation/cr-06-submission-deck-10p.html`：10页展示HTML源，可用于后续转换PPTX。
 ## 真实数据复跑更新
 - Week2：2026-06-05，SCFI综合指数2726.48，上海航运交易所真实发布数据，质量等级 A_official。
 - Week3：2026-06-12，SCFI综合指数2985.22来自上海航交所官网真实发布；分航线按6月5日真实分航线数据与综合指数涨幅比例推算，质量等级 B_public_excerpt。
@@ -33,13 +37,13 @@
 - `01-raw-data/carrier-announcements/carrier-announcements-natural-week-events.csv`：CSV数据、清单或计算输出。
 - `01-raw-data/carrier-announcements/week2-input/carrier-announcement-week2-simulated.csv`：复跑输入数据，已从模拟替换为公开数据口径。
 - `01-raw-data/carrier-announcements/week3-input/carrier-announcement-week3-simulated.csv`：复跑输入数据，已从模拟替换为公开数据口径。
-- `01-raw-data/carrier-announcements/原始_船公司公告_BAF_ONE.pdf`：项目文件。
+- `01-raw-data/carrier-announcements/原始_船公司公告_BAF_ONE.pdf`：PDF展示或提交材料。
 - `01-raw-data/carrier-announcements/原始_船公司公告_BAF_行业转载.txt`：项目文件。
-- `01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基.pdf`：项目文件。
+- `01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基.pdf`：PDF展示或提交材料。
 - `01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基候选.txt`：项目文件。
-- `01-raw-data/carrier-announcements/原始_船公司公告_PSS_中远.pdf`：项目文件。
+- `01-raw-data/carrier-announcements/原始_船公司公告_PSS_中远.pdf`：PDF展示或提交材料。
 - `01-raw-data/carrier-announcements/原始_船公司公告_PSS_马士基.txt`：项目文件。
-- `01-raw-data/carrier-announcements/原始_船公司公告_停航_MSC.pdf`：项目文件。
+- `01-raw-data/carrier-announcements/原始_船公司公告_停航_MSC.pdf`：PDF展示或提交材料。
 - `01-raw-data/carrier-announcements/原始_船公司公告_停航_综合转载.txt`：项目文件。
 - `01-raw-data/carrier-announcements/原始_船公司公告_结构化样本.csv`：CSV数据、清单或计算输出。
 - `01-raw-data/carrier-announcements/原始_船公司公告_跳港港口拥堵_MSC转载.txt`：项目文件。
@@ -133,8 +137,9 @@
 ## 展示层-PPT
 - `05-presentation/CR-06_参赛展示PPT_storyboard.md`：Markdown说明、报告或QA材料。
 - `05-presentation/CR-06_可打印PPT稿.md`：Markdown说明、报告或QA材料。
-- `05-presentation/PPT_EXPORT_NOTE.md`：Markdown说明、报告或QA材料。
+- `05-presentation/PPT_EXPORT_NOTE.md`：PPT/PDF导出说明，记录PDF替代交付口径。
 - `05-presentation/assets/generated/manifest.json`：项目文件。
+- `05-presentation/cr-06-submission-deck-10p.html`：10页参赛展示HTML源文件，用于后续导出PPTX或PDF。
 - `05-presentation/cr-06-submission-deck.html`：HTML演示或展示素材。
 - `05-presentation/printable-markdown/README.md`：Markdown说明、报告或QA材料。
 - `05-presentation/printable-markdown/p1-printable.md`：Markdown说明、报告或QA材料。
@@ -165,6 +170,7 @@
 - `05-presentation/screenshots/demo-screenshot-P08.png`：演示截图或图表素材。
 - `05-presentation/screenshots/demo-screenshot-P09.png`：演示截图或图表素材。
 - `05-presentation/screenshots/demo-screenshot-P10.png`：演示截图或图表素材。
+- `05-presentation/舱路雷达_参赛展示PPT.pdf`：可直接上传/查看的10页参赛展示PDF，由P01-P10截图按顺序合成。
 ## 展示层-Demo
 - `06-visual-demo/CR-07_闭环长图.png`：演示截图或图表素材。
 - `06-visual-demo/CR-07_闭环长图_wireframe.md`：Markdown说明、报告或QA材料。

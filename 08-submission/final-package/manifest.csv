@@ -1,6 +1,4 @@
 ﻿source,included,arcname,module,quality_level,note
-09-logs/rerun-records-week2-prime.md,yes,09-logs/rerun-records-week2-prime.md,复跑记录,N/A,Week2真实公开数据复跑记录。
-09-logs/rerun-records-week3-prime.md,yes,09-logs/rerun-records-week3-prime.md,复跑记录,N/A,Week3真实公开数据/推算口径复跑记录。
 .gitignore,yes,.gitignore,仓库配置,N/A,项目文件。
 00-control/batch-map.md,yes,00-control/batch-map.md,控制层,N/A,Markdown说明、报告或QA材料。
 00-control/data-dependency-stoplist.md,yes,00-control/data-dependency-stoplist.md,控制层,N/A,Markdown说明、报告或QA材料。
@@ -17,13 +15,13 @@
 01-raw-data/carrier-announcements/carrier-announcements-natural-week-events.csv,yes,01-raw-data/carrier-announcements/carrier-announcements-natural-week-events.csv,数据层-原始数据,N/A,CSV数据、清单或计算输出。
 01-raw-data/carrier-announcements/week2-input/carrier-announcement-week2-simulated.csv,yes,01-raw-data/carrier-announcements/week2-input/carrier-announcement-week2-simulated.csv,数据层-原始数据,N/A,复跑输入数据，已从模拟替换为公开数据口径。
 01-raw-data/carrier-announcements/week3-input/carrier-announcement-week3-simulated.csv,yes,01-raw-data/carrier-announcements/week3-input/carrier-announcement-week3-simulated.csv,数据层-原始数据,N/A,复跑输入数据，已从模拟替换为公开数据口径。
-01-raw-data/carrier-announcements/原始_船公司公告_BAF_ONE.pdf,yes,01-raw-data/carrier-announcements/原始_船公司公告_BAF_ONE.pdf,数据层-原始数据,N/A,项目文件。
+01-raw-data/carrier-announcements/原始_船公司公告_BAF_ONE.pdf,yes,01-raw-data/carrier-announcements/原始_船公司公告_BAF_ONE.pdf,数据层-原始数据,N/A,PDF展示或提交材料。
 01-raw-data/carrier-announcements/原始_船公司公告_BAF_行业转载.txt,yes,01-raw-data/carrier-announcements/原始_船公司公告_BAF_行业转载.txt,数据层-原始数据,N/A,项目文件。
-01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基.pdf,yes,01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基.pdf,数据层-原始数据,N/A,项目文件。
+01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基.pdf,yes,01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基.pdf,数据层-原始数据,N/A,PDF展示或提交材料。
 01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基候选.txt,yes,01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基候选.txt,数据层-原始数据,N/A,项目文件。
-01-raw-data/carrier-announcements/原始_船公司公告_PSS_中远.pdf,yes,01-raw-data/carrier-announcements/原始_船公司公告_PSS_中远.pdf,数据层-原始数据,N/A,项目文件。
+01-raw-data/carrier-announcements/原始_船公司公告_PSS_中远.pdf,yes,01-raw-data/carrier-announcements/原始_船公司公告_PSS_中远.pdf,数据层-原始数据,N/A,PDF展示或提交材料。
 01-raw-data/carrier-announcements/原始_船公司公告_PSS_马士基.txt,yes,01-raw-data/carrier-announcements/原始_船公司公告_PSS_马士基.txt,数据层-原始数据,N/A,项目文件。
-01-raw-data/carrier-announcements/原始_船公司公告_停航_MSC.pdf,yes,01-raw-data/carrier-announcements/原始_船公司公告_停航_MSC.pdf,数据层-原始数据,N/A,项目文件。
+01-raw-data/carrier-announcements/原始_船公司公告_停航_MSC.pdf,yes,01-raw-data/carrier-announcements/原始_船公司公告_停航_MSC.pdf,数据层-原始数据,N/A,PDF展示或提交材料。
 01-raw-data/carrier-announcements/原始_船公司公告_停航_综合转载.txt,yes,01-raw-data/carrier-announcements/原始_船公司公告_停航_综合转载.txt,数据层-原始数据,N/A,项目文件。
 01-raw-data/carrier-announcements/原始_船公司公告_结构化样本.csv,yes,01-raw-data/carrier-announcements/原始_船公司公告_结构化样本.csv,数据层-原始数据,N/A,CSV数据、清单或计算输出。
 01-raw-data/carrier-announcements/原始_船公司公告_跳港港口拥堵_MSC转载.txt,yes,01-raw-data/carrier-announcements/原始_船公司公告_跳港港口拥堵_MSC转载.txt,数据层-原始数据,N/A,项目文件。
@@ -129,8 +127,9 @@
 04-decision-report/rerun-simulations/week3-prime/CR-04B_业务决策建议_week3-prime.docx,yes,04-decision-report/rerun-simulations/week3-prime/CR-04B_业务决策建议_week3-prime.docx,决策层,N/A,复跑决策建议输出。
 05-presentation/CR-06_参赛展示PPT_storyboard.md,yes,05-presentation/CR-06_参赛展示PPT_storyboard.md,展示层-PPT,N/A,Markdown说明、报告或QA材料。
 05-presentation/CR-06_可打印PPT稿.md,yes,05-presentation/CR-06_可打印PPT稿.md,展示层-PPT,N/A,Markdown说明、报告或QA材料。
-05-presentation/PPT_EXPORT_NOTE.md,yes,05-presentation/PPT_EXPORT_NOTE.md,展示层-PPT,N/A,Markdown说明、报告或QA材料。
+05-presentation/PPT_EXPORT_NOTE.md,yes,05-presentation/PPT_EXPORT_NOTE.md,展示层-PPT,N/A,PPT/PDF导出说明，记录PDF替代交付口径。
 05-presentation/assets/generated/manifest.json,yes,05-presentation/assets/generated/manifest.json,展示层-PPT,N/A,项目文件。
+05-presentation/cr-06-submission-deck-10p.html,yes,05-presentation/cr-06-submission-deck-10p.html,展示层-PPT,N/A,10页参赛展示HTML源文件，用于后续导出PPTX或PDF。
 05-presentation/cr-06-submission-deck.html,yes,05-presentation/cr-06-submission-deck.html,展示层-PPT,N/A,HTML演示或展示素材。
 05-presentation/printable-markdown/README.md,yes,05-presentation/printable-markdown/README.md,展示层-PPT,N/A,Markdown说明、报告或QA材料。
 05-presentation/printable-markdown/p1-printable.md,yes,05-presentation/printable-markdown/p1-printable.md,展示层-PPT,N/A,Markdown说明、报告或QA材料。
@@ -161,6 +160,7 @@
 05-presentation/screenshots/demo-screenshot-P08.png,yes,05-presentation/screenshots/demo-screenshot-P08.png,展示层-PPT,N/A,演示截图或图表素材。
 05-presentation/screenshots/demo-screenshot-P09.png,yes,05-presentation/screenshots/demo-screenshot-P09.png,展示层-PPT,N/A,演示截图或图表素材。
 05-presentation/screenshots/demo-screenshot-P10.png,yes,05-presentation/screenshots/demo-screenshot-P10.png,展示层-PPT,N/A,演示截图或图表素材。
+05-presentation/舱路雷达_参赛展示PPT.pdf,yes,05-presentation/舱路雷达_参赛展示PPT.pdf,展示层-PPT,N/A,可直接上传/查看的10页参赛展示PDF，由P01-P10截图按顺序合成。
 06-visual-demo/CR-07_闭环长图.png,yes,06-visual-demo/CR-07_闭环长图.png,展示层-Demo,N/A,演示截图或图表素材。
 06-visual-demo/CR-07_闭环长图_wireframe.md,yes,06-visual-demo/CR-07_闭环长图_wireframe.md,展示层-Demo,N/A,Markdown说明、报告或QA材料。
 06-visual-demo/CR-08_Demo演示脚本.docx,yes,06-visual-demo/CR-08_Demo演示脚本.docx,展示层-Demo,N/A,项目文件。
@@ -190,4 +190,6 @@
 08-submission/CR-11_作品说明文档.md,yes,08-submission/CR-11_作品说明文档.md,提交层,N/A,评审导航文档，说明项目闭环、商业价值、工具整合和真实数据复跑。
 08-submission/final-package/canglu-radar-submission.zip,yes,08-submission/final-package/canglu-radar-submission.zip,提交层,N/A,最终提交包归档。
 08-submission/final-package/manifest.csv,yes,08-submission/final-package/manifest.csv,提交层,N/A,CSV数据、清单或计算输出。
+09-logs/rerun-records-week2-prime.md,yes,09-logs/rerun-records-week2-prime.md,复跑记录,N/A,Week2真实公开数据复跑记录。
+09-logs/rerun-records-week3-prime.md,yes,09-logs/rerun-records-week3-prime.md,复跑记录,N/A,Week3真实公开数据/推算口径复跑记录。
 README.md,yes,README.md,仓库首页,N/A,仓库首页，含项目定位、核心数字速查、阅读顺序和数据质量声明。
