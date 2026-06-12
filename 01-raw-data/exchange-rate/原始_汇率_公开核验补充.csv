@@ -1,0 +1,2 @@
+﻿date,currency_pair,rate,source_type,source_url,note,data_quality_level,is_estimated
+2026-05-22,USD/CNY,6.8373,official_SAFE,国家外汇管理局公开汇率中间价：100美元=683.73元人民币,官方公开中间价；仅单日记录，尚未形成26周序列,A,False

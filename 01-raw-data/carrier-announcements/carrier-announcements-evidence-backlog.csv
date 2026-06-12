@@ -1,0 +1,2 @@
+﻿carrier,event_type,route_scope,effective_date,effective_week_start,effective_week_end,announcement_date,announcement_week_start,current_data_quality_level,missing_fields,recommended_search_query,next_action,record_status
+MSC,FAK/GRI,Asia to North Europe/Mediterranean/North Africa,2026-06-01,2026-06-01,2026-06-07,,,B,announcement_date,MSC FAK/GRI 2026-06-01 Asia to North Europe/Mediterranean/North Africa announcement surcharge FAK PSS GRI,补缺失字段；补齐后按announcement_date重算公告自然周,evidence_backlog_open

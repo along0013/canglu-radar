@@ -1,0 +1,4 @@
+﻿date,route_code,route_name,freight_usd,unit,fee_type,carrier,usd_cny_rate,data_source,source_url,capture_time,remarks
+YYYY-MM-DD,CN-USWC,中国-美西,<待抓取>,USD/FEU,Ocean Freight,<如有>,<待匹配>,<公开数据源>,<URL>,<抓取时间>,公开数据，占位模板
+YYYY-MM-DD,CN-USEC,中国-美东,<待抓取>,USD/FEU,Ocean Freight,<如有>,<待匹配>,<公开数据源>,<URL>,<抓取时间>,公开数据，占位模板
+YYYY-MM-DD,CN-EUR,中国-欧洲,<待抓取>,USD/FEU,Ocean Freight,<如有>,<待匹配>,<公开数据源>,<URL>,<抓取时间>,公开数据，占位模板

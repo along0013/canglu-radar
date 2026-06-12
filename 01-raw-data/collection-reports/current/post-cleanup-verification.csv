@@ -1,0 +1,10 @@
+﻿path,exists,type,size_or_count
+01-raw-data/collection-reports/current/README_当前主线文件说明.md,True,file,2095
+01-raw-data/collection-reports/current/诊断错题集.csv,True,file,4954
+01-raw-data/collection-reports/current/诊断错题集与回归测试机制.md,True,file,1621
+01-raw-data/collection-reports/current/archive-move-index.csv,True,file,49633
+01-raw-data/collection-drafts/manual-weekly/weekly-single-query-plan.csv,True,file,1456
+01-raw-data/collection-drafts/manual-weekly/verified-weekly-index-records.csv,True,file,1712
+01-raw-data/collection-reports/archive/diagnostics,True,dir,9
+01-raw-data/collection-reports/archive/old-reports,True,dir,75
+01-raw-data/collection-reports/archive/draft-probes/manual-weekly,True,dir,135

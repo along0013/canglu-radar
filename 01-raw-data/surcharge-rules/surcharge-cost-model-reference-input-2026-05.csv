@@ -1,0 +1,15 @@
+﻿fee_code,fee_name_cn,amount_min,amount_max,amount_mid_reference,currency,unit,applicable_scope,data_quality_level,can_enter_demo_cost_model,source_file,governance_note,cost_model_value_usd,cost_model_usage
+BAF,燃油附加费,450.0,550.0,500.0,USD,USD/FEU,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,500.0,demo_reference_midpoint
+PSS,旺季附加费,300.0,1000.0,650.0,USD,USD/FEU,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,650.0,demo_reference_midpoint
+THC,码头操作费,190.0,220.0,205.0,USD,USD/FEU_equiv,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,205.0,demo_reference_midpoint
+港口拥堵附加费,,50.0,250.0,150.0,USD,USD/FEU,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,150.0,demo_reference_midpoint
+EBS,紧急燃油附加费,50.0,200.0,125.0,USD,USD/FEU,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,125.0,demo_reference_midpoint
+GRI,综合费率上涨附加费,200.0,1000.0,600.0,USD,USD/FEU,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,600.0,demo_reference_midpoint
+CIC,集装箱不平衡附加费,100.0,350.0,225.0,USD,USD/FEU,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,225.0,demo_reference_midpoint
+WRS,战争风险附加费,50.0,200.0,125.0,USD,USD/FEU,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,125.0,demo_reference_midpoint
+PCS,巴拿马运河附加费,200.0,350.0,275.0,USD,USD/FEU,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,275.0,demo_reference_midpoint
+LSS,低硫燃油附加费,,,,,included_in_BAF,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,,skip_or_manual_confirm
+DOC,文件费,45.0,65.0,55.0,USD,USD/shipment,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,55.0,demo_reference_midpoint
+SEAL,封条费,8.0,15.0,11.5,USD,USD/container,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,11.5,demo_reference_midpoint
+AMS/ENS,申报费,35.0,50.0,42.5,USD,USD/shipment,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,42.5,demo_reference_midpoint
+设备交接单费,,15.0,30.0,22.5,USD,USD/container,亚欧/美线主流船公司；2026年5月底市场参考行情,C_market_reference,True,output/附加费明细.txt,用户提供的2026年5月底行情参考表，未附官方船司报价单/合同/网页证据；用于演示测算和参数敏感性分析，不作为A/B层真实费率。,22.5,demo_reference_midpoint

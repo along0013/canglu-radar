@@ -1,0 +1,6 @@
+﻿dataset,path,records,valid_key_records,missing_cells
+SCFI,..\canglu-radar\01-raw-data\freight-index\原始_SCFI运价指数.csv,26,26,164
+SCFIS,..\canglu-radar\01-raw-data\freight-index\原始_SCFIS结算指数.csv,16,16,24
+FX,..\canglu-radar\01-raw-data\exchange-rate\原始_汇率.csv,26,26,50
+Brent,..\canglu-radar\01-raw-data\oil-price\原始_布伦特原油.csv,3,3,0
+Announcements,..\canglu-radar\01-raw-data\carrier-announcements\原始_船公司公告_结构化样本.csv,4,4,3

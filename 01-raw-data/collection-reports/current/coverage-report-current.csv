@@ -1,0 +1,13 @@
+﻿layer,item,covered,total,coverage
+true_public,SCFI_record,18,26,0.6923076923076923
+true_public,CCFI_record,9,26,0.34615384615384615
+true_public,SCFIS_record,6,32,0.1875
+true_public,FX_weekly_record,1,26,0.038461538461538464
+true_public,Carrier_event_key_fields,19,20,0.95
+demo_completed,SCFI_record,26,26,1.0
+demo_completed,CCFI_record,26,26,1.0
+demo_completed,SCFIS_record,32,32,1.0
+demo_completed,FX_weekly_record,26,26,1.0
+demo_completed,Carrier_event_key_fields,20,20,1.0
+demo_completed,OVERALL,130,130,1.0
+true_public,OVERALL,53,130,0.4076923076923077

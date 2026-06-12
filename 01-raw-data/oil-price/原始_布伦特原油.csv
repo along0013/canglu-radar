@@ -1,0 +1,4 @@
+﻿date,time_beijing,instrument,price_usd_per_barrel,price_type,source,source_url,data_quality_level,note
+2026-05-22,01:53,Brent crude futures,102.629,intraday_quote,东方财富网/财联社,https://finance.eastmoney.com/a/202605223745653819.html,B,公开新闻快讯，非完整历史收盘序列
+2026-05-22,15:36,Brent crude futures,105.656,intraday_quote,东方财富Choice数据,https://finance.eastmoney.com/a/202605223746683486.html,B,公开新闻快讯，非完整历史收盘序列
+2026-05-22,15:42,Brent crude futures,105.67,intraday_quote,东方财富期货/哈富快讯,https://qhweb.eastmoney.com/news/202605223746685668.html,B,公开新闻快讯，非完整历史收盘序列

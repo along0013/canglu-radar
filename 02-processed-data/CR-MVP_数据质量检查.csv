@@ -1,0 +1,6 @@
+﻿check_item,result,value,note
+raw_file_count,pass,7,7个MVP原始文件均已落地
+scfi_weeks,warn,26,近26周行数完整，但真实提取点5个，其余待补
+exchange_rate_weeks,warn,26,26周完整，但当前为MVP模拟序列
+announcement_files,warn,4,PDF可读；部分为fallback snapshot
+surcharge_rules,pass,5,模拟规则表可供MVP规则引擎使用

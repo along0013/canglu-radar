@@ -1,0 +1,2 @@
+﻿date,currency_pair,usd_cny_rate,data_source,source_url,remarks
+YYYY-MM-DD,USD/CNY,<待抓取>,中国外汇交易中心/东方财富,<URL>,公开数据，占位模板

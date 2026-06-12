@@ -1,0 +1,4 @@
+﻿route_code,route_name,region,origin_region,destination_region,is_active,remarks
+CN-USWC,中国-美西,美线,China,US West Coast,TRUE,口径定义表
+CN-USEC,中国-美东,美线,China,US East Coast,TRUE,口径定义表
+CN-EUR,中国-欧洲,欧线,China,Europe,TRUE,口径定义表

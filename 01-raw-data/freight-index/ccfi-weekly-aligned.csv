@@ -1,0 +1,27 @@
+﻿target_friday,natural_week_start,natural_week_end,index_type,ccfi_composite,japan_index,europe_index,mediterranean_index,us_west_index,us_east_index,source_type,source_url,source_note,data_quality_level,record_status,missing_reason
+2025-11-28,2025-11-24,2025-11-30,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2025-12-05,2025-12-01,2025-12-07,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2025-12-12,2025-12-08,2025-12-14,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2025-12-19,2025-12-15,2025-12-21,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2025-12-26,2025-12-22,2025-12-28,CCFI,1146.67,,,,,,batch-04 public excerpt,collection-drafts/batch-04/week21-26-scfi-scfis-ccfi-draft.csv,公开摘录/交叉记录，非官方原页,B,collected_public_or_saved_evidence,分航线值未补齐；仅综合指数可用
+2026-01-02,2025-12-29,2026-01-04,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-01-09,2026-01-05,2026-01-11,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-01-16,2026-01-12,2026-01-18,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-01-23,2026-01-19,2026-01-25,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-01-30,2026-01-26,2026-02-01,CCFI,1175.59,,,,,,batch-03 verified draft,collection-drafts/batch-03/week15-20-verified-draft.csv,draft验证记录,B,collected_public_or_saved_evidence,分航线值未补齐；仅综合指数可用
+2026-02-06,2026-02-02,2026-02-08,CCFI,1122.15,,,,,,batch-03 verified draft,collection-drafts/batch-03/week15-20-verified-draft.csv,draft验证记录,B,collected_public_or_saved_evidence,分航线值未补齐；仅综合指数可用
+2026-02-13,2026-02-09,2026-02-15,CCFI,1088.14,,,,,,batch-03 verified draft,collection-drafts/batch-03/week15-20-verified-draft.csv,draft验证记录,B,collected_public_or_saved_evidence,分航线值未补齐；仅综合指数可用
+2026-02-20,2026-02-16,2026-02-22,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-02-27,2026-02-23,2026-03-01,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-03-06,2026-03-02,2026-03-08,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-03-13,2026-03-09,2026-03-15,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-03-20,2026-03-16,2026-03-22,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-03-27,2026-03-23,2026-03-29,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-04-03,2026-03-30,2026-04-05,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-04-10,2026-04-06,2026-04-12,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-04-17,2026-04-13,2026-04-19,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-04-24,2026-04-20,2026-04-26,CCFI,1233.76,,,,,,batch-01 public excerpt,collection-drafts/batch-01/,公开摘录，存在约1234四舍五入差异,B,collected_public_or_saved_evidence,分航线值未补齐；仅综合指数可用
+2026-05-01,2026-04-27,2026-05-03,CCFI,1269.64,,,,,,batch-01 public excerpt,collection-drafts/batch-01/,五一假期窗口，发布日归属待复核,B,collected_public_or_saved_evidence,分航线值未补齐；仅综合指数可用
+2026-05-08,2026-05-04,2026-05-10,CCFI,,,,,,,placeholder,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,占位行，不得作为真实数据参与分析,PENDING,placeholder_pending,官方单期页/历史查询未能可靠返回该周可核验数值；保留占位，待逐周补采或人工截图
+2026-05-15,2026-05-11,2026-05-17,CCFI,1280.46,960.73,1585.49,1985.41,984.19,1120.63,SSE saved/current page previous-period field + batch-01,collection-drafts/batch-01/; sse saved page previous period,修正疑似误填；官方页上期字段显示2026-05-15=1280.46，仍建议截图复核,A-/B+,collected_public_or_saved_evidence,分航线值未补齐；仅综合指数可用
+2026-05-22,2026-05-18,2026-05-24,CCFI,1317.36,960.73,1585.49,1985.41,984.19,1120.63,上海航运交易所单期查询,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,单期公开查询逐周抓取,A,collected_official_or_near_official,

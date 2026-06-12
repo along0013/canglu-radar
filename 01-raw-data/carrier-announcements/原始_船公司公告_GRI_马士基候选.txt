@@ -1,0 +1,9 @@
+数据来源URL：https://www.maersk.com.cn/news/articles/2026/05/08/heavy-load-surcharge-revision-fea-europe-e1w-e2w
+来源类型：official_web_url_candidate
+采集日期：2026-05-28
+
+GRI/费率上调候选公告文本
+Carrier: Maersk
+Candidate URL: https://www.maersk.com.cn/news/articles/2026/05/08/heavy-load-surcharge-revision-fea-europe-e1w-e2w
+Event type: rate/surcharge revision, usable as GRI-like fee increase evidence for MVP extraction.
+Note: Direct page content was not fully captured in this pass; source URL was previously located from Maersk official site. For final audit, use browser print/PDF from official page.

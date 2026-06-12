@@ -1,0 +1,13 @@
+数据来源URL：http://www.csoa.cn/doc/31609.jsp
+来源类型：industry_association_reprint_text
+采集日期：2026-05-28
+
+停航/绕航/暂停订舱类公告转载文本
+Publish date: 2026-03-04
+Source: 中国船东协会转载/行业报道
+URL: http://www.csoa.cn/doc/31609.jsp
+Content excerpt:
+MSC stated that due to evolving security situation in the Middle East and restrictions around Hormuz Strait / Bab el-Mandeb, it suspended bookings to Middle East region until further notice and instructed vessels to proceed to safe areas.
+Maersk stated that due to military conflict escalation in the Middle East and safety deterioration, future trans-Suez sailings via Bab el-Mandeb would be suspended temporarily, with ME11 and MECL rerouted via Cape of Good Hope until further notice.
+Fields extractable: carrier, affected lane/service, reason, sailing/route impact, resume condition.
+Note: This is not original carrier official PDF; use as fallback evidence only.

@@ -1,0 +1,12 @@
+数据来源URL：https://caifuhao.eastmoney.com/news/20260305210456846620890
+来源类型：industry_media_reprint_text
+采集日期：2026-05-28
+
+跳港/转港/终止航程类公告转载文本
+Publish date: 2026-03-05
+Source: 东方财富财富号/航运界转载
+URL: https://caifuhao.eastmoney.com/news/20260305210456846620890
+Content excerpt:
+MSC reportedly announced voyage termination / cargo transfer to next safe discharge port for cargos affected by Middle East situation. Affected cargos may be discharged at an alternative safe port and customers need to arrange onward shipment.
+Fields extractable: carrier=MSC, event_type=port_omission/alternative_discharge, reason=Middle East security, affected cargo/ports, surcharge amount example=USD 800 per box.
+Note: This is not original MSC official PDF; use as fallback only.

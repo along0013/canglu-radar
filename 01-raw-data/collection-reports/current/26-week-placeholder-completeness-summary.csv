@@ -1,0 +1,4 @@
+﻿dataset,rows,rows_with_any_value,placeholder_rows,coverage_rate
+SCFI,26,7,19,0.2692
+CCFI,26,2,24,0.0769
+SCFIS,30,4,26,0.1333

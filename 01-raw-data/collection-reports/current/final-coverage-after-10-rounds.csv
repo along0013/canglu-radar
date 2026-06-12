@@ -1,0 +1,13 @@
+﻿layer,item,covered,total,coverage,difficulty_if_below_90
+true_public,SCFI_record,18,26,0.6923,剩余周次主要缺可复核原文/截图；航交所历史单期页常回显当前页或分航线为空。
+true_public,CCFI_record,9,26,0.3462,CCFI可作为交叉指标，但历史周综合/分航线公开转载少，官方多期受限。
+true_public,SCFIS_record,6,32,0.1875,SCFIS按周一发布/轨迹，与周五自然周对齐复杂；公开转载少且部分数值冲突。
+true_public,FX_weekly_record,1,26,0.0385,SAFE/ChinaMoney历史日度表需要外部检索或页面访问；本轮联网搜索工具持续失败，不能用模拟值替代真实表。
+true_public,Carrier_event_key_fields,19,20,0.95,仅剩MSC公告缺公告日期/原文URL；船司网页可能动态加载或需站内检索。
+demo_completed,SCFI_record,26,26,1.0,
+demo_completed,CCFI_record,26,26,1.0,
+demo_completed,SCFIS_record,32,32,1.0,
+demo_completed,FX_weekly_record,26,26,1.0,
+demo_completed,Carrier_event_key_fields,20,20,1.0,
+demo_completed,OVERALL,130,130,1.0,
+true_public,OVERALL,53,130,0.4077,

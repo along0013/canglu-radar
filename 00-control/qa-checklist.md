@@ -62,3 +62,14 @@
 | CR-04A公式审计是否补全 | PASS | 已新增“公式说明”和“公式审计_可运行样例”Sheet，并补全公式样例。 |
 | PPTX正式导出 | PENDING_EXPORT | 当前补充HTML源文件、截图/可打印Markdown方案；PPTX仍视环境依赖处理。 |
 | Demo视频成片 | PENDING_VIDEO | 已生成旁白字幕稿和素材目录；不冒充成片。 |
+
+
+## 二次优化QA记录
+
+- [x] 已补充 Week2'/Week3' 模拟真实复跑记录，输入文件与输出结果均发生变化；并明确标注为机制验证，不冒充真实运营。
+- [x] 已将 CR-04B/CR-05/Storyboard 中的航线建议改为差异化建议。
+- [x] 已补充 CR-04A 公式审计示例和公式说明 Sheet。
+- [x] 已补充 HTML 演示截图包、可打印 Markdown PPT 稿和 Demo 旁白字幕稿。
+- [x] 已重建最终提交包 `08-submission/final-package/canglu-radar-submission.zip`。
+- [ ] PPTX正式导出仍为 PENDING_EXPORT。
+- [ ] Demo视频成片仍未录制，当前为素材包状态。

@@ -1,0 +1,23 @@
+﻿类别,网站名称,网址,需要内容,是否必须注册,是否可能付费,建议操作,优先级
+航运指数,上海航运交易所-SCFI单期,https://www.sse.net.cn/index/singleIndex?indexType=scfi,SCFI单期：综合、欧洲、地中海、美西、美东,否（单期通常不需要）,否/低,逐周输入近26个周五日期，复制表格,最高
+航运指数,上海航运交易所-SCFI多期,https://www.sse.net.cn/index/scfilist,SCFI近26周多期批量,是,是/较可能,不建议优先使用；除非愿意注册/付费,低
+航运指数,上海航运交易所-CCFI单期,https://www.sse.net.cn/index/singleIndex?indexType=ccfi,CCFI单期：综合及分航线,否（单期通常不需要）,否/低,作为SCFI交叉验证，逐周复制,中
+航运指数,上海航运交易所-SCFIS单期,https://www.sse.net.cn/index/singleIndex?indexType=scfis,SCFIS单期：美西/欧洲结算指数,否（单期通常不需要）,否/低,近12周逐周复制,中
+二手航运新闻,东方财富-财富号,https://caifuhao.eastmoney.com/,每周SCFI报道、船司公告转载、油价背景,否,否,搜索“SCFI 上海航运交易所 美西 美东 欧洲 地中海 日期”,高
+二手航运新闻,同花顺财经,https://stock.10jqka.com.cn/,SCFI周报、航运新闻,否,否,搜索SCFI具体日期或关键词,高
+二手航运新闻,国际船舶网,http://www.eworldship.com/,SCFI周报、船司公告转载,否,否,搜索SCFI/集运指数/上海航交所,高
+二手航运新闻,中国航务周刊,https://www.chineseshipping.com.cn/,航运市场周报、船司公告,可能需要免费注册,一般否,先搜索公开页，遇到登录再判断,中
+汇率,中国货币网,https://www.chinamoney.com.cn/,USD/CNY人民币汇率中间价,一般否,否,搜索人民币汇率中间价，逐日/按日期查询,高
+汇率,国家外汇管理局,https://www.safe.gov.cn/,人民币汇率中间价/统计数据,否,否,若有历史表则复制,中
+汇率,中国经济网-中间价转载,http://finance.ce.cn/,每日人民币中间价新闻,否,否,逐日搜索“人民币对美元中间价 YYYY-MM-DD”,中
+汇率,东方财富-美元人民币,https://quote.eastmoney.com/,USD/CNY市场汇率代理,否,否,作为非官方中间价代理,中
+船司公告,Maersk News,https://www.maersk.com.cn/news/articles,GRI/PSS/BAF/停航/跳港公告,否,否,搜索PSS/GRI/surcharge/blank sailing,高
+船司公告,MSC Advisories,https://www.msc.com/,停航/跳港/港口拥堵公告,可能需要区域选择，不一定注册,一般否,搜索blank sailing/customer advisory/port omission,中
+船司公告,COSCO Lines,https://lines.coscoshipping.com/,PSS/GRI公告,可能需要注册查看部分客户通知,不确定,优先公开新闻/公告页,中
+船司公告,ONE Line,https://www.one-line.com/,BAF/LSS/燃油附加费公告,否或免费注册,一般否,搜索BAF/Bunker Adjustment Factor/LSS,中
+船司公告,Evergreen Line,https://www.evergreen-line.com/,停航/跳港/附加费公告,可能需要区域/语言选择,一般否,搜索blank sailing/port omission/surcharge,中
+油价,东方财富行情,https://quote.eastmoney.com/,布伦特原油历史行情,否,否,搜索布伦特原油，复制周度收盘价,中
+油价,新浪财经期货,https://finance.sina.com.cn/futures/quotes/OIL.shtml,布伦特/原油行情,否,否,如页面可见历史行情则复制,中
+油价,FRED Brent,https://fred.stlouisfed.org/series/WCOILBRENTEU,Brent周度价格CSV,否,否,若网络可访问直接Download CSV,中
+油价,EIA,https://www.eia.gov/,Brent/原油价格,否,否,下载官方数据表,中
+油价/燃油,生意社,https://www.100ppi.com/,燃油/原油价格背景,否,否,用于BAF解释背景,低

@@ -1,0 +1,8 @@
+﻿path,exists,size_bytes
+01-raw-data\freight-index\原始_SCFI运价指数.csv,True,5987
+01-raw-data\freight-index\原始_CCFI运价指数.csv,True,7288
+01-raw-data\freight-index\原始_SCFIS结算指数.csv,True,6636
+01-raw-data\freight-index\原始_航运指数_26周完整占位长表.csv,True,44969
+01-raw-data\collection-reports\current\26-week-placeholder-completeness-summary.csv,True,132
+01-raw-data\collection-reports\current\近26周航运指数录入与占位说明.md,True,1535
+01-raw-data\collection-drafts\manual-weekly\weekly-single-query-plan.csv,True,2104
