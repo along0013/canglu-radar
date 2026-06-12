@@ -4,8 +4,8 @@
 
 ## 1. 总览
 
-- 当前跟踪文件数：188 个
-- 核心阅读路径：`CR-11 → CR-04A → CR-04B.md → CR-05.md → CR-09 → CR-10C`
+- 当前跟踪文件数：190 个
+- 核心阅读路径：`CR-11 → CR-04A → CR-04B.md → CR-05.md → CR-04C → CR-09 → CR-10C`
 - 数据口径：真实数据、公开线索、演示补全和待复核材料分层标注；含 `C_demo_simulated` 或 `C_market_reference` 的材料仅用于演示和流程验证。
 
 ## 2. 分模块材料清单
@@ -105,6 +105,7 @@
 
 | 文件路径 | 用途说明 | 数据质量/口径 |
 |---|---|---|
+| `03-analysis/CR-04C_敏感性分析表.md` | 敏感性分析表，展示汇率、附加费和运价上涨的what-if测算能力。 | 基于CR-04A与场景模型公式计算；what-if分析 |
 | `03-analysis/rerun-simulations/week2-prime/latest-summary-week2-prime.csv` | 模拟复跑Week2’材料，验证输入变化导致输出变化。 | 由CR-04A数值源计算生成；含A/C/PENDING标注 |
 | `03-analysis/rerun-simulations/week3-prime/latest-summary-week3-prime.csv` | 模拟复跑Week3’材料，验证输入变化导致输出变化。 | 由CR-04A数值源计算生成；含A/C/PENDING标注 |
 
@@ -245,6 +246,7 @@
 | `"08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216.docx"` | 项目材料。 | N/A |
 | `"08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216_outline.md"` | 项目材料。 | N/A |
 | `"08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225.docx"` | 项目材料。 | N/A |
+| `"08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225.md"` | 项目材料。 | N/A |
 | `"08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225_outline.md"` | 项目材料。 | N/A |
 | `"08-submission/CR-11_\344\275\234\345\223\201\350\257\264\346\230\216\346\226\207\346\241\243.md"` | 项目材料。 | N/A |
 
@@ -256,8 +258,9 @@
 | 2 | `03-analysis/CR-04A_指标计算结果.xlsx` | 唯一指标数字源，核对最新周核心数字。 |
 | 3 | `04-decision-report/CR-04B_业务决策建议.md` | 查看差异化业务建议、成本场景和公告措辞限制。 |
 | 4 | `04-decision-report/CR-05_分析报告.md` | 查看周度分析报告与数据质量限制。 |
-| 5 | `07-validation/CR-09_量化验证表.xlsx` | 查看效率提升与验证口径。 |
-| 6 | `06-visual-demo/demo-screenshots/` | 查看Demo截图素材。 |
+| 5 | `03-analysis/CR-04C_敏感性分析表.md` | 查看汇率、附加费和运价上涨敏感性。 |
+| 6 | `07-validation/CR-09_量化验证表.xlsx` | 查看效率提升与验证口径。 |
+| 7 | `06-visual-demo/demo-screenshots/` | 查看Demo截图素材。 |
 
 ## 4. 关键数据质量说明
 

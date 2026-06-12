@@ -76,6 +76,7 @@
 """08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216.docx""",yes,"""08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216.docx""",其他,N/A,项目材料。
 """08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216_outline.md""",yes,"""08-submission/CR-10B_\345\244\215\350\267\221\350\257\264\346\230\216_outline.md""",其他,N/A,项目材料。
 """08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225.docx""",yes,"""08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225.docx""",其他,N/A,项目材料。
+"""08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225.md""",yes,"""08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225.md""",其他,N/A,项目材料。
 """08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225_outline.md""",yes,"""08-submission/CR-10C_\346\235\220\346\226\231\347\233\256\345\275\225_outline.md""",其他,N/A,项目材料。
 """08-submission/CR-11_\344\275\234\345\223\201\350\257\264\346\230\216\346\226\207\346\241\243.md""",yes,"""08-submission/CR-11_\344\275\234\345\223\201\350\257\264\346\230\216\346\226\207\346\241\243.md""",其他,N/A,项目材料。
 .gitignore,yes,.gitignore,仓库配置,N/A,排除草稿、日志、缓存、压缩包等非评审材料。
@@ -138,6 +139,7 @@
 02-processed-data/surcharge-scenario-definitions-2026-05.csv,yes,02-processed-data/surcharge-scenario-definitions-2026-05.csv,处理层,A/B/C/PENDING 分层治理,结构化数据或清单文件。
 02-processed-data/surcharge-scenario-rules-2026-05.csv,yes,02-processed-data/surcharge-scenario-rules-2026-05.csv,处理层,A/B/C/PENDING 分层治理,结构化数据或清单文件。
 02-processed-data/surcharge-scenario-summary-2026-05.csv,yes,02-processed-data/surcharge-scenario-summary-2026-05.csv,处理层,A/B/C/PENDING 分层治理,结构化数据或清单文件。
+03-analysis/CR-04C_敏感性分析表.md,yes,03-analysis/CR-04C_敏感性分析表.md,分析层,基于CR-04A与场景模型公式计算；what-if分析,敏感性分析表，展示汇率、附加费和运价上涨的what-if测算能力。
 03-analysis/rerun-simulations/week2-prime/latest-summary-week2-prime.csv,yes,03-analysis/rerun-simulations/week2-prime/latest-summary-week2-prime.csv,分析层,由CR-04A数值源计算生成；含A/C/PENDING标注,模拟复跑Week2’材料，验证输入变化导致输出变化。
 03-analysis/rerun-simulations/week3-prime/latest-summary-week3-prime.csv,yes,03-analysis/rerun-simulations/week3-prime/latest-summary-week3-prime.csv,分析层,由CR-04A数值源计算生成；含A/C/PENDING标注,模拟复跑Week3’材料，验证输入变化导致输出变化。
 05-presentation/PPT_EXPORT_NOTE.md,yes,05-presentation/PPT_EXPORT_NOTE.md,展示层,展示材料；不新增数据口径,Markdown说明、报告或QA材料。

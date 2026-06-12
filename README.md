@@ -24,8 +24,9 @@
 2. `03-analysis/CR-04A_指标计算结果.xlsx`：唯一指标数字源，包含最新周摘要、质量等级和公式审计示例。
 3. `04-decision-report/CR-04B_业务决策建议.md`：业务决策建议，包含差异化航线建议、成本场景建议和公告措辞限制。
 4. `04-decision-report/CR-05_分析报告.md`：周度分析报告，解释指标、事件关联、成本测算和数据质量限制。
-5. `05-presentation/` 与 `06-visual-demo/demo-screenshots/`：展示材料、HTML占位与Demo截图。
-6. `03-analysis/rerun-simulations/week2-prime/`、`03-analysis/rerun-simulations/week3-prime/`：模拟复跑证据，展示输入变化后输出变化。
+5. `03-analysis/CR-04C_敏感性分析表.md`：what-if 敏感性分析，展示汇率、附加费和运价上涨对成本的影响。
+6. `05-presentation/` 与 `06-visual-demo/demo-screenshots/`：展示材料、HTML占位与Demo截图。
+7. `03-analysis/rerun-simulations/week2-prime/`、`03-analysis/rerun-simulations/week3-prime/`：模拟复跑证据，展示输入变化后输出变化。
 
 ## 提交包位置
 
@@ -50,6 +51,6 @@
 
 ## 当前仓库状态
 
-- 当前 Git 跟踪文件：188 个。
+- 当前 Git 跟踪文件：190 个。
 - 评审核心材料：以 `CR-11 → CR-04A → CR-04B.md → CR-05.md → CR-09 → CR-10C` 为主线。
 - 已排除内容：草稿、日志、缓存、压缩包和临时抓取页不纳入评审主仓库。
