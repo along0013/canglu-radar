@@ -25,8 +25,9 @@
 3. `04-decision-report/CR-04B_业务决策建议.md`：业务决策建议，包含差异化航线建议、成本场景建议和公告措辞限制。
 4. `04-decision-report/CR-05_分析报告.md`：周度分析报告，解释指标、事件关联、成本测算和数据质量限制。
 5. `03-analysis/CR-04C_敏感性分析表.md`：what-if 敏感性分析，展示汇率、附加费和运价上涨对成本的影响。
-6. `05-presentation/` 与 `06-visual-demo/demo-screenshots/`：展示材料、HTML占位与Demo截图。
-7. `03-analysis/rerun-simulations/week2-prime/`、`03-analysis/rerun-simulations/week3-prime/`：模拟复跑证据，展示输入变化后输出变化。
+6. `07-validation/CR-09_量化验证表.xlsx`：量化验证与 `人工vs自动化对比` Sheet，说明时间、错误率、复用性和标准化价值。
+7. `05-presentation/` 与 `06-visual-demo/demo-screenshots/`：展示材料、HTML占位与Demo截图。
+8. `03-analysis/rerun-simulations/week2-prime/`、`03-analysis/rerun-simulations/week3-prime/`：模拟复跑证据，展示输入变化后输出变化。
 
 ## 提交包位置
 
