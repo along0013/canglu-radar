@@ -1,224 +1,82 @@
-# CR-10C 材料目录（最终版）
-本目录基于当前 Git 正式跟踪/候选提交文件生成，共 194 个文件。已排除草稿、缓存、批量日志和临时探针；仅保留两份真实数据复跑记录。
-## 推荐评审阅读顺序
-1. `README.md`
-2. `08-submission/CR-11_作品说明文档.md`
-3. `05-presentation/舱路雷达_参赛展示PPT.pdf`
-4. `03-analysis/CR-04A_指标计算结果.xlsx`
-5. `04-decision-report/CR-04B_业务决策建议.md`
-6. `04-decision-report/CR-05_分析报告.md`
-7. `03-analysis/CR-04C_敏感性分析表.md`
-8. `09-logs/rerun-records-week2-prime.md` 与 `09-logs/rerun-records-week3-prime.md`
-## 参赛展示文件
-- `05-presentation/舱路雷达_参赛展示PPT.pdf`：10页可上传展示PDF，由P01-P10截图顺序合并。
-- `05-presentation/cr-06-submission-deck-10p.html`：10页展示HTML源，可用于后续转换PPTX。
-## 真实数据复跑更新
-- Week2：2026-06-05，SCFI综合指数2726.48，上海航运交易所真实发布数据，质量等级 A_official。
-- Week3：2026-06-12，SCFI综合指数2985.22来自上海航交所官网真实发布；分航线按6月5日真实分航线数据与综合指数涨幅比例推算，质量等级 B_public_excerpt。
-- 复跑输出：`03-analysis/rerun-simulations/week2-prime/`、`03-analysis/rerun-simulations/week3-prime/`。
-## 仓库配置
-- `.gitignore`：项目文件。
-## 仓库首页
-- `README.md`：仓库首页，含项目定位、核心数字速查、阅读顺序和数据质量声明。
-## 控制层
-- `00-control/batch-map.md`：Markdown说明、报告或QA材料。
-- `00-control/data-dependency-stoplist.md`：Markdown说明、报告或QA材料。
-- `00-control/data-governance/README.md`：Markdown说明、报告或QA材料。
-- `00-control/data-governance/carrier-announcement-natural-week-rules.txt`：项目文件。
-- `00-control/data-governance/chart-derived-index-c-rules.md`：Markdown说明、报告或QA材料。
-- `00-control/data-governance/natural-week-multisource-data-governance.txt`：项目文件。
-- `00-control/data-governance/usd-cny-natural-week-alignment-rules.txt`：项目文件。
-- `00-control/naming-rules.md`：Markdown说明、报告或QA材料。
-- `00-control/placeholder-file-index.md`：Markdown说明、报告或QA材料。
-- `00-control/qa-checklist.md`：Markdown说明、报告或QA材料。
-## 数据层-原始数据
-- `01-raw-data/carrier-announcements/carrier-announcements-evidence-backlog.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/carrier-announcements/carrier-announcements-natural-week-events-demo-completed.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/carrier-announcements/carrier-announcements-natural-week-events.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/carrier-announcements/week2-input/carrier-announcement-week2-simulated.csv`：复跑输入数据，已从模拟替换为公开数据口径。
-- `01-raw-data/carrier-announcements/week3-input/carrier-announcement-week3-simulated.csv`：复跑输入数据，已从模拟替换为公开数据口径。
-- `01-raw-data/carrier-announcements/原始_船公司公告_BAF_ONE.pdf`：PDF展示或提交材料。
-- `01-raw-data/carrier-announcements/原始_船公司公告_BAF_行业转载.txt`：项目文件。
-- `01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基.pdf`：PDF展示或提交材料。
-- `01-raw-data/carrier-announcements/原始_船公司公告_GRI_马士基候选.txt`：项目文件。
-- `01-raw-data/carrier-announcements/原始_船公司公告_PSS_中远.pdf`：PDF展示或提交材料。
-- `01-raw-data/carrier-announcements/原始_船公司公告_PSS_马士基.txt`：项目文件。
-- `01-raw-data/carrier-announcements/原始_船公司公告_停航_MSC.pdf`：PDF展示或提交材料。
-- `01-raw-data/carrier-announcements/原始_船公司公告_停航_综合转载.txt`：项目文件。
-- `01-raw-data/carrier-announcements/原始_船公司公告_结构化样本.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/carrier-announcements/原始_船公司公告_跳港港口拥堵_MSC转载.txt`：项目文件。
-- `01-raw-data/collection-reports/current/26-week-placeholder-completeness-summary.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/26-week-placeholder-file-check.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/README_当前主线文件说明.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/collection-reports/current/archive-move-index.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/coverage-after-chart-10-rounds.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/coverage-after-chart-10-rounds.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/collection-reports/current/coverage-difficulties-below-90-after-chart-10-rounds.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/coverage-report-current.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/data-source-website-list.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/data-source-website-list.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/collection-reports/current/document-library-cleanup-recommendations.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/document-library-inventory.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/document-library-summary.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/final-coverage-after-10-rounds.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/final-coverage-after-10-rounds.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/collection-reports/current/post-cleanup-verification.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/public-data-write-summary.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/公开数据补采续执行报告.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/collection-reports/current/诊断错题集.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/current/诊断错题集与回归测试机制.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/collection-reports/current/近26周航运指数录入与正式说明.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/collection-reports/data-source-website-list.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/data-source-website-list.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/collection-reports/document-library-cleanup-recommendations.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/document-library-inventory.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/document-library-summary.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/public-data-write-summary.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/collection-reports/公开数据补采续执行报告.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/data-ingestion-checklist.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/exchange-rate/README_当前汇率文件说明.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/exchange-rate/usd-cny-screenshot-ocr-daily.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/exchange-rate/usd-cny-weekly-aligned.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/exchange-rate/usd-cny-weekly-collection-plan.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/exchange-rate/usd-cny-weekly-from-screenshot.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/exchange-rate/week2-input/usd-cny-week2-simulated-input.csv`：复跑输入数据，已从模拟替换为公开数据口径。
-- `01-raw-data/exchange-rate/week3-input/usd-cny-week3-simulated-input.csv`：复跑输入数据，已从模拟替换为公开数据口径。
-- `01-raw-data/exchange-rate/原始_汇率.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/exchange-rate/原始_汇率_template.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/exchange-rate/原始_汇率_公开核验补充.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/exchange-rate/原始_汇率_周度.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/exchange-rate/原始_汇率_周度_演示补全版.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/ccfi-weekly-aligned.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/week2-input/scfi-week2-simulated-input.csv`：复跑输入数据，已从模拟替换为公开数据口径。
-- `01-raw-data/freight-index/week3-input/scfi-week3-simulated-input.csv`：复跑输入数据，已从模拟替换为公开数据口径。
-- `01-raw-data/freight-index/原始_CCFI运价指数.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/原始_CCFI运价指数_演示补全版.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/原始_SCFIS结算指数.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/原始_SCFIS结算指数_演示补全版.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/原始_SCFI单期综合指数.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/原始_SCFI运价指数.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/原始_SCFI运价指数_演示补全版.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/原始_航运指数_26周完整正式长表.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/freight-index/原始_运价指数_template.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/internal-simulated/原始_附加费规则.xlsx`：Excel分析、验证或样式文件文件。
-- `01-raw-data/mvp-raw-files-status.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/oil-price/原始_布伦特原油.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/route-dictionary/原始_航线字典.xlsx`：Excel分析、验证或样式文件文件。
-- `01-raw-data/route-dictionary/原始_航线字典_template.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/surcharge-rules/README_surcharge_reference_2026_05.md`：Markdown说明、报告或QA材料。
-- `01-raw-data/surcharge-rules/surcharge-cost-model-reference-input-2026-05.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/surcharge-rules/surcharge-market-reference-2026-05.csv`：CSV数据、清单或计算输出。
-- `01-raw-data/surcharge-rules/原始_附加费规则.xlsx`：Excel分析、验证或样式文件文件。
-- `01-raw-data/surcharge-rules/原始_附加费规则_template.xlsx`：Excel分析、验证或样式文件文件。
-## 分析层
-- `03-analysis/CR-04A_指标计算结果.xlsx`：Excel分析、验证或样式文件文件。
-- `03-analysis/CR-04A_指标计算结果_template.xlsx`：Excel分析、验证或样式文件文件。
-- `03-analysis/CR-04C_敏感性分析表.md`：What-if敏感性分析。
-- `03-analysis/rerun-simulations/week2-prime/CR-04A_指标计算结果_week2-prime.xlsx`：Excel分析、验证或样式文件文件。
-- `03-analysis/rerun-simulations/week2-prime/latest-summary-week2-prime.csv`：复跑指标计算输出。
-- `03-analysis/rerun-simulations/week3-prime/CR-04A_指标计算结果_week3-prime.xlsx`：Excel分析、验证或样式文件文件。
-- `03-analysis/rerun-simulations/week3-prime/latest-summary-week3-prime.csv`：复跑指标计算输出。
-## 决策层
-- `04-decision-report/CR-01_业务痛点与价值主张.docx`：项目文件。
-- `04-decision-report/CR-01_业务痛点与价值主张_outline.md`：Markdown说明、报告或QA材料。
-- `04-decision-report/CR-03_工作流设计说明书.docx`：项目文件。
-- `04-decision-report/CR-03_工作流设计说明书_outline.md`：Markdown说明、报告或QA材料。
-- `04-decision-report/CR-04B_业务决策建议.csv`：CSV数据、清单或计算输出。
-- `04-decision-report/CR-04B_业务决策建议.docx`：项目文件。
-- `04-decision-report/CR-04B_业务决策建议.md`：业务决策建议Markdown版，含差异化建议和当前周复跑摘要。
-- `04-decision-report/CR-04B_业务决策建议_outline.md`：Markdown说明、报告或QA材料。
-- `04-decision-report/CR-05_分析报告.docx`：项目文件。
-- `04-decision-report/CR-05_分析报告.md`：分析报告Markdown版，含2026-06-12当前周指标摘要。
-- `04-decision-report/CR-05_分析报告_outline.md`：Markdown说明、报告或QA材料。
-- `04-decision-report/rerun-simulations/week2-prime/CR-04B_业务决策建议_week2-prime.csv`：复跑决策建议输出。
-- `04-decision-report/rerun-simulations/week2-prime/CR-04B_业务决策建议_week2-prime.docx`：复跑决策建议输出。
-- `04-decision-report/rerun-simulations/week3-prime/CR-04B_业务决策建议_week3-prime.csv`：复跑决策建议输出。
-- `04-decision-report/rerun-simulations/week3-prime/CR-04B_业务决策建议_week3-prime.docx`：复跑决策建议输出。
-## 展示层-PPT
-- `05-presentation/CR-06_参赛展示PPT_storyboard.md`：Markdown说明、报告或QA材料。
-- `05-presentation/CR-06_可打印PPT稿.md`：Markdown说明、报告或QA材料。
-- `05-presentation/PPT_EXPORT_NOTE.md`：PPT/PDF导出说明，记录PDF替代交付口径。
-- `05-presentation/assets/generated/manifest.json`：项目文件。
-- `05-presentation/cr-06-submission-deck-10p.html`：10页参赛展示HTML源文件，用于后续导出PPTX或PDF。
-- `05-presentation/cr-06-submission-deck.html`：HTML演示或展示素材。
-- `05-presentation/printable-markdown/README.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-markdown/p1-printable.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-markdown/p2-printable.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-markdown/p3-printable.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-markdown/p4-printable.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-markdown/p5-printable.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-markdown/p6-printable.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-markdown/p7-printable.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-markdown/p8-printable.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P01.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P02.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P03.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P04.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P05.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P06.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P07.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P08.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P09.md`：Markdown说明、报告或QA材料。
-- `05-presentation/printable-pages/P10.md`：Markdown说明、报告或QA材料。
-- `05-presentation/screenshots/demo-screenshot-P01.png`：演示截图或图表素材。
-- `05-presentation/screenshots/demo-screenshot-P02.png`：演示截图或图表素材。
-- `05-presentation/screenshots/demo-screenshot-P03.png`：演示截图或图表素材。
-- `05-presentation/screenshots/demo-screenshot-P04.png`：演示截图或图表素材。
-- `05-presentation/screenshots/demo-screenshot-P05.png`：演示截图或图表素材。
-- `05-presentation/screenshots/demo-screenshot-P06.png`：演示截图或图表素材。
-- `05-presentation/screenshots/demo-screenshot-P07.png`：演示截图或图表素材。
-- `05-presentation/screenshots/demo-screenshot-P08.png`：演示截图或图表素材。
-- `05-presentation/screenshots/demo-screenshot-P09.png`：演示截图或图表素材。
-- `05-presentation/screenshots/demo-screenshot-P10.png`：演示截图或图表素材。
-- `05-presentation/舱路雷达_参赛展示PPT.pdf`：可直接上传/查看的10页参赛展示PDF，由P01-P10截图按顺序合成。
-## 展示层-Demo
-- `06-visual-demo/CR-07_闭环长图.png`：演示截图或图表素材。
-- `06-visual-demo/CR-07_闭环长图_wireframe.md`：Markdown说明、报告或QA材料。
-- `06-visual-demo/CR-08_Demo演示脚本.docx`：项目文件。
-- `06-visual-demo/CR-08_Demo演示脚本_outline.md`：Markdown说明、报告或QA材料。
-- `06-visual-demo/demo-assets/demo-narration-subtitles.md`：Markdown说明、报告或QA材料。
-- `06-visual-demo/demo-screenshots/README.md`：Markdown说明、报告或QA材料。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P01.png`：演示截图或图表素材。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P02.png`：演示截图或图表素材。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P03.png`：演示截图或图表素材。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P04.png`：演示截图或图表素材。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P05.png`：演示截图或图表素材。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P06.png`：演示截图或图表素材。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P07.png`：演示截图或图表素材。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P08.png`：演示截图或图表素材。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P09.png`：演示截图或图表素材。
-- `06-visual-demo/demo-screenshots/demo-screenshot-P10.png`：演示截图或图表素材。
-## 验证层
-- `07-validation/CR-09_量化验证表.xlsx`：Excel分析、验证或样式文件文件。
-- `07-validation/CR-09_量化验证表_template.xlsx`：Excel分析、验证或样式文件文件。
-## 提交层
-- `08-submission/01_作品说明文档_outline.docx`：项目文件。
-- `08-submission/CR-10A_评委阅读指南.docx`：项目文件。
-- `08-submission/CR-10A_评委阅读指南_outline.md`：Markdown说明、报告或QA材料。
-- `08-submission/CR-10B_复跑说明.docx`：项目文件。
-- `08-submission/CR-10B_复跑说明_outline.md`：Markdown说明、报告或QA材料。
-- `08-submission/CR-10C_材料目录.docx`：项目文件。
-- `08-submission/CR-10C_材料目录.md`：Markdown说明、报告或QA材料。
-- `08-submission/CR-10C_材料目录_outline.md`：Markdown说明、报告或QA材料。
-- `08-submission/CR-11_作品说明文档.md`：评审导航文档，说明项目闭环、商业价值、工具整合和真实数据复跑。
-- `08-submission/final-package/canglu-radar-submission.zip`：最终提交包归档。
-- `08-submission/final-package/manifest.csv`：CSV数据、清单或计算输出。
-## 复跑记录
-- `09-logs/rerun-records-week2-prime.md`：Week2真实公开数据复跑记录。
-- `09-logs/rerun-records-week3-prime.md`：Week3真实公开数据/推算口径复跑记录。
-## 其他
-- `02-governance/CR-02A_字段字典.xlsx`：Excel分析、验证或样式文件文件。
-- `02-governance/CR-02A_字段字典_template.xlsx`：Excel分析、验证或样式文件文件。
-- `02-governance/CR-02B_清洗后主数据.xlsx`：Excel分析、验证或样式文件文件。
-- `02-governance/CR-02B_清洗后主数据_template.xlsx`：Excel分析、验证或样式文件文件。
-- `02-governance/CR-02C_数据脱敏与来源说明.docx`：项目文件。
-- `02-governance/surcharge-scenario-cost-model.md`：Markdown说明、报告或QA材料。
-- `02-processed-data/CR-MVP_数据质量检查.csv`：CSV数据、清单或计算输出。
-- `02-processed-data/CR-MVP_清洗后主数据.xlsx`：Excel分析、验证或样式文件文件。
-- `02-processed-data/canglu-demo-cost-model-scenario-based.csv`：CSV数据、清单或计算输出。
-- `02-processed-data/canglu-demo-cost-model-scenario-based.xlsx`：Excel分析、验证或样式文件文件。
-- `02-processed-data/canglu-radar-scenario-cost-model.xlsx`：Excel分析、验证或样式文件文件。
-- `02-processed-data/surcharge-scenario-calculation-detail-2026-05.csv`：CSV数据、清单或计算输出。
-- `02-processed-data/surcharge-scenario-definitions-2026-05.csv`：CSV数据、清单或计算输出。
-- `02-processed-data/surcharge-scenario-rules-2026-05.csv`：CSV数据、清单或计算输出。
-- `02-processed-data/surcharge-scenario-summary-2026-05.csv`：CSV数据、清单或计算输出。
+---
+生成日期：2026-06-20
+版本：正式版
+---
+
+# 舱路雷达 | 材料目录
+
+## 提交包结构
+舱路雷达/
+├── 00-control/              # 控制与QA
+│   ├── qa-checklist.md
+│   └── batch-map.md
+├── 01-raw-data/             # 原始数据（真实+演示补全）
+│   ├── freight-index/       # SCFI运价指数
+│   ├── exchange-rate/       # 汇率数据
+│   ├── carrier-announcements/ # 船公司公告
+│   └── surcharge-rules/     # 附加费规则
+├── 02-governance/           # 数据治理
+│   ├── CR-02A_字段字典.xlsx
+│   └── CR-02B_清洗后主数据.xlsx
+├── 02-processed-data/       # 处理后数据
+│   └── canglu-demo-cost-model-scenario-based.xlsx
+├── 03-analysis/             # 指标计算
+│   ├── CR-04A_指标计算结果.xlsx
+│   └── CR-04C_敏感性分析表.md
+├── 04-decision-report/      # 决策建议
+│   ├── CR-04B_业务决策建议.md
+│   └── CR-05_分析报告.md
+├── 05-presentation/         # 展示材料
+│   ├── 舱路雷达_参赛展示PPT.pdf
+│   └── cr-06-submission-deck.html
+├── 06-visual-demo/          # Demo素材
+│   ├── CR-07_闭环长图.png
+│   └── CR-08_Demo演示脚本.docx
+├── 07-validation/           # 量化验证
+│   └── CR-09_量化验证表.xlsx
+├── 08-submission/           # 提交材料
+│   ├── CR-10A_评委阅读指南.md
+│   ├── CR-10B_复跑说明.md
+│   ├── CR-10C_材料目录.md
+│   ├── CR-11_作品说明文档.md
+│   └── final-package/
+│       └── manifest.csv
+└── 09-logs/                 # 复跑记录
+├── rerun-records-week2-prime.md
+└── rerun-records-week3-prime.md
+plain
+￼
+复制
+## 核心文件清单（14个）
+
+| 编号 | 文件 | 用途 | 数据质量 |
+|:---|:---|:---|:---|
+| 01 | CR-04A_指标计算结果.xlsx | 核心指标源 | A/B/C混合 |
+| 02 | CR-04B_业务决策建议.md | 差异化建议 | 基于04A |
+| 03 | CR-05_分析报告.md | 分析报告 | 基于04A/04B |
+| 04 | CR-09_量化验证表.xlsx | 效率提升证明 | 估算+记录 |
+| 05 | 舱路雷达_参赛展示PPT.pdf | 10页参赛展示 | 展示材料 |
+| 06 | CR-11_作品说明文档.md | 评审导航 | 说明文档 |
+| 07 | CR-10A_评委阅读指南.md | 阅读顺序 | 说明文档 |
+| 08 | CR-10B_复跑说明.md | 复跑路径 | 说明文档 |
+| 09 | CR-10C_材料目录.md | 文件索引 | 说明文档 |
+| 10 | rerun-records-week2-prime.md | 真实复跑记录 | A_official |
+| 11 | rerun-records-week3-prime.md | 推算复跑记录 | B_public_excerpt |
+| 12 | CR-04C_敏感性分析表.md | what-if分析 | 基于04A |
+| 13 | CR-07_闭环长图.png | 一图读懂 | 展示材料 |
+| 14 | CR-08_Demo演示脚本.docx | 演示脚本 | 展示材料 |
+
+## 评审建议阅读顺序
+
+1. **3分钟**：打开舱路雷达_参赛展示PPT.pdf，快速理解作品
+2. **5分钟**：阅读CR-11_作品说明文档.md，理解评分维度对应关系
+3. **10分钟**：打开CR-04A_指标计算结果.xlsx，验证公式和数字
+4. **5分钟**：阅读CR-04B_业务决策建议.md，检查差异化建议
+5. **5分钟**：阅读rerun-records-week2-prime.md，验证复跑真实性
+6. **10分钟**：打开CR-09_量化验证表.xlsx，检查效率提升数据
+7. **可选**：打开CR-04C_敏感性分析表.md，查看what-if能力
+
+## 当前状态
+
+所有材料已最终定稿，无占位稿、无待补项、无TODO。
+生成日期：2026-06-20。
