@@ -180,15 +180,11 @@
 07-validation/CR-09_量化验证表.xlsx,yes,07-validation/CR-09_量化验证表.xlsx,验证层,N/A,Excel分析、验证或结构文件。
 07-validation/CR-09_量化验证表_template.xlsx,yes,07-validation/CR-09_量化验证表_template.xlsx,验证层,N/A,Excel分析、验证或结构文件。
 08-submission/01_作品说明文档_outline.docx,yes,08-submission/01_作品说明文档_outline.docx,提交层,N/A,项目文件。
-08-submission/CR-10A_评委阅读指南.docx,yes,08-submission/CR-10A_评委阅读指南.docx,提交层,N/A,项目文件。
-08-submission/CR-10A_评委阅读指南_outline.md,yes,08-submission/CR-10A_评委阅读指南_outline.md,提交层,N/A,Markdown说明、报告或QA材料。
-08-submission/CR-10B_复跑说明.docx,yes,08-submission/CR-10B_复跑说明.docx,提交层,N/A,项目文件。
-08-submission/CR-10B_复跑说明_outline.md,yes,08-submission/CR-10B_复跑说明_outline.md,提交层,N/A,Markdown说明、报告或QA材料。
-08-submission/CR-10C_材料目录.docx,yes,08-submission/CR-10C_材料目录.docx,提交层,N/A,项目文件。
 08-submission/CR-10C_材料目录.md,yes,08-submission/CR-10C_材料目录.md,提交层,N/A,Markdown说明、报告或QA材料。
-08-submission/CR-10C_材料目录_outline.md,yes,08-submission/CR-10C_材料目录_outline.md,提交层,N/A,Markdown说明、报告或QA材料。
 08-submission/CR-11_作品说明文档.md,yes,08-submission/CR-11_作品说明文档.md,提交层,N/A,评审导航文档，说明项目闭环、商业价值、工具整合和真实数据复跑。
 08-submission/final-package/manifest.csv,yes,08-submission/final-package/manifest.csv,提交层,N/A,CSV数据、清单或计算输出。
 09-logs/rerun-records-week2-prime.md,yes,09-logs/rerun-records-week2-prime.md,复跑记录,N/A,Week2真实公开数据复跑记录。
 09-logs/rerun-records-week3-prime.md,yes,09-logs/rerun-records-week3-prime.md,复跑记录,N/A,Week3真实公开数据/推算口径复跑记录。
 README.md,yes,README.md,仓库首页,N/A,仓库首页，含项目定位、核心数字速查、阅读顺序和数据质量声明。
+08-submission/CR-10A_评委阅读指南.md,yes,08-submission/CR-10A_评委阅读指南.md,submission,A/B/C/PENDING documented,评委阅读指南正式Markdown版。
+08-submission/CR-10B_复跑说明.md,yes,08-submission/CR-10B_复跑说明.md,submission,A/B/C/PENDING documented,复跑说明正式Markdown版，材料级复核口径。
