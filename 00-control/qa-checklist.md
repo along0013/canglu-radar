@@ -33,7 +33,7 @@
 | 公告关联措辞 | PASS | CR-05仅使用“关联线索”，未写确定因果。 |
 | 模拟/参考数据声明 | PASS | 附加费明确为C_market_reference；视频录制和外部补采为PENDING。 |
 | 复跑路径完整性 | PASS_PARTIAL | 已生成3次dry-run复跑记录；未完成真实连续三周运营。 |
-| 工具整合证据 | PASS_PARTIAL | 已覆盖数据分析、Excel、Word报告、PPT storyboard、长图、Demo脚本、QA、打包；正式PPTX/Demo视频待补。 |
+| 工具整合证据 | PASS_PARTIAL | 已覆盖数据分析、Excel、Word报告、PPT storyboard、长图、Demo脚本、QA、打包；展示PDF与Demo素材说明已纳入提交包。 |
 
 ## 七天冲刺一致性检查补充
 

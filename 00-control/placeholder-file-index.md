@@ -1,6 +1,6 @@
 # 舱路雷达｜占位文件索引
 
-## Excel模板
+## Excel表格结构记录
 
 | 文件 | 状态 |
 |---|---|
@@ -10,7 +10,7 @@
 | 03-analysis/CR-04A_指标计算结果_template.xlsx | 已完成 |
 | 07-validation/CR-09_量化验证表_template.xlsx | 已完成 |
 
-## Word占位正式稿
+## Word正式稿修复记录
 
 | 文件 | 状态 |
 |---|---|
@@ -34,7 +34,7 @@
 | 06-visual-demo/CR-07_闭环长图_placeholder.html | 已完成HTML骨架 |
 | 06-visual-demo/CR-07_闭环长图_wireframe.md | 已完成 |
 
-## 原始数据CSV模板
+## 原始数据CSV结构记录
 
 | 文件 | 状态 |
 |---|---|
