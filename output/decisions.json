@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "version": "5.0",
+    "latest_week": "2026-06-26",
+    "generated_at": "2026-08-07T21:33:54.680863+08:00",
+    "quality_level": "B_public_excerpt",
+    "source": "SCFI 上海航运交易所官网 + 公开转载数据",
+    "fx_rate": 6.8166,
+    "note": "SCFI 数据部分周 PENDING（空值），Z 分数仅基于有效样本计算。"
+  },
+  "decisions": [
+    {
+      "code": "EUR",
+      "name": "欧洲航线",
+      "warning_level": "黄色预警",
+      "suggestion": "亚欧航线运价上行，当前 3342 USD/TEU，Z=2.80。建议密切关注未来 1-2 周走势，对中长期合约适当增加浮动条款。非紧急货物可暂缓订舱。",
+      "confidence": "B_public_excerpt",
+      "source_metrics": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周",
+        "周涨跌幅≥5%"
+      ]
+    },
+    {
+      "code": "MED",
+      "name": "地中海航线",
+      "warning_level": "黄色预警",
+      "suggestion": "地中海航线运价上升，当前 4666 USD/TEU，Z=2.59。建议关注北非/南欧替代港口方案，降低单一航线依赖。报价有效期建议缩短至 10 天。",
+      "confidence": "B_public_excerpt",
+      "source_metrics": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周",
+        "周涨跌幅≥5%"
+      ]
+    },
+    {
+      "code": "USWC",
+      "name": "美西航线",
+      "warning_level": "黄色预警",
+      "suggestion": "美西航线运价走高，当前 6067 USD/FEU，Z=2.72。建议提前 1 周订舱，对大批量货物拆分批次降低风险。报价有效期建议 10 天。",
+      "confidence": "B_public_excerpt",
+      "source_metrics": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周",
+        "周涨跌幅≥5%"
+      ]
+    },
+    {
+      "code": "USEC",
+      "name": "美东航线",
+      "warning_level": "黄色预警",
+      "suggestion": "美东航线运价上扬，当前 7384 USD/FEU，Z=2.65。建议关注巴拿马运河通行状况，对时效敏感货物考虑美西+铁路替代方案。报价加入 10%-15% 缓冲。",
+      "confidence": "B_public_excerpt",
+      "source_metrics": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周",
+        "周涨跌幅≥5%"
+      ]
+    },
+    {
+      "code": "COMPOSITE",
+      "name": "SCFI综合指数",
+      "warning_level": "黄色预警",
+      "suggestion": "市场运价整体上行，SCFI 综合指数 3240 points，Z=2.29。建议对主要航线报价增加风险条款，缩短报价有效期至 10 天。",
+      "confidence": "B_public_excerpt",
+      "source_metrics": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周"
+      ]
+    }
+  ],
+  "cross_validation": {
+    "scfi_direction": "up",
+    "ccfi_direction": "up",
+    "consistency": "consistent",
+    "note": "SCFI 与 CCFI 4W趋势同向，高置信。⚠️ CCFI 天然滞后 SCFI 2-4 周，同向时可能低估拐点。已有 WCI/FBX 三方验证数据。"
+  },
+  "_stats": {
+    "total_data_points": 5,
+    "pending_count": 0,
+    "pending_ratio": 0.0,
+    "effective_sample_size": 5,
+    "window_size": 26
+  }
+}

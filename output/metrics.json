@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "version": "5.0",
+    "latest_week": "2026-06-26",
+    "generated_at": "2026-08-07T21:33:54.679583+08:00",
+    "quality_level": "B_public_excerpt",
+    "source": "SCFI 上海航运交易所官网 + 公开转载数据",
+    "fx_rate": 6.8166,
+    "note": "26/26 周有真实数据，0 数据点 PENDING。当前处于旺季(Q2, 比率1.62)。"
+  },
+  "routes": [
+    {
+      "code": "EUR",
+      "name": "欧洲航线",
+      "unit": "USD/TEU",
+      "current_value": 3342.0,
+      "percentiles": {
+        "p50": 1601.0,
+        "p75": 1778.5,
+        "p85": 2299.75,
+        "p90": 2694.0,
+        "p95": 3081.5
+      },
+      "wow_change_pct": 5.83,
+      "z_score": 2.8,
+      "up_streak_weeks": 10,
+      "warning_level": "黄色预警",
+      "warning_tags": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周",
+        "周涨跌幅≥5%"
+      ],
+      "quality_level": "B_public_excerpt",
+      "data_quality": "reduced"
+    },
+    {
+      "code": "MED",
+      "name": "地中海航线",
+      "unit": "USD/TEU",
+      "current_value": 4666.0,
+      "percentiles": {
+        "p50": 2459.5,
+        "p75": 3108.5,
+        "p85": 3619.25,
+        "p90": 4031.0,
+        "p95": 4244.0
+      },
+      "wow_change_pct": 9.53,
+      "z_score": 2.59,
+      "up_streak_weeks": 10,
+      "warning_level": "黄色预警",
+      "warning_tags": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周",
+        "周涨跌幅≥5%"
+      ],
+      "quality_level": "B_public_excerpt",
+      "data_quality": "reduced"
+    },
+    {
+      "code": "USWC",
+      "name": "美西航线",
+      "unit": "USD/FEU",
+      "current_value": 6067.0,
+      "percentiles": {
+        "p50": 2304.0,
+        "p75": 3045.0,
+        "p85": 3916.5,
+        "p90": 4679.0,
+        "p95": 5508.25
+      },
+      "wow_change_pct": 6.76,
+      "z_score": 2.72,
+      "up_streak_weeks": 10,
+      "warning_level": "黄色预警",
+      "warning_tags": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周",
+        "周涨跌幅≥5%"
+      ],
+      "quality_level": "B_public_excerpt",
+      "data_quality": "reduced"
+    },
+    {
+      "code": "USEC",
+      "name": "美东航线",
+      "unit": "USD/FEU",
+      "current_value": 7384.0,
+      "percentiles": {
+        "p50": 3237.5,
+        "p75": 4121.0,
+        "p85": 5135.25,
+        "p90": 5957.0,
+        "p95": 6726.25
+      },
+      "wow_change_pct": 7.43,
+      "z_score": 2.65,
+      "up_streak_weeks": 10,
+      "warning_level": "黄色预警",
+      "warning_tags": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周",
+        "周涨跌幅≥5%"
+      ],
+      "quality_level": "B_public_excerpt",
+      "data_quality": "reduced"
+    },
+    {
+      "code": "COMPOSITE",
+      "name": "SCFI综合指数",
+      "unit": "points",
+      "current_value": 3239.64,
+      "percentiles": {
+        "p50": 1840.87,
+        "p75": 2094.05,
+        "p85": 2610.42,
+        "p90": 2855.85,
+        "p95": 3087.73
+      },
+      "wow_change_pct": 3.77,
+      "z_score": 2.29,
+      "up_streak_weeks": 10,
+      "warning_level": "黄色预警",
+      "warning_tags": [
+        "P95高位",
+        "Z≥2异常",
+        "连续上涨≥3周"
+      ],
+      "quality_level": "B_public_excerpt",
+      "data_quality": "reduced"
+    }
+  ],
+  "market_regime": {
+    "overall_warning": "黄色预警",
+    "routes_in_red": 0,
+    "routes_in_yellow": 4,
+    "routes_in_green": 0,
+    "scfi_validates": false,
+    "season": "旺季(Q2, 比率1.62)",
+    "description": "部分航线运价偏离均值，建议密切关注。"
+  },
+  "_stats": {
+    "total_data_points": 130,
+    "pending_count": 0,
+    "pending_ratio": 0.0,
+    "effective_sample_size": 26,
+    "window_size": 26
+  }
+}

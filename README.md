@@ -52,6 +52,47 @@
 
 ## 当前仓库状态
 
-- 当前 Git 跟踪文件：190 个。
+- 🔒 **已封存** — 小浣熊 OPC 比赛 6/28 路演结束，项目进入只读归档。
+- ⚠️ Git 仓库已分离（`.git` 目录移除），当前仅保留工作目录快照。
+- 原有 Git 跟踪文件：190 个（封存时记录）。
 - 评审核心材料：以 `CR-11 → CR-04A → CR-04B.md → CR-05.md → CR-09 → CR-10C` 为主线。
 - 已排除内容：草稿、日志、缓存、压缩包和临时抓取页不纳入评审主仓库。
+- 📅 最后更新：2026-07-03（PPT v6 终版 + 项目清理）。
+
+## P0/P1 验证入口
+
+当前工作目录快照已补齐轻量 P0/P1 smoke tests，用于验证“路径入口 → output 五件套 → compute 复算 → 数值容差 diff → Dashboard 字段契约”的核心链路。
+
+本地一键脚本：
+
+```bash
+./scripts/smoke.sh
+```
+
+等价直接命令：
+
+```bash
+$BOX_AGENT_PYTHON tests/run_smoke_tests.py
+```
+
+通过时应看到：
+
+```text
+all P0/P1 smoke tests passed
+```
+
+远端 CI：已新增 GitHub Actions workflow：`.github/workflows/smoke.yml`，会在 `push` 到 `main/master` 或发起 `pull_request` 时运行：
+
+```bash
+python tests/run_smoke_tests.py
+```
+
+说明：compute 复算与数值 diff 默认使用项目内 fixture：`tests/fixtures/shared`，因此远端 CI checkout 后不再依赖相邻目录 `../shared`。本地如需使用完整真实输入，可通过环境变量覆盖：
+
+```bash
+CANGLU_SHARED_DIR=../shared ./scripts/smoke.sh
+```
+
+fixture 输入契约至少覆盖 compute 当前读取的 CSV 数据源，包括 SCFI/CCFI/WCI/FBX/SCFIS/BDI/Brent、汇率、事件、附加费场景和指数对比等文件。
+
+更多审计结论见：`plans/final-audit-report.md` 与 `plans/p0-test-landing-plan.md`。

@@ -1,0 +1,8 @@
+index_code,index_name,value,unit,date,quality_level,status
+SCFI,上海出口集装箱运价指数,3239.64,points,2026-06-26,B_public_excerpt,collected
+CCFI,中国出口集装箱运价指数,1710.47,points,2026-06-26,A_official,collected
+SCFIS,上海出口集装箱结算运价指数(欧洲),3358.62,points,2026-06-29,A_official,collected
+WCI,Drewry World Container Index,4166,USD/FEU,2026-06-26,B_public_excerpt,collected
+FBX,Freightos Baltic Index,3426.8,USD/FEU,2026-06-26,B_public_excerpt,collected
+BDI,波罗的海干散货运价指数,2501,points,2026-06-30,B_public_excerpt,collected
+BRENT,布伦特原油期货,72.95,USD/barrel,2026-06-30,B_public_excerpt,collected

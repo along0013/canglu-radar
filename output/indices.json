@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "version": "5.0",
+    "latest_week": "2026-06-26",
+    "generated_at": "2026-08-07T21:33:54.681383+08:00",
+    "quality_level": "B_public_excerpt",
+    "source": "SCFI 上海航运交易所官网 + 公开转载数据",
+    "fx_rate": 6.8166,
+    "note": "SCFI 数据部分周 PENDING（空值），Z 分数仅基于有效样本计算。"
+  },
+  "indices": [
+    {
+      "code": "SCFI",
+      "name": "上海出口集装箱运价指数",
+      "value": 3239.64,
+      "unit": "points",
+      "date": "2026-06-26",
+      "quality_level": "B_public_excerpt",
+      "status": "collected",
+      "source_url": ""
+    },
+    {
+      "code": "CCFI",
+      "name": "中国出口集装箱运价指数",
+      "value": 1710.47,
+      "unit": "points",
+      "date": "2026-06-26",
+      "quality_level": "A_official",
+      "status": "collected",
+      "source_url": ""
+    },
+    {
+      "code": "SCFIS",
+      "name": "上海出口集装箱结算运价指数(欧洲)",
+      "value": 3358.62,
+      "unit": "points",
+      "date": "2026-06-29",
+      "quality_level": "A_official",
+      "status": "collected",
+      "source_url": ""
+    },
+    {
+      "code": "WCI",
+      "name": "Drewry World Container Index",
+      "value": 4166.0,
+      "unit": "USD/FEU",
+      "date": "2026-06-26",
+      "quality_level": "B_public_excerpt",
+      "status": "collected",
+      "source_url": ""
+    },
+    {
+      "code": "FBX",
+      "name": "Freightos Baltic Index",
+      "value": 3426.8,
+      "unit": "USD/FEU",
+      "date": "2026-06-26",
+      "quality_level": "B_public_excerpt",
+      "status": "collected",
+      "source_url": ""
+    },
+    {
+      "code": "BDI",
+      "name": "波罗的海干散货运价指数",
+      "value": 2501.0,
+      "unit": "points",
+      "date": "2026-06-30",
+      "quality_level": "B_public_excerpt",
+      "status": "collected",
+      "source_url": ""
+    },
+    {
+      "code": "BRENT",
+      "name": "布伦特原油期货",
+      "value": 72.95,
+      "unit": "USD/barrel",
+      "date": "2026-06-30",
+      "quality_level": "B_public_excerpt",
+      "status": "collected",
+      "source_url": ""
+    }
+  ],
+  "_stats": {
+    "total_data_points": 7,
+    "pending_count": 0,
+    "pending_ratio": 0.0,
+    "effective_sample_size": 7,
+    "window_size": 26
+  }
+}

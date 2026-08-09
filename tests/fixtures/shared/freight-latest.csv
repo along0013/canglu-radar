@@ -1,0 +1,6 @@
+route_name,route_code,base_freight_usd,unit,quality_level
+欧洲航线,EUR,3342.0,USD/TEU,B_public_excerpt
+地中海航线,MED,4666.0,USD/TEU,B_public_excerpt
+美西航线,USWC,6067.0,USD/FEU,B_public_excerpt
+美东航线,USEC,7384.0,USD/FEU,B_public_excerpt
+SCFI综合指数,COMPOSITE,3239.64,points,B_public_excerpt

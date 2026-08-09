@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "version": "5.0",
+    "latest_week": "2026-06-26",
+    "generated_at": "2026-08-07T21:33:54.680618+08:00",
+    "quality_level": "B_public_excerpt",
+    "source": "SCFI 上海航运交易所官网 + 公开转载数据",
+    "fx_rate": 6.8166,
+    "note": "SCFI 数据部分周 PENDING（空值），Z 分数仅基于有效样本计算。"
+  },
+  "scenarios": [
+    {
+      "code": "BASE_USEC",
+      "name": "美东基础场景",
+      "route_code": "USEC",
+      "base_freight_usd": 7384.0,
+      "surcharge_usd": 836.5,
+      "total_cost_usd": 8220.5,
+      "total_cost_cny": 56035.86,
+      "description": "共 6 项费用",
+      "risk_level": "normal"
+    },
+    {
+      "code": "BASE_USWC",
+      "name": "美西基础场景",
+      "route_code": "USWC",
+      "base_freight_usd": 6067.0,
+      "surcharge_usd": 836.5,
+      "total_cost_usd": 6903.5,
+      "total_cost_cny": 47058.4,
+      "description": "共 6 项费用",
+      "risk_level": "normal"
+    },
+    {
+      "code": "STRESS_USEC",
+      "name": "美东压力场景",
+      "route_code": "USEC",
+      "base_freight_usd": 7384.0,
+      "surcharge_usd": 2111.5,
+      "total_cost_usd": 9495.5,
+      "total_cost_cny": 64727.03,
+      "description": "共 11 项费用",
+      "risk_level": "stress"
+    },
+    {
+      "code": "STRESS_USWC",
+      "name": "美西压力场景",
+      "route_code": "USWC",
+      "base_freight_usd": 6067.0,
+      "surcharge_usd": 2111.5,
+      "total_cost_usd": 8178.5,
+      "total_cost_cny": 55749.56,
+      "description": "共 11 项费用",
+      "risk_level": "stress"
+    },
+    {
+      "code": "USEC_PANAMA_STRESS",
+      "name": "美东巴拿马压力场景",
+      "route_code": "USEC",
+      "base_freight_usd": 7384.0,
+      "surcharge_usd": 2386.5,
+      "total_cost_usd": 9770.5,
+      "total_cost_cny": 66601.59,
+      "description": "共 12 项费用",
+      "risk_level": "extreme"
+    }
+  ],
+  "sensitivity": {
+    "fx_rate_range": [
+      6.6121,
+      6.8166,
+      7.0211
+    ],
+    "surcharge_multipliers": [
+      1.0,
+      1.5,
+      2.0
+    ],
+    "freight_change_pct": [
+      0,
+      10,
+      20,
+      30
+    ]
+  },
+  "_stats": {
+    "total_data_points": 20,
+    "pending_count": 0,
+    "pending_ratio": 0.0,
+    "effective_sample_size": 5,
+    "window_size": 26
+  }
+}

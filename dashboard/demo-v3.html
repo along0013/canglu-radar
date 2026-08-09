@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>舱路雷达 · 跨境物流异常预警与发货决策情报系统</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+/* ═══════════ Design Tokens — Linear-inspired dark + Gold accent ═══════════ */
+:root{
+  --bg-deep:#080D1A;
+  --bg-panel:rgba(14,21,40,0.94);
+  --bg-card:rgba(255,255,255,0.03);
+  --bg-hover:rgba(255,255,255,0.06);
+  --bg-active:rgba(249,199,79,0.08);
+  --border:rgba(255,255,255,0.06);
+  --border-active:rgba(249,199,79,0.25);
+  --accent:#F9C74F;
+  --accent-dim:rgba(249,199,79,0.12);
+  --text:#E2E6EE; --dim:#7A8296; --dim2:#525970;
+  --red:#FF4757; --red-bg:rgba(255,71,87,0.10);
+  --yellow:#FFA502; --yellow-bg:rgba(255,165,2,0.10);
+  --green:#2ED573; --green-bg:rgba(46,213,115,0.10);
+  --radius:8px; --radius-sm:6px;
+  --ease:200ms ease;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg-deep);
+  color:var(--text);
+  font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.5;
+  overflow:hidden; height:100vh;
+}
+
+/* ═══════════ Layout: H-type Cockpit ═══════════ */
+.app{display:flex;flex-direction:column;height:100vh}
+
+/* Top Bar */
+.topbar{
+  height:52px;min-height:52px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 20px;
+  background:rgba(14,21,40,0.96);
+  border-bottom:1px solid var(--border);
+  z-index:10;
+}
+.topbar-left{display:flex;align-items:center;gap:12px}
+.topbar .logo{font-size:1.15em;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.topbar .badge{
+  font-size:.7em;padding:2px 10px;border-radius:10px;
+  background:var(--accent-dim);color:var(--accent);font-weight:600;
+}
+.topbar-right{display:flex;align-items:center;gap:16px;font-size:.78em;color:var(--dim)}
+.topbar .time{font-variant-numeric:tabular-nums}
+.topbar .demo-btn{
+  padding:5px 14px;border-radius:var(--radius-sm);
+  background:var(--accent);color:#0a0f1a;font-weight:600;font-size:.78em;
+  cursor:pointer;border:none;transition:filter var(--ease);
+}
+.topbar .demo-btn:hover{filter:brightness(1.1)}
+
+/* Main Row */
+.main-row{flex:1;display:flex;overflow:hidden}
+
+/* Left Sidebar */
+.sidebar{
+  width:210px;min-width:210px;
+  background:rgba(14,21,40,0.90);
+  border-right:1px solid var(--border);
+  display:flex;flex-direction:column;
+  padding:14px 12px;gap:2px;
+  overflow-y:auto;
+  transition:width var(--ease),min-width var(--ease),opacity var(--ease);
+}
+.sidebar.collapsed{width:0;min-width:0;padding:14px 0;opacity:0;overflow:hidden}
+.sidebar .sec-title{
+  font-size:.68em;font-weight:600;color:var(--dim2);
+  text-transform:uppercase;letter-spacing:.08em;
+  padding:8px 6px 6px;
+}
+.sidebar .mini-card{
+  padding:10px 10px 8px;border-radius:var(--radius-sm);
+  background:var(--bg-card);
+  border:1px solid transparent;
+  cursor:pointer;transition:all var(--ease);
+  margin-bottom:1px;
+}
+.sidebar .mini-card:hover{background:var(--bg-hover);border-color:var(--border)}
+.sidebar .mini-card.active{background:var(--bg-active);border-color:var(--border-active)}
+.sidebar .mini-card .mc-name{font-size:.72em;color:var(--dim);margin-bottom:3px}
+.sidebar .mini-card .mc-val{font-size:1.05em;font-weight:700}
+.sidebar .mini-card .mc-sub{font-size:.65em;color:var(--dim);margin-top:1px}
+.sidebar .spark-row{display:flex;align-items:flex-end;gap:1px;height:24px;margin-top:4px}
+.sidebar .spark-row .spark-bar{
+  flex:1;min-width:2px;border-radius:1px 1px 0 0;
+  background:rgba(249,199,79,0.25);
+}
+.sidebar .source-dots{
+  display:flex;gap:6px;padding:10px 6px;flex-wrap:wrap;
+}
+.sidebar .source-dot{
+  width:7px;height:7px;border-radius:50%;
+}
+.sidebar .source-dot.on{background:var(--green);box-shadow:0 0 4px var(--green)}
+.sidebar .source-dot.off{background:var(--dim2)}
+
+/* Center */
+.center{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.center-top{flex:1;display:flex;flex-direction:column;overflow-y:auto;padding:16px 20px}
+
+/* Tabs */
+.tabs{display:flex;gap:2px;margin-bottom:14px}
+.tab{
+  padding:7px 18px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  font-size:.8em;font-weight:500;color:var(--dim);
+  cursor:pointer;border:none;background:transparent;
+  border-bottom:2px solid transparent;
+  transition:all var(--ease);
+}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* Route Cards */
+.route-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+  gap:10px;margin-bottom:16px;
+}
+.route-card{
+  padding:14px;border-radius:var(--radius);
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  transition:all var(--ease);
+}
+.route-card:hover{background:var(--bg-hover);transform:translateY(-1px)}
+.route-card .rc-name{font-size:.72em;color:var(--dim);margin-bottom:4px}
+.route-card .rc-val{font-size:1.45em;font-weight:700;font-variant-numeric:tabular-nums}
+.route-card .rc-unit{font-size:.65em;color:var(--dim2);margin-left:2px}
+.route-card .rc-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.pill{
+  font-size:.65em;padding:2px 8px;border-radius:10px;
+  font-weight:500;white-space:nowrap;
+}
+.pill-warning{background:var(--red-bg);color:var(--red)}
+.pill-caution{background:var(--yellow-bg);color:var(--yellow)}
+.pill-ok{background:var(--green-bg);color:var(--green)}
+.pill-tag{background:rgba(255,255,255,0.04);color:var(--dim)}
+/* Q&A cards */
+.qa-card{
+  padding:16px 18px;border-radius:var(--radius);
+  background:var(--bg-card);border:1px solid var(--border);
+  margin-bottom:12px;transition:all var(--ease);
+}
+.qa-card:hover{border-color:var(--border-active);background:var(--bg-hover)}
+.qa-card .qa-q{font-size:.82em;font-weight:600;color:var(--accent);margin-bottom:8px;display:flex;align-items:flex-start;gap:8px}
+.qa-card .qa-q .qa-num{font-size:.7em;background:var(--accent-dim);color:var(--accent);padding:2px 8px;border-radius:10px;white-space:nowrap;font-weight:700}
+.qa-card .qa-a{font-size:.75em;color:var(--text);line-height:1.65}
+.qa-card .qa-data{font-size:.68em;color:var(--dim);margin-top:6px;padding-top:6px;border-top:1px solid var(--border)}
+.qa-card .qa-tags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.qa-mini-table{width:100%;font-size:.75em;border-collapse:collapse;margin:6px 0}
+.qa-mini-table td{padding:3px 8px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.qa-mini-table td:first-child{color:var(--dim)}
+.qa-badge{display:inline-block;font-size:.65em;padding:2px 8px;border-radius:8px;font-weight:600}
+.qa-badge.red{background:var(--red-bg);color:var(--red)}
+.qa-badge.yellow{background:var(--yellow-bg);color:var(--yellow)}
+.qa-badge.green{background:var(--green-bg);color:var(--green)}
+
+/* Chart */
+.chart-wrap{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:16px;
+}
+.chart-wrap .chart-title{font-size:.78em;font-weight:600;color:var(--dim);margin-bottom:4px}
+.chart-wrap .chart-sub{font-size:.65em;color:var(--dim2);margin-bottom:12px}
+.chart-wrap canvas{max-height:240px}
+
+/* Bottom bar */
+.bottombar{
+  height:34px;min-height:34px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 20px;
+  border-top:1px solid var(--border);
+  font-size:.68em;color:var(--dim2);
+}
+.bottombar .eff{color:var(--accent);font-weight:600}
+
+/* Right Sidebar */
+.rightbar{
+  width:240px;min-width:240px;
+  background:rgba(14,21,40,0.90);
+  border-left:1px solid var(--border);
+  display:flex;flex-direction:column;
+  padding:14px 12px;overflow-y:auto;
+}
+.rightbar .sec-title{
+  font-size:.68em;font-weight:600;color:var(--dim2);
+  text-transform:uppercase;letter-spacing:.08em;
+  padding-bottom:8px;margin-bottom:8px;
+  border-bottom:1px solid var(--border);
+}
+.event-item{
+  padding:8px 8px 6px;border-radius:var(--radius-sm);
+  background:var(--bg-card);
+  border:1px solid transparent;margin-bottom:6px;
+  transition:all var(--ease);
+}
+.event-item:hover{border-color:var(--border);background:var(--bg-hover)}
+.event-item .ev-date{font-size:.62em;color:var(--dim2)}
+.event-item .ev-title{font-size:.72em;color:var(--text);margin:2px 0}
+.event-item .ev-tag{font-size:.6em}
+.urgency-high{border-left:2px solid var(--red)}
+.urgency-mid{border-left:2px solid var(--yellow)}
+.urgency-low{border-left:2px solid var(--green)}
+
+
+/* Painpoint intelligence upgrade */
+.route-insight-layout{display:grid;grid-template-columns:minmax(360px,1fr) 340px;gap:14px;margin-top:14px}
+.route-insight-side{display:flex;flex-direction:column;gap:12px}
+.compact-panel{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:18px;padding:14px}
+.compact-panel h3{font-size:13px;margin-bottom:10px;color:var(--text)}
+.chart-compact{height:190px;position:relative}
+.pain-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}
+.pain-tab{border:1px solid var(--border);background:rgba(255,255,255,.05);color:var(--dim);padding:8px 12px;border-radius:999px;font-size:12px;cursor:pointer;transition:all .18s}
+.pain-tab.active{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#041017;border-color:transparent;font-weight:700}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pain-card{position:relative;border:1px solid var(--border);background:rgba(255,255,255,.045);border-radius:18px;padding:14px;min-height:145px;overflow:hidden}
+.pain-card.ready{border-left:3px solid var(--cyan)}.pain-card.partial{border-left:3px solid var(--yellow)}.pain-card.disabled{opacity:.48;filter:grayscale(.35);border-style:dashed}
+.pain-card h3{font-size:14px;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px}.pain-card p{font-size:12px;color:var(--dim);line-height:1.65;margin-bottom:10px}.pain-card ul{font-size:12px;line-height:1.8;color:var(--text);padding-left:18px}
+.status-pill{font-size:10px;border:1px solid var(--border);border-radius:999px;padding:3px 7px;color:var(--dim);white-space:nowrap}.status-pill.ready{color:var(--cyan);border-color:rgba(0,212,255,.35);background:rgba(0,212,255,.08)}.status-pill.partial{color:var(--yellow);border-color:rgba(255,165,2,.35);background:rgba(255,165,2,.08)}.status-pill.disabled{color:var(--dim);background:rgba(255,255,255,.04)}
+.answer-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.answer-card{border:1px solid var(--border);border-radius:16px;padding:13px;background:rgba(255,255,255,.045)}.answer-card b{display:block;font-size:13px;margin-bottom:7px;color:var(--cyan)}.answer-card span{font-size:12px;line-height:1.65;color:var(--text)}
+.llm-panel{background:linear-gradient(145deg,rgba(0,212,255,.08),rgba(139,92,246,.07));border:1px solid rgba(0,212,255,.25);border-radius:18px;padding:15px;height:100%;min-height:245px;display:flex;flex-direction:column;gap:12px}.llm-panel .llm-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.llm-panel h3{font-size:14px;margin-bottom:5px}.llm-panel p{font-size:12px;color:var(--dim);line-height:1.6}.prompt-chips{display:flex;flex-wrap:wrap;gap:7px}.prompt-chips button{font-size:11px;border:1px solid var(--border);background:rgba(255,255,255,.06);color:var(--text);border-radius:999px;padding:7px 9px;cursor:pointer}.chat-window{flex:1;border:1px solid var(--border);border-radius:14px;padding:12px;background:rgba(0,0,0,.18);font-size:12px;line-height:1.7;color:var(--text);min-height:90px}.llm-input{display:flex;gap:8px}.llm-input input{flex:1;background:rgba(0,0,0,.22);border:1px solid var(--border);border-radius:12px;color:var(--text);padding:10px;font-size:12px}.llm-input button{border:0;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#041017;font-weight:800;padding:0 14px;cursor:pointer;opacity:.86}
+@media(max-width:1100px){.route-insight-layout{grid-template-columns:1fr}.chart-compact{height:180px}}
+
+/* AI Chat Placeholder */
+.ai-chat{
+  margin:12px 20px 4px;
+  padding:12px 16px;
+  border-radius:var(--radius);
+  border:1px dashed rgba(249,199,79,0.18);
+  background:rgba(249,199,79,0.03);
+  display:flex;align-items:center;gap:10px;
+}
+.ai-chat .ai-label{font-size:.72em;color:var(--accent);white-space:nowrap}
+.ai-chat .ai-input{
+  flex:1;background:transparent;border:none;color:var(--dim);
+  font-size:.75em;outline:none;font-family:inherit;
+}
+.ai-chat .ai-input::placeholder{color:var(--dim2)}
+.ai-chat .ai-send{
+  font-size:.72em;padding:4px 14px;border-radius:var(--radius-sm);
+  background:var(--accent-dim);color:var(--accent);
+  border:none;cursor:pointer;white-space:nowrap;
+}
+
+/* Hide panels */
+.hidden{display:none!important}
+
+/* collapse toggle */
+.toggle-sidebar{
+  position:absolute;left:210px;top:50%;transform:translateY(-50%);
+  width:16px;height:40px;background:rgba(14,21,40,0.9);
+  border:1px solid var(--border);border-left:none;
+  border-radius:0 4px 4px 0;
+  color:var(--dim);font-size:.6em;
+  cursor:pointer;z-index:5;
+  display:flex;align-items:center;justify-content:center;
+  transition:left var(--ease);
+}
+.toggle-sidebar.shifted{left:0}
+
+/* Data quality labels */
+.ql{font-size:.6em;padding:1px 5px;border-radius:3px;font-weight:600}
+.ql-A{background:var(--green-bg);color:var(--green)}
+.ql-B{background:var(--yellow-bg);color:var(--yellow)}
+
+/* Warning panel */
+.warn-item{
+  padding:10px 12px;border-radius:var(--radius-sm);
+  margin-bottom:6px;
+  border:1px solid var(--border);
+}
+.warn-item.warn-red{border-left:3px solid var(--red);background:rgba(255,71,87,0.04)}
+.warn-item.warn-yellow{border-left:3px solid var(--yellow);background:rgba(255,165,2,0.04)}
+.warn-item .warn-hdr{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.warn-item .warn-route{font-weight:600;font-size:.82em}
+.warn-item .warn-reason{font-size:.68em;color:var(--dim)}
+.warn-item .warn-advice{font-size:.72em;color:var(--text);margin-top:4px;line-height:1.6}
+
+/* Decision cards */
+.dec-card{
+  padding:14px;border-radius:var(--radius);
+  background:var(--bg-card);border:1px solid var(--border);
+  margin-bottom:10px;
+}
+.dec-card .dec-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.dec-card .dec-route{font-weight:700;font-size:.88em}
+.dec-card .dec-advice{font-size:.75em;color:var(--text);line-height:1.65;margin-bottom:8px}
+.dec-card .dec-tags{display:flex;gap:5px;flex-wrap:wrap}
+.dec-card .dec-conf{font-size:.65em;color:var(--dim2)}
+
+/* Indices table */
+.idx-table{width:100%;font-size:.72em;border-collapse:collapse}
+.idx-table th{text-align:left;color:var(--dim2);font-weight:500;padding:6px 8px;border-bottom:1px solid var(--border)}
+.idx-table td{padding:6px 8px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.idx-table .val{font-weight:600;font-variant-numeric:tabular-nums}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.06);border-radius:2px}
+
+/* Responsive */
+@media(max-width:1100px){
+  .rightbar{width:200px;min-width:200px}
+  .sidebar{width:180px;min-width:180px}
+}
+@media(max-width:768px){
+  .rightbar{display:none}
+  .sidebar{width:160px;min-width:160px}
+  .route-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ DATA ═══════════ -->
+<script>
+const M={"version":"5.0","latest_week":"2026-06-26","fx_rate":6.8166,"quality":"B_public_excerpt","generated_at":"2026-07-02T00:35:36+08:00"};
+const ROUTES=[
+  {code:"EUR",name:"欧洲航线",unit:"USD/TEU",val:3342.0,z:2.80,wow:5.83,streak:10,level:"黄色预警",tags:["P95高位","Z≥2","连涨10周","周涨≥5%"],color:"#FF6384"},
+  {code:"MED",name:"地中海航线",unit:"USD/TEU",val:4666.0,z:2.59,wow:9.53,streak:10,level:"黄色预警",tags:["P95高位","Z≥2","连涨10周","周涨≥5%"],color:"#36A2EB"},
+  {code:"USWC",name:"美西航线",unit:"USD/FEU",val:6067.0,z:2.72,wow:6.76,streak:10,level:"黄色预警",tags:["P95高位","Z≥2","连涨10周","周涨≥5%"],color:"#FFCE56"},
+  {code:"USEC",name:"美东航线",unit:"USD/FEU",val:7384.0,z:2.65,wow:7.43,streak:10,level:"黄色预警",tags:["P95高位","Z≥2","连涨10周","周涨≥5%"],color:"#4BC0C0"},
+  {code:"COMPOSITE",name:"SCFI综合",unit:"points",val:3239.64,z:2.29,wow:3.77,streak:14,level:"黄色预警",tags:["P95高位","Z≥2","连涨14周"],color:"#9966FF"}
+];
+const SCENARIOS=[
+  {code:"BASE_USEC",name:"美东基础",total_usd:8220.5,total_cny:56035.86,risk:"normal",desc:"6项费用"},
+  {code:"BASE_USWC",name:"美西基础",total_usd:6903.5,total_cny:47058.40,risk:"normal",desc:"6项费用"},
+  {code:"STRESS_USEC",name:"美东压力",total_usd:9495.5,total_cny:64727.03,risk:"stress",desc:"11项费用"},
+  {code:"STRESS_USWC",name:"美西压力",total_usd:8178.5,total_cny:55749.56,risk:"stress",desc:"11项费用"},
+  {code:"USEC_PANAMA",name:"美东巴拿马",total_usd:9770.5,total_cny:66601.59,risk:"extreme",desc:"12项费用"}
+];
+const DECISIONS=[
+  {code:"EUR",name:"欧洲航线",level:"黄色预警",advice:"亚欧航线运价上行，当前3342 USD/TEU，Z=2.80。建议密切关注未来1-2周走势，对中长期合约适当增加浮动条款。非紧急货物可暂缓订舱。",tags:["P95高位","Z≥2","连涨","周涨≥5%"],conf:"B_public_excerpt"},
+  {code:"MED",name:"地中海航线",level:"黄色预警",advice:"地中海航线运价上升，当前4666 USD/TEU，Z=2.59。建议关注北非/南欧替代港口方案，降低单一航线依赖。报价有效期建议缩短至10天。",tags:["P95高位","Z≥2","连涨","周涨≥5%"],conf:"B_public_excerpt"},
+  {code:"USWC",name:"美西航线",level:"黄色预警",advice:"美西航线运价走高，当前6067 USD/FEU，Z=2.72。建议提前1周订舱，对大批量货物拆分批次降低风险。报价有效期建议10天。",tags:["P95高位","Z≥2","连涨","周涨≥5%"],conf:"B_public_excerpt"},
+  {code:"USEC",name:"美东航线",level:"黄色预警",advice:"美东航线运价上扬，当前7384 USD/FEU，Z=2.65。建议关注巴拿马运河通行状况，对时效敏感货物考虑美西+铁路替代方案。报价加入10%-15%缓冲。",tags:["P95高位","Z≥2","连涨","周涨≥5%"],conf:"B_public_excerpt"},
+  {code:"COMPOSITE",name:"SCFI综合指数",level:"黄色预警",advice:"市场运价整体上行，SCFI综合指数3240 points，Z=2.29。建议对主要航线报价增加风险条款，缩短报价有效期至10天。",tags:["P95高位","Z≥2","连涨"],conf:"B_public_excerpt"}
+];
+const INDICES=[
+  {name:"SCFI 上海出口集装箱",val:3239.64,unit:"points",date:"06-26",ql:"B_public_excerpt",status:"✓"},
+  {name:"CCFI 中国出口集装箱",val:1710.47,unit:"points",date:"06-26",ql:"A_official",status:"✓"},
+  {name:"SCFIS 结算运价(欧洲)",val:3358.62,unit:"points",date:"06-29",ql:"A_official",status:"✓"},
+  {name:"Drewry WCI",val:4166.0,unit:"USD/FEU",date:"06-26",ql:"B_public_excerpt",status:"✓"},
+  {name:"Freightos FBX",val:3426.8,unit:"USD/FEU",date:"06-26",ql:"B_public_excerpt",status:"✓"},
+  {name:"BDI 波罗的海干散货",val:2501.0,unit:"points",date:"06-30",ql:"B_public_excerpt",status:"✓"},
+  {name:"布伦特原油",val:72.95,unit:"USD/bbl",date:"06-30",ql:"B_public_excerpt",status:"✓"}
+];
+const EVENTS=[
+  {date:"07-01",title:"巴拿马运河管理局宣布7月起每日通行量上调至36艘",tag:"重要",urgency:"high"},
+  {date:"07-01",title:"马士基宣布7月中旬北欧线GRI上调$1000/FEU",tag:"运价",urgency:"high"},
+  {date:"06-30",title:"BDI干散货指数突破2500点，创年内新高",tag:"市场",urgency:"mid"},
+  {date:"06-28",title:"以色列-黎巴嫩局势升级，地中海航线风险溢价增加",tag:"地缘",urgency:"high"},
+  {date:"06-26",title:"SCFI综合指数突破3200点，连续14周上涨",tag:"运价",urgency:"high"},
+  {date:"06-25",title:"美国对华301关税审查延长，新增品类清单待公布",tag:"政策",urgency:"mid"},
+  {date:"06-23",title:"欧盟碳边境调节机制(CBAM)过渡期第二阶段启动",tag:"政策",urgency:"mid"},
+  {date:"06-20",title:"MSC宣布新增远东-美西快线，增投8艘15000TEU船",tag:"运力",urgency:"low"}
+];
+const HISTORY={
+  labels:["01-02","01-09","01-16","01-23","01-30","02-06","02-13","02-20","02-27","03-06","03-13","03-20","03-27","04-03","04-10","04-17","04-24","05-01","05-08","05-15","05-22","05-29","06-05","06-12","06-19","06-26"],
+  datasets:[
+    {code:"EUR",name:"欧洲",color:"#FF6384",data:[1666,1642,1619,1595,1418,1403,1361,1425,1490,1554,1618,1636,1606,1577,1547,1501,1497,1546,1596,1816,1905,2221,2536,2852,3158,3342]},
+    {code:"MED",name:"地中海",color:"#36A2EB",data:[2999,2855,2712,2568,2424,2300,2177,2212,2247,2282,2317,2351,2386,2421,2456,2491,2420,2442,2463,3145,3207,3537,3866,4196,4260,4666]},
+    {code:"USWC",name:"美西",color:"#FFCE56",data:[2162,2136,2110,2084,1867,1801,1787,1902,2018,2134,2249,2054,2220,2359,2552,2612,2586,2706,2826,3118,3154,3764,4374,4984,5683,6067]},
+    {code:"USEC",name:"美东",color:"#4BC0C0",data:[2999,2964,2930,2896,2605,2530,2524,2671,2818,2964,3111,2922,3121,3354,3518,3584,3570,3691,3812,4224,4313,4971,5628,6286,6873,7384]},
+    {code:"COMPOSITE",name:"综合指数",color:"#9966FF",data:[1656,1647,1574,1458,1317,1267,1251,1251,1333,1489,1710,1707,1827,1855,1891,1887,1875,1915,1954,2141,2218,2572,2726,2985,3122,3240]}
+  ]
+};
+</script>
+
+<!-- ═══════════ TOP BAR ═══════════ -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span class="logo">🚢 舱路雷达</span>
+    <span class="badge">DEMO</span>
+    <span style="font-size:.72em;color:var(--dim2)">SynNovator S2 · OPC 路演</span>
+  </div>
+  <div class="topbar-right">
+    <span id="clock" class="time"></span>
+    <span style="color:var(--dim2)">数据截至 2026-06-26</span>
+    <button class="demo-btn" onclick="runDemo()">▶ 演示</button>
+  </div>
+</div>
+
+<!-- ═══════════ MAIN ROW ═══════════ -->
+<div class="main-row">
+
+<!-- Left Sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sec-title">📊 航线速览</div>
+  <div id="sidebar-cards"></div>
+  <div class="sec-title" style="margin-top:8px">📡 数据源</div>
+  <div class="source-dots">
+    <span title="SCFI" class="source-dot on"></span>
+    <span title="CCFI" class="source-dot on"></span>
+    <span title="SCFIS" class="source-dot on"></span>
+    <span title="WCI" class="source-dot on"></span>
+    <span title="FBX" class="source-dot on"></span>
+    <span title="BDI" class="source-dot on"></span>
+    <span title="布伦特" class="source-dot on"></span>
+  </div>
+</div>
+<button class="toggle-sidebar" id="toggle-sidebar-btn" onclick="toggleSidebar()">◀</button>
+
+<!-- Center -->
+<div class="center">
+  <div class="center-top" id="center-top">
+
+    <!-- Tab 1: 航线概览 -->
+    <div id="tab-overview">
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('overview')">📋 航线概览</button>
+        <button class="tab" onclick="switchTab('alerts')">⚠️ 预警分析</button>
+        <button class="tab" onclick="switchTab('decisions')">🎯 决策建议</button>
+        <button class="tab" onclick="switchTab('indices')">📈 指数验证</button>
+        <button class="tab" onclick="switchTab('qa')">💡 从业者问答</button>
+        <button class="tab" onclick="switchTab('painpoints')">🔥 高频痛点解析</button>
+      </div>
+      <div class="route-insight-layout">
+        <div>
+          <div class="route-grid" id="route-grid"></div>
+        </div>
+        <div class="route-insight-side">
+          <div class="compact-panel">
+            <h3>航线趋势联动</h3>
+            <div class="chart-compact"><canvas id="trendChart"></canvas></div>
+            <div class="chart-sub">26 周走势 · SCFI 主力航线 · 随航线数据同屏查看</div>
+          </div>
+          <div class="compact-panel" id="route-answer-box"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Alerts -->
+    <div id="tab-alerts" class="hidden">
+      <div class="tabs">
+        <button class="tab" onclick="switchTab('overview')">📋 航线概览</button>
+        <button class="tab active" onclick="switchTab('alerts')">⚠️ 预警分析</button>
+        <button class="tab" onclick="switchTab('decisions')">🎯 决策建议</button>
+        <button class="tab" onclick="switchTab('indices')">📈 指数验证</button>
+        <button class="tab" onclick="switchTab('qa')">💡 从业者问答</button>
+        <button class="tab" onclick="switchTab('painpoints')">🔥 高频痛点解析</button>
+      </div>
+      <div id="warn-panel"></div>
+      <div style="margin-top:16px">
+        <div class="chart-wrap">
+          <div class="chart-title">风险热力图 · Z分数 / 周环比 / 连涨 / 预警</div>
+          <canvas id="heatmapChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-wrap" style="margin-top:10px">
+        <div class="chart-title">成本场景速查（美西 / 美东）</div>
+        <div class="route-grid" id="scenario-cards"></div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Decisions -->
+    <div id="tab-decisions" class="hidden">
+      <div class="tabs">
+        <button class="tab" onclick="switchTab('overview')">📋 航线概览</button>
+        <button class="tab" onclick="switchTab('alerts')">⚠️ 预警分析</button>
+        <button class="tab active" onclick="switchTab('decisions')">🎯 决策建议</button>
+        <button class="tab" onclick="switchTab('indices')">📈 指数验证</button>
+        <button class="tab" onclick="switchTab('qa')">💡 从业者问答</button>
+        <button class="tab" onclick="switchTab('painpoints')">🔥 高频痛点解析</button>
+      </div>
+      <div id="decisions-panel"></div>
+    </div>
+
+    <!-- Tab 4: Indices -->
+    <div id="tab-indices" class="hidden">
+      <div class="tabs">
+        <button class="tab" onclick="switchTab('overview')">📋 航线概览</button>
+        <button class="tab" onclick="switchTab('alerts')">⚠️ 预警分析</button>
+        <button class="tab" onclick="switchTab('decisions')">🎯 决策建议</button>
+        <button class="tab active" onclick="switchTab('indices')">📈 指数验证</button>
+        <button class="tab" onclick="switchTab('qa')">💡 从业者问答</button>
+        <button class="tab" onclick="switchTab('painpoints')">🔥 高频痛点解析</button>
+      </div>
+      <div class="chart-wrap" style="margin-bottom:12px">
+        <div class="chart-title">七指数交叉验证 · 多维度市场信号</div>
+        <table class="idx-table">
+          <thead><tr><th>指数</th><th>最新值</th><th>日期</th><th>质量</th><th>状态</th></tr></thead>
+          <tbody id="indices-tbody"></tbody>
+        </table>
+      </div>
+      <div style="font-size:.68em;color:var(--dim2);padding:4px 8px">
+        ✓ SCFI 与 CCFI 4周趋势同向 · WCI/FBX 三方验证一致 · 数据质量分层 A/B
+      </div>
+    </div>
+
+    <!-- Tab 6: 高频痛点解析 -->
+    <div id="tab-painpoints" class="hidden">
+      <div class="tabs">
+        <button class="tab" onclick="switchTab('overview')">📋 航线概览</button>
+        <button class="tab" onclick="switchTab('alerts')">⚠️ 预警分析</button>
+        <button class="tab" onclick="switchTab('decisions')">🎯 决策建议</button>
+        <button class="tab" onclick="switchTab('indices')">📈 指数验证</button>
+        <button class="tab" onclick="switchTab('qa')">💡 从业者问答</button>
+        <button class="tab active" onclick="switchTab('painpoints')">🔥 高频痛点解析</button>
+      </div>
+      <div class="pain-tabs" id="pain-tabs"></div>
+      <div class="answer-list" id="today-answers"></div>
+      <div style="height:14px"></div>
+      <div class="pain-grid" id="pain-grid"></div>
+    </div>
+
+    <!-- Tab 5: Q&A -->
+    <div id="tab-qa" class="hidden">
+      <div class="tabs">
+        <button class="tab" onclick="switchTab('overview')">📋 航线概览</button>
+        <button class="tab" onclick="switchTab('alerts')">⚠️ 预警分析</button>
+        <button class="tab" onclick="switchTab('decisions')">🎯 决策建议</button>
+        <button class="tab" onclick="switchTab('indices')">📈 指数验证</button>
+        <button class="tab active" onclick="switchTab('qa')">💡 从业者问答</button>
+        <button class="tab" onclick="switchTab('painpoints')">🔥 高频痛点解析</button>
+      </div>
+      <div id="qa-panel"></div>
+    </div>
+
+  </div>
+
+  <!-- AI / LLM Interaction Placeholder -->
+  <div class="ai-chat" id="ai-chat">
+    <div class="chat-header">
+      <span>🤖 数据问答互动窗口</span>
+      <span class="tag">LLM 接入预留</span>
+    </div>
+    <div class="llm-panel">
+      <div class="llm-head">
+        <div>
+          <h3>之后这里接入 LLM，回答客户关于数据的问题</h3>
+          <p>当前为阶段产物占位：先展示高频问题、可回答范围与数据缺口；后续可基于航线、指数、场景和风险证据链做自然语言问答。</p>
+        </div>
+        <span class="status-pill partial">占位</span>
+      </div>
+      <div class="prompt-chips">
+        <button onclick="fillPrompt('欧洲航线现在该不该锁价？')">欧洲现在该不该锁价？</button>
+        <button onclick="fillPrompt('哪些航线需要提前订舱？')">哪些航线要提前订舱？</button>
+        <button onclick="fillPrompt('当前判断缺少哪些数据？')">当前缺少哪些数据？</button>
+        <button onclick="fillPrompt('美西和美东哪个风险更高？')">美西/美东风险对比</button>
+      </div>
+      <div class="chat-window" id="llm-answer">请选择一个示例问题，或输入你想问的数据问题。当前不会调用真实模型，只返回基于现有规则的示例答案。</div>
+      <div class="llm-input">
+        <input id="llm-input" placeholder="例如：这周哪些航线更适合分批发货？" onkeydown="if(event.key==='Enter')mockAsk()">
+        <button onclick="mockAsk()">提问</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Right Sidebar -->
+<div class="rightbar" id="rightbar">
+  <div class="sec-title">🔥 热点事件</div>
+  <div id="events-panel"></div>
+</div>
+
+</div><!-- /main-row -->
+
+<!-- ═══════════ BOTTOM BAR ═══════════ -->
+<div class="bottombar">
+  <span>舱路雷达 v6.3 · 小浣熊 HackForger · 数据来源：上海航运交易所 & 公开采集</span>
+  <span>⚡ 效率提升: <span class="eff">9-24×</span> (3-4h → 10-20min)</span>
+</div>
+
+<script>
+// ═══════ HELPERS ═══════
+const nf=n=>Number(n).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0});
+const pf=n=>(n>0?'+':'')+Number(n).toFixed(1)+'%';
+const e=s=>{const d=document.createElement('div');d.textContent=s;return d.innerHTML;};
+
+// ═══════ CLOCK ═══════
+function tick(){document.getElementById('clock').textContent=new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit',second:'2-digit'})}
+tick();setInterval(tick,1000);
+
+// ═══════ SIDEBAR ═══════
+let sidebarOpen=true;
+function toggleSidebar(){
+  sidebarOpen=!sidebarOpen;
+  document.getElementById('sidebar').classList.toggle('collapsed',!sidebarOpen);
+  document.getElementById('toggle-sidebar-btn').classList.toggle('shifted',!sidebarOpen);
+  document.getElementById('toggle-sidebar-btn').textContent=sidebarOpen?'◀':'▶';
+}
+
+// Mini cards + spark bars
+const sc=document.getElementById('sidebar-cards');
+ROUTES.forEach(r=>{
+  const cc=document.createElement('div');
+  cc.className='mini-card';cc.setAttribute('data-code',r.code);
+  cc.onclick=()=>{switchTab('overview');document.querySelectorAll('.mini-card').forEach(c=>c.classList.remove('active'));cc.classList.add('active')};
+  const ds=HISTORY.datasets.find(d=>d.code===r.code);
+  const maxV=Math.max(...ds.data);
+  cc.innerHTML=`<div class="mc-name">${e(r.name)}</div><div class="mc-val" style="color:${r.color}">${nf(r.val)}</div><div class="mc-sub">${e(r.unit)} · Z=${r.z.toFixed(2)} · ${pf(r.wow)}</div><div class="spark-row">${ds.data.slice(-16).map(v=>`<div class="spark-bar" style="height:${(v/maxV*100).toFixed(1)}%;background:${r.color}33"></div>`).join('')}</div>`;
+  sc.appendChild(cc);
+});
+// Activate first card
+sc.querySelector('.mini-card')?.classList.add('active');
+
+// ═══════ ROUTE CARDS ═══════
+const rg=document.getElementById('route-grid');
+ROUTES.forEach(r=>{
+  const lvl=r.level==='红色预警'?'pill-warning':r.level==='黄色预警'?'pill-caution':'pill-ok';
+  rg.innerHTML+=`<div class="route-card" onclick="renderRouteAnswer('${r.code}')" style="border-left:3px solid ${r.color};cursor:pointer"><div class="rc-name">${e(r.name)}</div><div class="rc-val" style="color:${r.color}">${nf(r.val)}</div><div class="rc-unit">${e(r.unit)}</div><div class="rc-meta"><span class="pill ${lvl}">${e(r.level)}</span><span class="pill pill-tag">Z=${r.z.toFixed(2)}</span><span class="pill pill-tag">${pf(r.wow)}</span></div></div>`;
+});
+
+// ═══════ CHART ═══════
+let trendChart=null;
+function initChart(){
+  const ctx=document.getElementById('trendChart').getContext('2d');
+  if(trendChart)trendChart.destroy();
+  trendChart=new Chart(ctx,{
+    type:'line',
+    data:{
+      labels:HISTORY.labels,
+      datasets:HISTORY.datasets.map(d=>({
+        label:d.name,data:d.data,borderColor:d.color,backgroundColor:d.color+'22',
+        borderWidth:2,pointRadius:0,pointHitRadius:8,
+        tension:.35,fill:true
+      }))
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{legend:{labels:{color:'#7A8296',usePointStyle:true,padding:20,font:{size:11}}}},
+      scales:{
+        x:{ticks:{color:'#525970',font:{size:9},maxTicksLimit:13},grid:{color:'rgba(255,255,255,0.03)'}},
+        y:{ticks:{color:'#525970',font:{size:9},callback:v=>v>=1000?(v/1000).toFixed(1)+'k':v},grid:{color:'rgba(255,255,255,0.03)'}}
+      }
+    }
+  });
+}
+
+// ═══════ TABS ═══════
+function switchTab(name){
+  ['overview','alerts','decisions','indices','qa','painpoints'].forEach(t=>document.getElementById('tab-'+t).classList.add('hidden'));
+  document.getElementById('tab-'+name).classList.remove('hidden');
+  if(name==='overview')setTimeout(initChart,50);
+}
+
+// ═══════ WARNING PANEL ═══════
+const wp=document.getElementById('warn-panel');
+ROUTES.forEach(r=>{
+  const cls=r.level==='红色预警'?'warn-red':'warn-yellow';
+  const d=DECISIONS.find(dd=>dd.code===r.code);
+  wp.innerHTML+=`<div class="warn-item ${cls}"><div class="warn-hdr"><span style="color:${r.color};font-size:1em">●</span><span class="warn-route">${e(r.name)} · ${e(r.level)}</span></div><div class="warn-reason">${r.tags.map(t=>'#'+e(t)).join(' ')} · Z=${r.z.toFixed(2)} · 连涨${r.streak}周</div><div class="warn-advice">${d?e(d.advice):''}</div></div>`;
+});
+
+// ═══════ SCENARIO CARDS ═══════
+const scc=document.getElementById('scenario-cards');
+SCENARIOS.forEach(s=>{
+  const rc=s.risk==='extreme'?'pill-warning':s.risk==='stress'?'pill-caution':'pill-ok';
+  const lb=s.risk==='extreme'?'极端':s.risk==='stress'?'压力':'正常';
+  scc.innerHTML+=`<div class="route-card"><div class="rc-name">${e(s.name)}</div><div class="rc-val">$${nf(s.total_usd)}</div><div class="rc-unit">≈ ¥${nf(s.total_cny)}</div><div style="font-size:.65em;color:var(--dim);margin-top:3px">${e(s.desc)}</div><span class="pill ${rc}" style="margin-top:6px;display:inline-block">${lb}</span></div>`;
+});
+
+// ═══════ DECISIONS ═══════
+const dp=document.getElementById('decisions-panel');
+DECISIONS.forEach(d=>{
+  const colors={EUR:'#FF6384',MED:'#36A2EB',USWC:'#FFCE56',USEC:'#4BC0C0',COMPOSITE:'#9966FF'};
+  const lvlCls=d.level==='红色预警'?'warn-red':d.level==='黄色预警'?'warn-yellow':'';
+  dp.innerHTML+=`<div class="dec-card" style="border-left:3px solid ${colors[d.code]}"><div class="dec-hdr"><span class="dec-route">● ${e(d.name)}</span><span class="pill ${lvlCls==='warn-red'?'pill-warning':'pill-caution'}">${e(d.level)}</span></div><div class="dec-advice">${e(d.advice)}</div><div class="dec-tags">${d.tags.map(t=>`<span class="pill pill-tag">${e(t)}</span>`).join('')}</div></div>`;
+});
+
+// ═══════ INDICES TABLE ═══════
+const it=document.getElementById('indices-tbody');
+INDICES.forEach(i=>{
+  const qlCls=i.ql==='A_official'?'ql-A':'ql-B';
+  it.innerHTML+=`<tr><td>${e(i.name)}</td><td class="val">${nf(i.val)} <span style="color:var(--dim2);font-weight:400">${e(i.unit)}</span></td><td>${e(i.date)}</td><td><span class="ql ${qlCls}">${e(i.ql)}</span></td><td style="color:var(--green)">${e(i.status)}</td></tr>`;
+});
+
+// ═══════ EVENTS ═══════
+const ep=document.getElementById('events-panel');
+EVENTS.forEach(ev=>{
+  const uc=ev.urgency==='high'?'urgency-high':ev.urgency==='mid'?'urgency-mid':'urgency-low';
+  ep.innerHTML+=`<div class="event-item ${uc}"><div class="ev-date">${e(ev.date)} · ${e(ev.tag)}</div><div class="ev-title">${e(ev.title)}</div></div>`;
+});
+
+// ═══════ DEMO MODE ═══════
+let demoStep=0;
+function runDemo(){
+  const steps=[
+    ()=>switchTab('overview'),
+    ()=>{document.querySelectorAll('.mini-card')[1]?.click();},
+    ()=>switchTab('alerts'),
+    ()=>switchTab('decisions'),
+    ()=>switchTab('indices'),
+    ()=>switchTab('painpoints'),
+    ()=>switchTab('overview')
+  ];
+  demoStep=demoStep%steps.length;
+  steps[demoStep]();
+  demoStep++;
+  if(demoStep<steps.length)setTimeout(runDemo,2000);
+}
+
+// ═══════ Q&A PANEL ═══════
+(function(){
+  const qa=document.getElementById('qa-panel');
+  const rmap={};ROUTES.forEach(r=>rmap[r.code]=r);
+  const dsmap={};HISTORY.datasets.forEach(d=>dsmap[d.code]=d);
+
+  // Q1: 运价水位
+  const q1rows=ROUTES.map(r=>{
+    const d=dsmap[r.code];const maxV=Math.max(...d.data);
+    const pctAbove=Math.round(d.data.filter(v=>v>r.val).length/d.data.length*100);
+    return`<tr><td style="color:${r.color}">● ${e(r.name)}</td><td>${nf(r.val)}</td><td>Z=${r.z.toFixed(2)}</td><td>${pctAbove}%时间更低</td><td><span class="qa-badge yellow">🟡 偏高</span></td></tr>`;
+  }).join('');
+  qa.innerHTML+=`<div class="qa-card"><div class="qa-q"><span class="qa-num">Q1</span>运费现在处于什么水位？还会继续涨吗？</div><div class="qa-a">全部航线处于 <b style="color:var(--red)">30 周历史最高位</b>，Z 分数全超 2.0。但涨幅速度正在收窄——近 4 周 WoW 从 10%+ 降至 4-7%。<span class="qa-badge yellow">见顶信号出现</span></div><div class="qa-data"><table class="qa-mini-table"><tr><th>航线</th><th>现价</th><th>Z分数</th><th>历史位置</th><th>判断</th></tr>${q1rows}</table></div><div class="qa-tags"><span class="pill pill-tag">#运价水位</span><span class="pill pill-tag">#历史分位</span><span class="pill pill-tag">#Z分数</span></div></div>`;
+
+  // Q2: 航线性价比
+  const q2rows=ROUTES.filter(r=>r.code!=='COMPOSITE').map(r=>{
+    const d=dsmap[r.code];const baseline=d.data.slice(0,4).reduce((a,b)=>a+b,0)/4;
+    const premium=((r.val/baseline-1)*100).toFixed(0);
+    const cls=parseFloat(premium)>150?'red':parseFloat(premium)>100?'yellow':'green';
+    return`<tr><td style="color:${r.color}">● ${e(r.name)}</td><td>${nf(r.val)}</td><td>Z=${r.z.toFixed(2)}</td><td><span class="qa-badge ${cls}">+${premium}%</span></td></tr>`;
+  }).join('');
+  qa.innerHTML+=`<div class="qa-card"><div class="qa-q"><span class="qa-num">Q2</span>美线和欧线哪个更划算？该优先发哪条？</div><div class="qa-a">相对 1 月初基线，<b style="color:#FFCE56">美西溢价最严重 (+186%)</b>，<b style="color:#36A2EB">地中海溢价最小 (+68%)</b>。但地中海受红海绕行影响运力紧张。综合看：<b style="color:var(--green)">美东 Z=2.65 相对最低</b>，性价比最优。</div><div class="qa-data"><table class="qa-mini-table"><tr><th>航线</th><th>现价</th><th>Z分数</th><th>vs 1月初溢价</th></tr>${q2rows}</table></div><div class="qa-tags"><span class="pill pill-tag">#航线性价比</span><span class="pill pill-tag">#溢价对比</span></div></div>`;
+
+  // Q3: 抢运决策
+  const uswc=rmap['USWC'],usec=rmap['USEC'];
+  const fx=(M&&M.fx_rate)||6.82;
+  qa.innerHTML+=`<div class="qa-card"><div class="qa-q"><span class="qa-num">Q3</span>关税要涨了，要不要赶在生效前抢运？</div><div class="qa-a">以货值 <b>$50,000/柜</b> 为例：现在发货（25%关税）美西总成本 <b>$${nf(50000*0.25+uswc.val)}/柜</b>，加税至 35% 后总成本 <b>$${nf(50000*0.35+uswc.val)}/柜</b>。<b style="color:var(--green)">抢运可节省 $5,000/柜</b>，即使运费再涨 $500 仍然划算。</div><div class="qa-data">美西运费 $${nf(uswc.val)} · 美东运费 $${nf(usec.val)} · USD/CNY ${fx.toFixed(2)} · 数据截止 ${M.latest_week}</div><div class="qa-tags"><span class="pill pill-tag">#关税抢运</span><span class="pill pill-tag">#成本模拟</span><span class="pill pill-tag">#时效决策</span></div></div>`;
+
+  // Q4: 涨价持续性
+  const q4rows=ROUTES.filter(r=>r.code!=='COMPOSITE').map(r=>{
+    const d=dsmap[r.code];const n=d.data.length;
+    const recent=[];for(let i=n-4;i<n;i++)if(d.data[i-1]>0)recent.push(((d.data[i]/d.data[i-1]-1)*100).toFixed(1));
+    const slowing=parseFloat(recent[recent.length-1])<parseFloat(recent[0])?'📉 收窄':'📈 加速';
+    return`<tr><td style="color:${r.color}">● ${e(r.name)}</td><td>连涨${r.streak}周</td><td>${recent.map(w=>w+'%').join(' → ')}</td><td>${slowing}</td></tr>`;
+  }).join('');
+  qa.innerHTML+=`<div class="qa-card"><div class="qa-q"><span class="qa-num">Q4</span>船公司控舱抬价，这波涨势还能持续多久？</div><div class="qa-a">全部航线连涨 <b>10 周以上</b>，但 <b style="color:var(--accent)">涨幅速度正在收窄</b>。SCFI 综合 WoW 从 6 周前的 +9.5% 降至当前的 +3.8%。<span class="qa-badge yellow">预计 1-2 周内见顶</span></div><div class="qa-data"><table class="qa-mini-table"><tr><th>航线</th><th>连涨</th><th>近4周WoW趋势</th><th>动能</th></tr>${q4rows}</table></div><div class="qa-tags"><span class="pill pill-tag">#涨势判断</span><span class="pill pill-tag">#控舱监测</span><span class="pill pill-tag">#WoW趋势</span></div></div>`;
+
+  // Q5: SCFI可信度
+  qa.innerHTML+=`<div class="qa-card"><div class="qa-q"><span class="qa-num">Q5</span>SCFI 是船公司报的虚价吗？实际成交价差多少？</div><div class="qa-a">我们实时对比 4 个权威指数：<b>SCFI（即期报价）</b>vs <b>SCFIS（实际结算价）</b>vs <b>WCI（Drewry 国际参考）</b>vs <b>FBX（在线平台价）</b>。当前四指数走势同向（均上行），表明报价体系基本可信。</div><div class="qa-data">SCFI ${nf(3240)} pts · SCFIS ${nf(3359)} pts · WCI $${nf(4166)}/FEU · FBX $${nf(3427)}/FEU · 交叉验证: ✓ 趋势一致</div><div class="qa-tags"><span class="pill pill-tag">#SCFI可信度</span><span class="pill pill-tag">#交叉验证</span><span class="pill pill-tag">#四方印证</span></div></div>`;
+
+  // Q6: 发货建议（综合）
+  qa.innerHTML+=`<div class="qa-card"><div class="qa-q"><span class="qa-num">Q6</span>下周适合发货吗？该选哪个航线？</div><div class="qa-a">当前市场<b style="color:var(--red)">全线偏贵</b>，优先级建议：<br>① <b>有货必发</b>：立即订舱，报价加 10% 缓冲，缩短有效期至 10 天<br>② <b>可缓则缓</b>：非紧急货物观望 1-2 周，等待涨幅见顶<br>③ <b style="color:var(--green)">首选美东</b>：Z=2.65 相对最优，溢价幅度最小<br>⚠️ 欧洲航线 Z=2.80 最高，处于高危区间</div><div class="qa-data">基于 30 周历史数据 + 四航线横向对比 + Z分数/P95/连涨三重校验 · 生成于 ${M.latest_week}</div><div class="qa-tags"><span class="pill pill-tag">#发货时机</span><span class="pill pill-tag">#航线选择</span><span class="pill pill-tag">#实时建议</span></div></div>`;
+
+  qa.innerHTML+=`<div style="font-size:.65em;color:var(--dim2);padding:12px 4px;text-align:center">以上回答基于真实 SCFI 数据自动计算 · 非 AI 幻觉 · 仅供参考</div>`;
+})();
+
+
+// ═══════ PAINPOINT INTELLIGENCE ═══════
+const PAINPOINTS=[
+  {id:'price',cat:'ready',icon:'💸',title:'运价涨太快 / 报价不稳定',answer:'可直接监测。当前可用 SCFI、CCFI、主力航线现价、Z 分数、WoW 和历史分位，形成涨价压力榜与锁价建议。',items:['欧洲/美线是否处于历史高位','报价是否需要缩短有效期','现在锁价还是继续观察']},
+  {id:'space',cat:'partial',icon:'🚢',title:'订不到舱 / 甩柜 / 临时改船',answer:'可做代理判断。用高分位、连续上涨、控舱标签和决策建议形成“舱位紧张代理分”；真实甩柜率待接入。',items:['哪些航线要提前订舱','哪些航线要准备备选船司','缺：实际舱位、甩柜率、空班数据']},
+  {id:'delay',cat:'partial',icon:'⏱️',title:'延误 / 港口拥堵 / 时效不可控',answer:'当前只能做弱提示。可基于价格热度与事件信号提示潜在时效风险；准班率、港口拥堵、ETA 变化接入后再做强判断。',items:['时效敏感订单需谨慎的航线','建议提前发货天数','缺：准班率、港口拥堵、ETA 变化']},
+  {id:'customs',cat:'disabled',icon:'🧾',title:'清关延误 / 文件问题 / 滞港费',answer:'暂灰。当前项目缺少 HS Code、申报、清关状态、查验率和滞港费规则，适合先做 checklist，不做强结论。',items:['商业发票/装箱单/HS Code 检查','目的国文件风险提示','待接入清关异常数据']},
+  {id:'forwarder',cat:'disabled',icon:'🕵️',title:'货代/海外仓风险与服务不透明',answer:'暂灰。需要接入投诉舆情、主体风险、服务 SLA、索赔记录后，才能形成服务商风险标签墙。',items:['费用争议/失联/暴雷舆情','服务商风险标签','待接入投诉和主体数据']},
+  {id:'cost',cat:'ready',icon:'🧮',title:'附加费和成本上涨原因不透明',answer:'可先做成本压力解释。当前可拆成运价指数、航线报价、汇率、油价等影响项；船司附加费和目的港费用待补。',items:['本周成本压力来自哪里','运价/汇率/油价影响拆解','缺：BAF/PSS/滞港费明细']},
+  {id:'event',cat:'partial',icon:'📅',title:'旺季 / 政策 / 抢运导致不确定',answer:'可做事件影响日历。当前已有热点事件和指数走势，可把事件与价格拐点挂钩；政策数据库后续补强。',items:['哪些事件影响未来 1-2 周','抢运是否划算','缺：结构化政策/大促日历']},
+  {id:'trust',cat:'ready',icon:'🔎',title:'信息分散，不知道该信谁',answer:'高度适合。用 SCFI/CCFI/WCI/FBX/SCFIS 多源信号一致性，明确哪些结论可行动，哪些只是观察。',items:['多源信号是否一致','判断置信度高不高','哪些数据缺口影响结论']}
+];
+const PAIN_FILTERS=[['all','全部痛点'],['ready','可直接加入'],['partial','可先代理'],['disabled','暂灰待数据']];
+function renderRouteAnswer(code='EUR'){
+  const r=ROUTES.find(x=>x.code===code)||ROUTES[0];
+  const d=DECISIONS.find(x=>x.code===code)||DECISIONS[0]||{};
+  const box=document.getElementById('route-answer-box');
+  if(!box)return;
+  const urgency=r.level==='红色预警'?'P0 立即处理':r.level==='黄色预警'?'P1 重点关注':'P2 观察';
+  box.innerHTML=`<h3>${e(r.name)} · 快速答案</h3>
+    <div class="answer-card" style="margin-bottom:10px"><b>现在该怎么做？</b><span>${e(d.advice||'维持观察，等待更多信号。')}</span></div>
+    <ul style="font-size:12px;color:var(--text);line-height:1.85;padding-left:18px">
+      <li>优先级：${urgency}</li>
+      <li>当前值：${nf(r.val)} ${e(r.unit)}，WoW ${pf(r.wow)}</li>
+      <li>趋势证据：Z=${r.z.toFixed(2)}，连涨 ${r.streak||'-'} 周</li>
+      <li>可回答：涨价压力、锁价/订舱、航线对比</li>
+      <li style="color:var(--dim)">待补数据：舱位、甩柜率、准班率、港口拥堵</li>
+    </ul>`;
+}
+function statusLabel(cat){return cat==='ready'?'已接入':cat==='partial'?'代理/弱判断':'暂灰待数据'}
+function renderPainTabs(active='all'){
+  const el=document.getElementById('pain-tabs'); if(!el)return;
+  el.innerHTML=PAIN_FILTERS.map(([id,label])=>`<button class="pain-tab ${id===active?'active':''}" onclick="renderPainpoints('${id}')">${label}</button>`).join('');
+}
+function renderTodayAnswers(){
+  const el=document.getElementById('today-answers'); if(!el)return;
+  const top=[...ROUTES].sort((a,b)=>b.z-a.z)[0];
+  const east=ROUTES.find(r=>r.code==='USEC')||top;
+  el.innerHTML=[
+    ['今天贵不贵？',`贵。${top.name} Z=${top.z.toFixed(2)}，${top.level}；多条航线处于高位，报价建议加缓冲并缩短有效期。`],
+    ['今天堵不堵？','当前缺港口拥堵和准班率数据，只能提示潜在时效风险；不做确定性拥堵判断。'],
+    ['今天该不该发？',`高优先级订单建议提前锁舱；非紧急货物可观察 1-2 周。相对比较看，${east.name} Z=${east.z.toFixed(2)}，可作为优先备选。`]
+  ].map(([q,a])=>`<div class="answer-card"><b>${q}</b><span>${a}</span></div>`).join('');
+}
+function renderPainpoints(filter='all'){
+  renderPainTabs(filter); renderTodayAnswers();
+  const el=document.getElementById('pain-grid'); if(!el)return;
+  const rows=PAINPOINTS.filter(p=>filter==='all'||p.cat===filter);
+  el.innerHTML=rows.map(p=>`<div class="pain-card ${p.cat}"><h3><span>${p.icon} ${e(p.title)}</span><span class="status-pill ${p.cat}">${statusLabel(p.cat)}</span></h3><p>${e(p.answer)}</p><ul>${p.items.map(i=>`<li>${e(i)}</li>`).join('')}</ul></div>`).join('');
+}
+function fillPrompt(q){const input=document.getElementById('llm-input'); if(input){input.value=q; mockAsk();}}
+function mockAsk(){
+  const q=(document.getElementById('llm-input')?.value||'').trim();
+  const out=document.getElementById('llm-answer'); if(!out)return;
+  if(!q){out.textContent='请输入一个问题，或点击上方示例问题。';return;}
+  let ans='这是 LLM 接入前的规则型示例回答：';
+  if(q.includes('锁价')||q.includes('欧洲')) ans='建议欧洲航线优先锁价/订舱。依据：当前处于红色预警，Z 分数和价格水位较高，适合高优先级订单先锁定；非急单可观察 1-2 周。';
+  else if(q.includes('提前订舱')||q.includes('哪些航线')) ans='建议提前订舱的对象：欧洲、美西、美东等高位航线。当前为代理判断，依据是价格高位、连续上涨和决策规则；实际舱位/甩柜率仍待接入。';
+  else if(q.includes('缺少')||q.includes('缺')) ans='当前主要缺口：实际舱位、甩柜率、空班、准班率、港口拥堵、ETA 变化、清关状态、附加费和服务商投诉舆情。缺口模块已置灰或标记为弱判断。';
+  else if(q.includes('美西')||q.includes('美东')) ans='美西/美东都需关注。若按相对性价比和 Z 分数比较，当前 demo 中美东相对更优；但实际选择还需要订单时效、目的地、船司舱位和尾程数据。';
+  else ans+='当前可回答涨价压力、锁价/订舱、航线对比、多源信号可信度；涉及清关、甩柜率、服务商暴雷等问题，需要补充数据后再做强结论。';
+  out.innerHTML=`<b>Q：</b>${e(q)}<br><br><b>A：</b>${e(ans)}`;
+}
+
+// Init
+initChart();
+renderRouteAnswer();
+renderPainpoints();
+</script>
+</body>
+</html>

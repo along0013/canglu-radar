@@ -1,0 +1,89 @@
+# 舱路雷达 · 配置文件
+# 集中管理所有静态配置项，compute.py 启动时加载
+
+# ── 航线配置 ──
+routes:
+  - EUR
+  - MED
+  - USWC
+  - USEC
+  - COMPOSITE
+
+route_meta:
+  EUR:
+    name: "欧洲航线"
+    unit: "USD/TEU"
+    color: "#FF6384"
+  MED:
+    name: "地中海航线"
+    unit: "USD/TEU"
+    color: "#36A2EB"
+  USWC:
+    name: "美西航线"
+    unit: "USD/FEU"
+    color: "#FFCE56"
+  USEC:
+    name: "美东航线"
+    unit: "USD/FEU"
+    color: "#4BC0C0"
+  COMPOSITE:
+    name: "SCFI综合指数"
+    unit: "points"
+    color: "#9966FF"
+
+# ── 数据质量 ──
+quality_level: "B_public_excerpt"
+
+# ── 最新数据周 ──
+latest_week: "2026-06-26"
+
+# ── 汇率默认值 (运行时会从 CSV 覆盖) ──
+fx_rate: 6.8166  # USD/CNY 06-26
+
+# ── 窗口大小 ──
+window_size: 26
+
+# ── 百分位数列表 ──
+percentile_points: [50, 75, 85, 90, 95]
+
+# ── 预警阈值 ──
+warning:
+  # Z-score 阈值
+  z_red: 2.0       # 标准通道A
+  z_red_b: 1.8     # 趋势钝化缓解通道B
+  z_yellow: 1.5    # 黄色预警
+  # 连涨周数阈值
+  up_streak_red: 3
+  # WoW 快通道阈值（单周极端涨幅直接红色）
+  surge_threshold:
+    USWC: 20
+    USEC: 18
+    EUR: 15
+    MED: 15
+    COMPOSITE: 15
+
+# ── 数据质量阈值 ──
+data_quality:
+  full_min: 22       # 高质量样本 ≥ 22 → full
+  reduced_min: 16    # 高质量样本 ≥ 16 → reduced; < 16 → insufficient
+
+# ── 季节性配置 ──
+season:
+  # L1 比率阈值
+  ratio_high: 1.05
+  ratio_mid: 1.02
+  ratio_low: 0.98
+  # L2 回退：月份 → 季节名（全年 12 月完整覆盖，3-6月无明确航运淡旺季）
+  month_fallback:
+    1: "春节淡季"
+    2: "春节淡季"
+    3: "平季"
+    4: "平季"
+    5: "平季"
+    6: "平季"
+    7: "旺季(Q3)"
+    8: "旺季(Q3)"
+    9: "旺季(Q3)"
+    10: "圣诞备货季"
+    11: "圣诞备货季"
+    12: "圣诞备货季"
