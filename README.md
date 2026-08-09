@@ -1,75 +1,153 @@
-# 舱路雷达 | 跨境物流异常预警与发货决策情报系统
+# 舱路雷达 canglu-radar
 
-舱路雷达是一个面向跨境电商物流运营的周度物流情报系统，用于把 SCFI 运价、船公司公告、汇率、附加费和场景化成本模型整合为可复跑的预警、建议、报告和展示材料。
+舱路雷达是一个面向跨境物流与供应链决策的异常预警系统。它把运价指数、汇率、油价、事件与附加费场景等数据统一计算成可交付的 `output` 五件套，并提供 Dashboard 展示、数据校验、复算验证和 CI smoke tests。
 
-## 一句话定位
+项目最早用于 OPC 路演场景；比赛已经结束，当前 README 以项目现有功能和工程化验证能力为准。
 
-用多源数据治理和自动化指标计算，替代物流专员“查网页、算 Excel、写建议、做汇报”的重复劳动，将每周 3-4 小时的运价情报工作压缩为 10-20 分钟的复跑流程。
+## 当前能力概览
 
-## 核心数字速查（历史高位周：2026-05-22；系统已验证复跑至2026-06-12）
+- **数据计算**：从 shared CSV 输入生成结构化 JSON 数据包。
+- **异常预警**：输出航线级价格、趋势、波动、预警等级和建议动作。
+- **场景测算**：覆盖美西、美东等附加费 / 压力场景。
+- **指数对比**：汇总 SCFI、CCFI、WCI、FBX、SCFIS、BDI、Brent 等外部指数信号。
+- **决策输出**：生成发货节奏、观察窗口、风险解释和交叉验证结果。
+- **Dashboard 展示**：`dashboard/demo-v3.html` 消费当前 output 数据结构。
+- **本地一键验证**：`./scripts/smoke.sh` 运行完整 P0/P1 smoke tests。
+- **远端 CI 验证**：GitHub Actions 在 push / pull request 时运行 smoke workflow。
 
-| 指标 | 数值 | 单位 | 环比 | Z分数 | 预警 |
-|---|---:|---|---:|---:|---|
-| 欧洲航线 | 1905.0 | USD/TEU | 4.9% | 2.76 | 红色预警 |
-| 地中海航线 | 3207.0 | USD/TEU | 1.97% | 2.22 | 红色预警 |
-| 美西航线 | 3154.0 | USD/FEU | 1.15% | 2.27 | 红色预警 |
-| 美东航线 | 4313.0 | USD/FEU | 2.11% | 2.36 | 红色预警 |
-| SCFI综合指数 | 2218.15 | points | 3.62% | 2.23 | 红色预警 |
+## 目录结构
 
-> 数字来源：`03-analysis/CR-04A_指标计算结果.xlsx`，并在 `04-decision-report/CR-04B_业务决策建议.md`、`04-decision-report/CR-05_分析报告.md` 中复用。
+```text
+.
+├── dashboard/
+│   └── demo-v3.html                 # Dashboard 页面
+├── engine/
+│   ├── compute.py                   # 从 shared 输入计算 output 五件套
+│   ├── data_loader.py               # 数据加载工具
+│   ├── metrics.py                   # 指标辅助逻辑
+│   └── validate.py                  # output 数据包校验
+├── output/
+│   ├── metrics.json                 # 核心航线指标与预警结果
+│   ├── history.json                 # 历史时间序列
+│   ├── scenarios.json               # 场景测算结果
+│   ├── decisions.json               # 决策建议与交叉验证
+│   └── indices.json                 # 外部指数对比
+├── scripts/
+│   └── smoke.sh                     # 本地一键 smoke 验证脚本
+├── tests/
+│   ├── fixtures/shared/             # CI 可用的 shared 输入 fixture
+│   ├── run_smoke_tests.py           # 统一 smoke 入口
+│   ├── test_cli_paths.py            # CLI 路径回归
+│   ├── test_validate_paths.py       # validate 路径回归
+│   ├── test_output_smoke.py         # output 五件套契约校验
+│   ├── test_compute_reproducibility.py
+│   ├── test_compute_output_diff.py
+│   └── test_dashboard_contract.py
+└── .github/workflows/smoke.yml      # GitHub Actions smoke workflow
+```
 
-## 建议阅读顺序
+## output 五件套
 
-1. `08-submission/CR-11_作品说明文档.md`：评审入口，说明项目目标、闭环、价值和限制。
-2. `03-analysis/CR-04A_指标计算结果.xlsx`：唯一指标数字源，包含最新周摘要、质量等级和公式审计示例。
-3. `04-decision-report/CR-04B_业务决策建议.md`：业务决策建议，包含差异化航线建议、成本场景建议和公告措辞限制。
-4. `04-decision-report/CR-05_分析报告.md`：周度分析报告，解释指标、事件关联、成本测算和数据质量限制。
-5. `03-analysis/CR-04C_敏感性分析表.md`：what-if 敏感性分析，展示汇率、附加费和运价上涨对成本的影响。
-6. `07-validation/CR-09_量化验证表.xlsx`：量化验证与 `人工vs自动化对比` Sheet，说明时间、错误率、复用性和标准化价值。
-7. `05-presentation/` 与 `06-visual-demo/demo-screenshots/`：展示材料、HTML占位与Demo截图。
-8. `03-analysis/rerun-simulations/week2-prime/`、`03-analysis/rerun-simulations/week3-prime/`：模拟复跑证据，展示输入变化后输出变化。
+当前交付数据包位于 `output/`：
 
-## 提交包位置
+| 文件 | 作用 |
+|---|---|
+| `metrics.json` | 航线核心指标、最新值、趋势、预警等级、建议动作 |
+| `history.json` | 运价、指数、汇率等历史序列 |
+| `scenarios.json` | 附加费和压力场景测算 |
+| `decisions.json` | 发货建议、风险解释、交叉验证摘要 |
+| `indices.json` | 外部指数对比和质量等级 |
 
-- 提交目录：`08-submission/`
-- 当前提交包清单：`08-submission/final-package/manifest.csv`
-- 最终版材料目录：`08-submission/CR-10C_材料目录.md`
+这五个文件是 Dashboard 和后续分析的核心数据契约。
 
-## 数据质量声明
+## 数据输入与 fixture
 
-本项目明确区分真实数据、公开线索、演示补全和待复核材料：
+`engine/compute.py` 支持从 shared CSV 输入重新生成 `output` 五件套。
 
-| 等级 | 含义 | 示例 |
-|---|---|---|
-| A_official | 官方或结构化可信来源 | SCFI 指标结果中的官方口径数据 |
-| B_public_excerpt | 公开网页/公告摘录 | 船公司官网公告、公开线索 |
-| B_screenshot_ocr | 截图OCR或人工录入复核数据 | SAFE汇率截图OCR |
-| C_market_reference | 市场参考或场景化附加费 | 附加费模型输入 |
-| C_demo_simulated | 演示补全或模拟复跑数据 | 缺失周补全、Week2’/Week3’复跑输入 |
-| PENDING_REVIEW | 待人工复核 | 尚未形成A/B/C确定等级的线索 |
+默认 CI / smoke tests 使用项目内 fixture：
 
-含 `C_demo_simulated`、`C_market_reference` 或 `PENDING_REVIEW` 的材料仅用于流程验证、场景演示和方法说明，不作为正式报价、审计或经营承诺口径。
+```text
+tests/fixtures/shared
+```
 
-## 当前仓库状态
+这样远端 CI checkout 后即可运行，不依赖机器本地存在 `../shared`。
 
-- 🔒 **已封存** — 小浣熊 OPC 比赛 6/28 路演结束，项目进入只读归档。
-- ⚠️ Git 仓库已分离（`.git` 目录移除），当前仅保留工作目录快照。
-- 原有 Git 跟踪文件：190 个（封存时记录）。
-- 评审核心材料：以 `CR-11 → CR-04A → CR-04B.md → CR-05.md → CR-09 → CR-10C` 为主线。
-- 已排除内容：草稿、日志、缓存、压缩包和临时抓取页不纳入评审主仓库。
-- 📅 最后更新：2026-07-03（PPT v6 终版 + 项目清理）。
+本地如需使用完整真实 shared 输入，可以通过环境变量覆盖：
 
-## P0/P1 验证入口
+```bash
+CANGLU_SHARED_DIR=../shared ./scripts/smoke.sh
+```
 
-当前工作目录快照已补齐轻量 P0/P1 smoke tests，用于验证“路径入口 → output 五件套 → compute 复算 → 数值容差 diff → Dashboard 字段契约”的核心链路。
+fixture 覆盖当前计算链路需要的数据源，包括但不限于：
 
-本地一键脚本：
+- SCFI / CCFI / WCI / FBX / SCFIS
+- BDI / Brent
+- USD/CNY 汇率
+- shipping events
+- surcharge scenarios
+- index comparison
+
+如果后续正式 `output/` 更新，需要同步刷新 `tests/fixtures/shared`，否则数值 diff 测试会合理失败。
+
+## 计算与校验
+
+重新计算数据包：
+
+```bash
+python engine/compute.py --shared-dir tests/fixtures/shared --output-dir /tmp/canglu-output
+```
+
+校验某个 output 目录：
+
+```bash
+python engine/validate.py --data-dir output
+```
+
+说明：正式 smoke tests 会把 compute 输出写入临时目录，不会覆盖仓库中的正式 `output/`。
+
+## Dashboard
+
+Dashboard 文件：
+
+```text
+dashboard/demo-v3.html
+```
+
+当前测试已覆盖 Dashboard 字段契约，验证页面实际消费的字段可以从 `output` 五件套稳定映射出来，包括：
+
+- `metrics.json -> routes`
+- `history.json -> datasets`
+- `scenarios.json -> scenarios`
+- `decisions.json -> decisions`
+- `indices.json -> indices`
+
+已覆盖展示端短字段与正式字段之间的映射，例如：
+
+- `val -> current_value/value`
+- `z -> z_score`
+- `wow -> wow_change_pct`
+- `streak -> up_streak_weeks`
+- `level -> warning_level`
+- `advice -> suggestion`
+- `ql -> quality_level`
+
+当前 smoke tests 验证的是字段契约，不等同于真实浏览器渲染截图验收。
+
+## 本地一键验证
+
+推荐使用本地脚本：
 
 ```bash
 ./scripts/smoke.sh
 ```
 
 等价直接命令：
+
+```bash
+python tests/run_smoke_tests.py
+```
+
+或在小浣熊环境中使用：
 
 ```bash
 $BOX_AGENT_PYTHON tests/run_smoke_tests.py
@@ -81,18 +159,71 @@ $BOX_AGENT_PYTHON tests/run_smoke_tests.py
 all P0/P1 smoke tests passed
 ```
 
-远端 CI：已新增 GitHub Actions workflow：`.github/workflows/smoke.yml`，会在 `push` 到 `main/master` 或发起 `pull_request` 时运行：
+当前统一 smoke tests 覆盖：
+
+1. engine CLI 路径回归
+2. validate 路径回归
+3. output 五件套契约校验
+4. compute 从 shared fixture 临时复算
+5. 临时复算结果与正式 output 的数值容差 diff
+6. Dashboard 字段契约校验
+
+## GitHub Actions CI
+
+远端 CI 配置文件：
+
+```text
+.github/workflows/smoke.yml
+```
+
+触发条件：
+
+- push 到 `main`
+- push 到 `master`
+- pull request
+
+CI 执行命令：
 
 ```bash
 python tests/run_smoke_tests.py
 ```
 
-说明：compute 复算与数值 diff 默认使用项目内 fixture：`tests/fixtures/shared`，因此远端 CI checkout 后不再依赖相邻目录 `../shared`。本地如需使用完整真实输入，可通过环境变量覆盖：
+当前 smoke workflow 已在 GitHub Actions 上实际运行通过，状态为 `completed / success`。
 
-```bash
-CANGLU_SHARED_DIR=../shared ./scripts/smoke.sh
+## 项目目录
+
+```text
+engine/                 计算、加载、指标和校验脚本
+dashboard/              HTML Dashboard
+output/                 当前正式五件套数据包
+tests/                  smoke tests 与回归测试
+tests/fixtures/shared/  CI 可用的 shared 输入 fixture
+scripts/smoke.sh        本地一键验证脚本
+.github/workflows/      GitHub Actions CI 配置
+plans/                  审计、测试落地和治理文档
+archive/                历史材料归档
 ```
 
-fixture 输入契约至少覆盖 compute 当前读取的 CSV 数据源，包括 SCFI/CCFI/WCI/FBX/SCFIS/BDI/Brent、汇率、事件、附加费场景和指数对比等文件。
+## 当前已闭环能力
 
-更多审计结论见：`plans/final-audit-report.md` 与 `plans/p0-test-landing-plan.md`。
+- 数据输入不再依赖机器外部 `../shared`。
+- compute 可在临时目录复算五件套，不污染正式 `output/`。
+- 复算结果可与正式 `output/` 做数值容差 diff。
+- Dashboard 字段消费与五件套数据契约一致。
+- 本地一键验证和 GitHub Actions CI 均已接入。
+- P0/P1 smoke tests 已通过。
+
+## 已知边界
+
+- Dashboard smoke tests 当前覆盖字段契约，不覆盖真实浏览器渲染、截图和交互。
+- `tests/fixtures/shared` 是当前正式 `output/` 对应输入快照；正式数据更新时需要同步刷新 fixture。
+- 当前测试体系以轻量 smoke 为主，后续测试规模扩大后可迁移到 `pytest`。
+
+## 背景说明
+
+本项目最初来自一次比赛路演场景。比赛已经结束，相关材料已归档；当前 README 以项目现有功能、数据链路和验证体系为准。
+
+更多审计和治理记录可见：
+
+- `plans/final-audit-report.md`
+- `plans/p0-test-landing-plan.md`
