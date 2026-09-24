@@ -1,5 +1,7 @@
 # 舱路雷达 canglu-radar
 
+[![Smoke Tests](https://github.com/along0013/canglu-radar/actions/workflows/smoke.yml/badge.svg)](https://github.com/along0013/canglu-radar/actions/workflows/smoke.yml)
+
 舱路雷达是一个面向跨境物流与供应链决策的异常预警系统。它把运价指数、汇率、油价、事件与附加费场景等数据统一计算成可交付的 `output` 五件套，并提供 Dashboard 展示、数据校验、复算验证和 CI smoke tests。
 
 项目最早用于 OPC 路演场景；比赛已经结束，当前 README 以项目现有功能和工程化验证能力为准。
@@ -185,10 +187,11 @@ all P0/P1 smoke tests passed
 CI 执行命令：
 
 ```bash
+pip install -r requirements.txt   # 依赖：pyyaml
 python tests/run_smoke_tests.py
 ```
 
-当前 smoke workflow 已在 GitHub Actions 上实际运行通过，状态为 `completed / success`。
+CI 在每次 push 到 `main` / `master` 或提交 PR 时执行 `python tests/run_smoke_tests.py`；运行状态见上方 badge 与 Actions 页。
 
 ## 项目目录
 
